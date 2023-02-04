@@ -1,0 +1,1 @@
+# msvsd2bitcomp
