@@ -23,12 +23,17 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 4. Magic VLSI
 5. Open_pdk
 ###### **Pre Layout**
+- Before installing, check whether you are in the root directory:
+  ```
+  $ cd
+  ```
+- First, let us run a check on the versions, using the command below:
+  ```
+  $ sudo apt-get update -y
+  ```
 * **NgSpice**
 
   - NgSpice is the open-source spice simulator for electric and electronic circuits.
-    ```
-    $ sudo apt-get update -y
-    ```
   - Now, install ngspice using the command below:
     ```
     $ sudo apt-get install -y ngspice
@@ -50,15 +55,9 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ sudo make install
     ```
 ###### **Post Layout**
-- Before installing, check whether you are in the root directory:
-  ```
-  $ cd
-  ```
-- First, let us run a check on the versions, using the command below:
-  ```
-  $ sudo apt-get update
-  ```
+
 * **Magic VLSI**
+
   - Some dependencies required to run magic vlsi as it doesn't come preinstalled. Enter the following command in terminal to install before installing magic vlsi:
     ```
     $ sudo apt update && sudo apt install m4 tcsh csh libx11-dev tcl-dev tk-dev libcairo2-dev libncurses-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev
