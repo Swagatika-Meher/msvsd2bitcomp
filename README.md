@@ -17,11 +17,11 @@
 
 ## **Tools Installation**
 To adequately utilize the open source skywater130 pdk and understand the design flow, we first need to install all the necessary tools, which are
-1. NgSpice
-2. Xschem
-3. Netgen
-4. Magic VLSI
-5. Open_pdk
+**1. NgSpice -** Spice Simulation 
+**2. Xschem -** Schematic Editor
+**3. Netgen -** Netlist Comparator
+**4. Magic VLSI -** Layout Editor
+**5. Open PDK -** Sky130 Library
 ###### **Pre Layout**
 - Before installing, check whether you are in the root directory:
   ```
