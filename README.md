@@ -113,6 +113,17 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ tcsh
     $ sudo magic -T sky130A
     ```
+* **Netgen**
+
+  - Netgen is a tool for comparing netlists, a process known as LVS, which stands for "Layout vs. Schematic". Install netgen using the command below:
+    ```
+    $ git clone git://opencircuitdesign.com/netgen
+    $ cd netgen
+    $	sudo ./configure
+    $ sudo make
+    $ sudo make install
+    $ cd .. 
+ 
     
     
     
