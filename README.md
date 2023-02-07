@@ -21,8 +21,9 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 3. Netgen
 4. Magic
 5. Open_pdk
-
+###### **Pre Layout**
 * **NgSpice**
+
   - NgSpice is the open-source spice simulator for electric and electronic circuits.
   ```
   $ sudo apt-get update -y
@@ -31,4 +32,15 @@ To adequately utilize the open source skywater130 pdk and understand the design 
   ```
   $ sudo apt-get install -y ngspice
   ```
-  
+* **Xschem**
+ 
+  - Xschem is a schematic capture program. Install xschem using the command below:
+  ```
+  $ git clone https://github.com/StefanSchippers/xschem.git xschem_git
+  $ sudo apt-get install flex
+  $ sudo apt-get install bison
+  $ sudo apt-get install libxpm-dev
+  $ sudo ./configure
+  $ sudo make
+  $ sudo make install
+  ```
