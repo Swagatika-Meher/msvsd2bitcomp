@@ -119,11 +119,8 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     ```
     $ git clone git://opencircuitdesign.com/netgen
     $ cd netgen
-    $	sudo ./configure
+    $ sudo./configure
     $ sudo make
     $ sudo make install
-    $ cd .. 
- 
-    
-    
-    
+    $ cd ..
+    ```
