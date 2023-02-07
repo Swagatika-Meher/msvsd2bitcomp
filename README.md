@@ -50,6 +50,7 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ sudo apt-get install flex
     $ sudo apt-get install bison
     $ sudo apt-get install libxpm-dev
+    $ cd xschem_git
     $ sudo ./configure
     $ sudo make
     $ sudo make install
