@@ -75,4 +75,26 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     ```
     $ cd ..
     ```
+* **Skywater PDK**
+
+  - First, download Sky130 PDK using the following command:
+    ```
+    $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
+    ```
+* **OpenPDK**
+
+  - Next, we we will need OpenPDK to install and generate the required tech files for magic vlsi:
+    ```
+    $ git clone git://opencircuitdesign.com/open_pdks
+    $ cd open_pdks
+    $ git checkout open_pdks-1.0
+    ```
+  - Now, we have to configure sky130 PDK:
+    ```
+    $ sudo ./configure  --enable-sky130-pdk=<skywater_root_dir>/skywater-pdk/libraries
+    ```
+> **NOTE:** For those using home directory do NOT use ~/<your_dir>, please use the full directory /home/username/<your_dir> !!!
+
+
+    
     
