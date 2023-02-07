@@ -95,6 +95,24 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     ```
 > **NOTE:** For those using home directory do NOT use ~/<your_dir>, please use the full directory /home/username/<your_dir> !!!
 
+  - Next, run the following commands, inside the open_pdks root directory to install skywater PDK:
+    ```
+    $ cd sky130
+    $ sudo make
+    $ sudo make install
+    ```
+* **Sky130 PDK and Magic Integration**
 
+  - Integrate Sky130 PDK with Magic. As the skywater tech files are not installed in magic’s library, we need to create a symbolic link in order to use the tech files for drawing layout. This can be done using:
+    ```
+    $ sudo ln -s <sky130A_install_root_dir>/sky130A/libs.tech/magic/* /usr/local/lib/magic/sys/
+    ```
+  - Finally, the installation is complete! 
+    Now, come back to the current working directory, and check whether the files are properly installed using the command below:
+    ```
+    $ tcsh
+    $ sudo magic -T sky130A
+    ```
+    
     
     
