@@ -99,7 +99,19 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 
   - First, download Sky130 PDK using the following command:
     ```
-    $ git clone https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr
+    $ git clone https://github.com/google/skywater-pdk
+    $ cd skywater-pdk
+    $ git submodule init libraries/sky130_fd_io/latest
+    $ git submodule init libraries/sky130_fd_pr/latest
+    $ git submodule init libraries/sky130_fd_sc_hd/latest
+    $ git submodule init libraries/sky130_fd_sc_hvl/latest
+    $ git submodule init libraries/sky130_fd_sc_hdll/latest
+    $ git submodule init libraries/sky130_fd_sc_hs/latest
+    $ git submodule init libraries/sky130_fd_sc_ms/latest
+    $ git submodule init libraries/sky130_fd_sc_ls/latest
+    $ git submodule init libraries/sky130_fd_sc_lp/latest
+    $ git submodule update
+    $ make timing
     ```
 * **OpenPDK**
 
