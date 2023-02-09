@@ -28,6 +28,8 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 
 **5. Open PDK -** Sky130 Library
 
+**6. ALIGN Tool -** Translate SPICE netlist of an analog circuit to a GDSII layout
+
 ###### **Pre Layout**
 - Before installing, check whether you are in the root directory:
   ```
@@ -41,9 +43,16 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 
   - NgSpice is the open-source spice simulator for electric and electronic circuits.
   - Now, install ngspice using the command below:
-    ```
-    $ sudo apt-get install -y ngspice
-    ```
+Download the tarball from this [link](https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/37/ngspice-37.tar.gz/download) and unpack it using below commands:
+  ```
+  $ tar -zxvf ngspice-37.tar.gz
+  $ cd ngspice-37
+  $ mkdir release
+  $ cd release
+  $ ../configure  --with-x --with-readline=yes --disable-debug
+  $ make
+  $ sudo make install
+  ```
 * **Xschem**
   - Install Git and Make using the commands below:
     ```
