@@ -133,6 +133,8 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ sudo make
     $ sudo make install
     ```
+    More info can be found [here](http://opencircuitdesign.com/open_pdks/).
+    
 * **Sky130 PDK and Magic Integration**
 
   - Integrate Sky130 PDK with Magic. As the skywater tech files are not installed in magic’s library, we need to create a symbolic link in order to use the tech files for drawing layout. This can be done using:
@@ -156,3 +158,36 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ sudo make install
     $ cd ..
     ```
+* **ALIGN Tool**
+
+  - ALIGN is an open source automatic layout generator for analog circuits. The goal of ALIGN (Analog Layout, Intelligently Generated from Netlists) is to automatically translate an unannotated (or partially annotated) SPICE netlist of an analog circuit to a GDSII layout. Use the following commands to install ALIGN tool.
+    ```
+    $ cd
+    $ sudo apt-get install libboost-all-dec
+    $ sudo apt-get update
+    $ sudo apt-get install ip-solve
+    
+    $ export CC=/usr/bin/gcc
+    $ export CXX=/usr/bin/g++
+    $ git clone https://github.com/ALIGN-analoglayout/ALIGN-public
+    $ cd ALIGN-public
+    
+    $ python3 -m venv general
+    $ source general/bin/activate
+    $ python -m pip install pip --upgrade
+    
+    $ pip install -v .
+    $ pip install -e .
+    
+    $ pip install setuptools wheel pybind11 scikit-build cmake ninja
+    $ pip install -v -e .[test] --no-build-isolation
+    $ pip install -v --no-build-isolation -e . --no-deps --install-option='-DBUILD_TESTING=ON'
+    ```
+* **Making ALIGN Portable to Sky130 tehnology**
+  
+  - Clone the following Repository inside ALIGN-public directory.
+    ```
+    $ git clone https://github.com/ALIGN-analoglayout/ALIGN-pdk-sky130
+    ```
+  Move `SKY130_PDK` folder to `/home/username/ALIGN-public/pdks`.
+  To run ALIGN Tool and for more info, follow this [link](https://github.com/sanampudig/OpenFASoC/tree/main/AUXCELL).
