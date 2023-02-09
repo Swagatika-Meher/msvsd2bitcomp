@@ -126,7 +126,7 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ sudo ./configure  --enable-sky130-pdk=<skywater_root_dir>/skywater-pdk/libraries
     ```
 > **NOTE:** For those using home directory do NOT use ~/<your_dir>, please use the full directory /home/username/<your_dir> !!!
-*
+
   - Next, run the following commands, inside the open_pdks root directory to install skywater PDK:
     ```
     $ cd sky130
