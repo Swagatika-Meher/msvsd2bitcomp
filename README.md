@@ -43,15 +43,15 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 
   - NgSpice is the open-source spice simulator for electric and electronic circuits.
   - Now, download the tarball from this [link](https://sourceforge.net/projects/ngspice/files/ng-spice-rework/old-releases/37/ngspice-37.tar.gz/download) and unpack it using below commands:
-  ```
-  $ tar -zxvf ngspice-37.tar.gz
-  $ cd ngspice-37
-  $ mkdir release
-  $ cd release
-  $ ../configure  --with-x --with-readline=yes --disable-debug
-  $ make
-  $ sudo make install
-  ```
+    ```
+    $ tar -zxvf ngspice-37.tar.gz
+    $ cd ngspice-37
+    $ mkdir release
+    $ cd release
+    $ ../configure  --with-x --with-readline=yes --disable-debug
+    $ make
+    $ sudo make install
+    ```
 * **Xschem**
   - Install Git and Make using the commands below:
     ```
