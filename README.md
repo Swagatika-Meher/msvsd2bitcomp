@@ -52,7 +52,13 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ make
     $ sudo make install
     ```
+  - Please note that to view the simulation graphs of ngspice, xterm is required and can be installed using.
+    ```
+    $ sudo apt-get update
+    $ sudo apt-get install xterm
+    ```
 * **Xschem**
+
   - Install Git and Make using the commands below:
     ```
     $ sudo apt install git
