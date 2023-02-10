@@ -193,6 +193,23 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     ```
   Move `SKY130_PDK` folder to `/home/username/ALIGN-public/pdks`.
   To run ALIGN Tool and for more info, follow this [link](https://github.com/sanampudig/OpenFASoC/tree/main/AUXCELL).
+* **Verifying the OpenPDK installation**
+  
+  - An initial working directory can be made by copying the required files as follows:
+    ```
+    $ mkdir test
+    $ cd test
+    $ mkdir mag
+    $ mkdir netgen
+    $ mkdir xschem
+    $ cd xschem
+    $ cp /usr/local/share/pdk/sky130A/libs.tech/xschem/xschemrc .
+    $ cp /usr/local/share/pdk/sky130A/libs.tech/ngspice/spinit .spiceinit
+    $ cd ../mag
+    $ cp /usr/local/share/pdk/sky130A/libs.tech/magic/sky130A.magicrc .magicrc
+    $ cd ../netgen
+    $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
+    ```
 # Create Inverter and perform pre-layout using Xschem and NgSpice
 ## Circuit diagram of Inverter
    The following is the schematic of inverter in Xschem simulator.
