@@ -2,7 +2,8 @@
 # VSD Mixed Signal PD Research
 # INDEX
 * [Week 0](#Week-0)
-  - [Tools Installation](#Tools-Installation) 
+  - [Tools Installation](#Tools-Installation)
+  - [Create Inverter and perform pre-layout](#Create-Inverter-and-perform-pre-layout) 
 # Week 0
 ## **Prerequisites**
 * **Operating System** - Ubuntu 20.04
