@@ -271,7 +271,7 @@ set xbrushwidth=3
 
 * **ERRORS**
 
-  The original schematic of inverter is successfully completed. But, getting the following errors while creating an independent test bench to simulate the circuit.
+  The schematic of inverter is successfully completed. But, getting the following errors while creating an independent test bench to simulate the circuit.
 
 ![33](https://user-images.githubusercontent.com/114692581/218186715-0be3219d-da34-4091-8fdc-5ee41a789b40.PNG)
 
