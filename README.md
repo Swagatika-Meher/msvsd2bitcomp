@@ -191,3 +191,6 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     ```
   Move `SKY130_PDK` folder to `/home/username/ALIGN-public/pdks`.
   To run ALIGN Tool and for more info, follow this [link](https://github.com/sanampudig/OpenFASoC/tree/main/AUXCELL).
+  # Circuit diagram of Inverter in Xschem
+  The following is the schematic of inverter in Xschem simulator.
+  
