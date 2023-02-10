@@ -3,7 +3,7 @@
 # INDEX
 * [Week 0](#Week-0)
   - [Tools Installation](#Tools-Installation)
-  - [Create Inverter and perform pre-layout](#Create-Inverter-and-perform-pre-layout) 
+  - [Create Inverter and perform pre-layout using Xschem and NgSpice](#Create-Inverter-and-perform-pre-layout-using-Xschem-and-NgSpice) 
 # Week 0
 ## **Prerequisites**
 * **Operating System** - Ubuntu 20.04
@@ -193,11 +193,11 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     ```
   Move `SKY130_PDK` folder to `/home/username/ALIGN-public/pdks`.
   To run ALIGN Tool and for more info, follow this [link](https://github.com/sanampudig/OpenFASoC/tree/main/AUXCELL).
+# Create Inverter and perform pre-layout using Xschem and NgSpice
+## Circuit diagram of Inverter
+   The following is the schematic of inverter in Xschem simulator.
   
-# Circuit diagram of Inverter in Xschem
-  The following is the schematic of inverter in Xschem simulator.
-  
-  ![11](https://user-images.githubusercontent.com/114692581/218074378-0bba0835-e161-4664-b6fe-17b1c65de1e3.PNG)
+   ![11](https://user-images.githubusercontent.com/114692581/218074378-0bba0835-e161-4664-b6fe-17b1c65de1e3.PNG)
   
 # Netlist
 ```
