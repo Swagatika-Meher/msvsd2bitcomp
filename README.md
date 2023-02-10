@@ -273,8 +273,9 @@ set xbrushwidth=3
 
   The original schematic of inverter is successfully completed. But, getting the following errors while creating an independent test bench to simulate the circuit.
 
-![33](https://user-images.githubusercontent.com/114692581/218148866-da636835-e673-4496-899f-81c87c7df460.PNG)
+![33](https://user-images.githubusercontent.com/114692581/218186715-0be3219d-da34-4091-8fdc-5ee41a789b40.PNG)
 
-![44](https://user-images.githubusercontent.com/114692581/218148914-cbf89c19-5281-488f-b1b4-ecbf7c5e3301.PNG)
+![44](https://user-images.githubusercontent.com/114692581/218186743-755e6658-673e-49e4-9669-77075e99a3a2.PNG)
+
 
 
