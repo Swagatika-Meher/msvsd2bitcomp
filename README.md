@@ -2,7 +2,7 @@
 # VSD Mixed Signal PD Research
 # INDEX
 * [Week 0](#Week-0)
-  - [Tools Installation](##Tools-Installation) 
+  - [Tools Installation](#Tools-Installation) 
 # Week 0
 ## **Prerequisites**
 * **Operating System** - Ubuntu 20.04
