@@ -198,9 +198,51 @@ To adequately utilize the open source skywater130 pdk and understand the design 
   ![11](https://user-images.githubusercontent.com/114692581/218074378-0bba0835-e161-4664-b6fe-17b1c65de1e3.PNG)
   
 # Netlist
-  
-  
+```
+** sch_path: /home/swagatika/Desktop/Circuits/Inverter.sch
+**.subckt Inverter Vout Vin Vin
+*.opin Vout
+*.ipin Vin
+*.ipin Vin
+XPMOS Vout Vin VDD VDD sky130_fd_pr__pfet_01v8 L=0.18 W=3.6 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XNMOS Vout Vin GND GND sky130_fd_pr__nfet_01v8 L=0.18 W=1.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+Vin Vin GND pulse(0 1.8 0.1ns 0.1ns 0.1ns 5ns 10ns)
+.save i(vin)
+VDD1 VDD GND 1.8
+.save i(vdd1)
+**** begin user architecture code
 
+
+.tran 0.01n 100n
+.control
+run
+set color0=white
+set color1=black
+plot Vin+3 Vout+1
+set xbrushwidth=3
+.save all
+.endc
+.end
+
+
+
+
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.save all
+
+
+
+**** end user architecture code
+**.ends
+.GLOBAL VDD
+.GLOBAL GND
+.end
+```
 # NgSpice Plot
 
 ![22](https://user-images.githubusercontent.com/114692581/218075806-2ece10da-a7de-4c9a-99f7-c4f0a4e1efdb.PNG)
