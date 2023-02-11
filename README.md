@@ -211,8 +211,8 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
     ```
 # Create Inverter and perform pre-layout using Xschem and NgSpice
-## Circuit diagram of Inverter
-   The following is the schematic of inverter in Xschem simulator.
+## Transient Analysis of Inverter
+   An initial schematic of inverter is made by placing components from the open_pdk library in Xschem simulator.
   
    ![11](https://user-images.githubusercontent.com/114692581/218123256-939d0aed-d8f4-46af-85f4-ff4a18fe59c3.PNG)
   
@@ -269,13 +269,24 @@ set xbrushwidth=3
 
 ![22](https://user-images.githubusercontent.com/114692581/218123837-e16d1d9d-90c9-44bc-b78d-552054bd2f08.PNG)
 
-* **ERRORS**
+# Make Symbol from Schematic
+First, design an inverter without voltage source. The following is schematic of inverter with metal pins.
 
-  The schematic of inverter is successfully completed. But, getting the following errors while creating an independent test bench to simulate the circuit.
+![33](https://user-images.githubusercontent.com/114692581/218243371-9491fd51-4497-4c44-871d-ca2cdb8fa657.PNG)
 
-![33](https://user-images.githubusercontent.com/114692581/218186715-0be3219d-da34-4091-8fdc-5ee41a789b40.PNG)
+Then, go to Symbol and click on make symbol from schematic. The following is the symbol of generated inverter.
 
-![44](https://user-images.githubusercontent.com/114692581/218186743-755e6658-673e-49e4-9669-77075e99a3a2.PNG)
+![44](https://user-images.githubusercontent.com/114692581/218243495-c33e37c1-66bd-42f9-9311-ae90ecaf1ca7.PNG)
+
+Using the symbol, we can create an independent test bench to simulate the circuit. The following is the schematic of inverter using symbol.
+
+![55](https://user-images.githubusercontent.com/114692581/218243674-f525cc21-2102-42d6-9e02-49644e2cb9c4.PNG)
+
+
+
+
+
+
 
 
 
