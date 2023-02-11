@@ -272,17 +272,25 @@ set xbrushwidth=3
 # Make Symbol from Schematic and an independent testbench circuit to simulate
   - First, design an inverter without voltage source. The following is schematic of inverter with metal pins.
 
-  ![33](https://user-images.githubusercontent.com/114692581/218243371-9491fd51-4497-4c44-871d-ca2cdb8fa657.PNG)
+    ![33](https://user-images.githubusercontent.com/114692581/218243371-9491fd51-4497-4c44-871d-ca2cdb8fa657.PNG)
 
   - Then, go to Symbol and click on make symbol from schematic.
 
-  ![44](https://user-images.githubusercontent.com/114692581/218243495-c33e37c1-66bd-42f9-9311-ae90ecaf1ca7.PNG)
+    ![44](https://user-images.githubusercontent.com/114692581/218243495-c33e37c1-66bd-42f9-9311-ae90ecaf1ca7.PNG)
 
   - Using the symbol, we can create an independent test bench to simulate the circuit. 
 
-  ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
+    ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
 
   - Transient analysis of testbench schematic
+  
+    - Rise time : 1ns
+    - Fall time : 1ns
+    - On time : 5ns
+    - Period : 10ns
+  
+    ![66](https://user-images.githubusercontent.com/114692581/218246025-70524b2a-9349-4b5a-8a10-46d41fb9bf8e.PNG)
+
   
   
 
