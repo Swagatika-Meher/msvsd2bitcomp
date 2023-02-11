@@ -280,7 +280,7 @@ set xbrushwidth=3
 
   - Using the symbol, we can create an independent test bench to simulate the circuit. 
 
-  ![55](https://user-images.githubusercontent.com/114692581/218243674-f525cc21-2102-42d6-9e02-49644e2cb9c4.PNG)
+  ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
 
   - Transient analysis of testbench schematic
   
