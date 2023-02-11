@@ -278,7 +278,7 @@ set xbrushwidth=3
 
     ![44](https://user-images.githubusercontent.com/114692581/218243495-c33e37c1-66bd-42f9-9311-ae90ecaf1ca7.PNG)
 
-  - Using the symbol, we can create an independent test bench to simulate the circuit. 
+  - To create a layout of this circuit but first, we need to functionally validate it and for that we need to create an independent testbench with the schematic as a symbol. 
 
     ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
 
