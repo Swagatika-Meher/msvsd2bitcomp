@@ -290,6 +290,24 @@ set xbrushwidth=3
     - Period : 10ns
   
     ![66](https://user-images.githubusercontent.com/114692581/218246025-70524b2a-9349-4b5a-8a10-46d41fb9bf8e.PNG)
+    
+# Post-layout using Inverter Schematic in Magic VLSI tool
+Create a working directory with `sky130A.tech`, `sky130.magicrc`, `sky130A.magicrc` files and use the following command in the same directory.
+```
+$ magic -d XR
+```
+**OR**
+```
+$ magic -T sky130A.tech
+```
+This command opens up the Toplevel magic layout window and `Tkcon.tcl` command window. Then, `Go to file --> Import SPICE` and select your generated netlist (Schematic of Inverter symbol which has metal pins, NFET and PFET) from the `.xschem` folder.
+
+Once import the `.spice` file, an empty inverter cell will be visible with black bounding box. Move cursor over the cell and press `s`. Then press `x`. The four metal contacts and two fet cells will be visible as shown below.
+
+![77L](https://user-images.githubusercontent.com/114692581/218331557-f1c80a5a-5508-49df-a2a7-d61d58f12c78.PNG)
+
+
+
 
   
   
