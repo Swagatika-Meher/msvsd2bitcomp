@@ -305,9 +305,20 @@ Once import the `.spice` file, an empty inverter cell will be visible with black
 
 Save the `.mag` files in the same working directory. Navigate to `.mag` file using the terminal and rename the files to match the missing cell name displayed on the tkcon window. Reload the renamed `.mag` file in magic layout and expand the cell. NFET, PFET and the metal contacts will be visible. Place the cells and route the **metal1** layer such that the layout should be DRC free as shown below.
 
-**Note:** For moving elements, `s` to select metal contacts and `i` to select cells.
+**Note:** For moving elements, `s` to select metal contacts, `i` to select cells and `m` to move the cell.
 
 ![88L](https://user-images.githubusercontent.com/114692581/218331996-8eb9c5ac-89ef-40ca-8273-92c4d5b670e4.PNG)
+
+Now, `go to File --> save` and select autowrite. Then, go to the `Tkcon.tcl` command window and type the following.
+
+`extract do local`
+`extract all`
+
+**Extract do local** is an instruction to perform all extractions to the local directory and **extract all** does the actual extraction. To be in the spice format for LVS check on testbench and layout netlist, run the following commands.
+
+`ext2spice lvs`
+`ext2spice`
+
 
 
 
