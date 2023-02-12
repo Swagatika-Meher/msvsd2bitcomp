@@ -310,14 +310,15 @@ Save the `.mag` files in the same working directory. Navigate to `.mag` file usi
 ![88L](https://user-images.githubusercontent.com/114692581/218331996-8eb9c5ac-89ef-40ca-8273-92c4d5b670e4.PNG)
 
 Now, `go to File --> save` and select autowrite. Then, go to the `Tkcon.tcl` command window and type the following.
-
-`extract do local`
-`extract all`
-
+```
+extract do local
+extract all
+```
 **Extract do local** is an instruction to perform all extractions to the local directory and **extract all** does the actual extraction. To be in the spice format for LVS check on testbench and layout netlist, run the following commands.
-
-`ext2spice lvs`
-`ext2spice`
+```
+ext2spice lvs
+ext2spice
+```
 
 
 
