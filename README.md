@@ -301,7 +301,7 @@ This command opens up the Toplevel magic layout window and `Tkcon.tcl` command w
 
 Once import the `.spice` file, an empty inverter cell will be visible with black bounding box. Move cursor over the cell and press `s`. Then press `x`. The four metal contacts and two fet cells will be visible as shown below.
 
-![77L](https://user-images.githubusercontent.com/114692581/218331557-f1c80a5a-5508-49df-a2a7-d61d58f12c78.PNG)
+![77L](https://user-images.githubusercontent.com/114692581/218332190-7adb1974-5026-449a-9681-b9ce52c0c623.PNG)
 
 Save the `.mag` files in the same working directory. Navigate to `.mag` file using the terminal and rename the files to match the missing cell name displayed on the tkcon window. Reload the renamed `.mag` file in magic layout and expand the cell. NFET, PFET and the metal contacts will be visible. Place the cells and route the **metal1** layer such that the layout should be DRC free as shown below.
 
