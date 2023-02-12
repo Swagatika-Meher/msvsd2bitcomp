@@ -319,6 +319,12 @@ extract all
 ext2spice lvs
 ext2spice
 ```
+Now, we can close magic.
+If we run an `ls` in same working directory we should see our `.ext` files, `.mag` files and also post layout `.spice` file for the inverter.
+
+![99L](https://user-images.githubusercontent.com/114692581/218333348-354d7ee0-3f6c-4fc6-9726-21d1183115ee.PNG)
+
+
 
 
 
