@@ -471,7 +471,7 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 
 | Transient Characteristics | Pre-layout | Post-layout |
 | ------------------------- | ---------- | ----------- |
-| NgSpice Plots |  ![66](https://user-images.githubusercontent.com/114692581/218398739-971debc6-33dc-4584-ada4-6a6ac1f80560.PNG) | ![22](https://user-images.githubusercontent.com/114692581/218398878-f8c4db57-36e7-49c9-9e64-354c66766c18.PNG) |
+| NgSpice Plots |   | ![delay_postL](https://user-images.githubusercontent.com/114692581/218403735-aa3f0559-b9f7-4c22-85a1-fbcf903319f3.PNG) |
 
 
 
