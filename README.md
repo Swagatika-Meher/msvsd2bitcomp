@@ -471,9 +471,9 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 
 | Transient Characteristics (Timing Parameters) | Pre-layout | Post-layout |
 | --------------------------------------------- | ---------- | ----------- |
-| Rising Propagation Delay (tpdr) |   | ![Rising_delay](https://user-images.githubusercontent.com/114692581/218422246-0e7f18d5-9b3f-49ce-81ed-da2ccfdb28f4.PNG) **tpdr = 6.67ns - 6.5ns = 0.17ns** |
-| Falling Propagation Delay (tpdf) |  | ![falling_delay](https://user-images.githubusercontent.com/114692581/218423287-a50565dd-1130-4a2b-a5b2-7a329ede1f0b.PNG) **tpdf = 10.6ns - 10.5ns = 0.1ns** |
-| Propagation Delay (tpd) |  | ![delay_postL](https://user-images.githubusercontent.com/114692581/218423767-ac6accff-4f31-495c-b1e5-b1472d370d1c.PNG) **tpd = 10.6162ns - 10.5014ns = 0.1148ns** |
+| Rising Propagation Delay (tpdr) | ![risingPD_prelayout](https://user-images.githubusercontent.com/114692581/218427837-050dc423-8294-4ad9-8b44-a050b37021ba.PNG) **tpdr = 6.6728ns - 6.5ns = 0.1728ns** | ![Rising_delay](https://user-images.githubusercontent.com/114692581/218422246-0e7f18d5-9b3f-49ce-81ed-da2ccfdb28f4.PNG) **tpdr = 6.67ns - 6.5ns = 0.17ns** |
+| Falling Propagation Delay (tpdf) | ![fallingPD_prelayout](https://user-images.githubusercontent.com/114692581/218428230-09cc75c3-9d34-42f4-9506-25a3f9e95a12.PNG) **tpdf = 10.648ns - 10.505ns = 0.143ns** | ![falling_delay](https://user-images.githubusercontent.com/114692581/218423287-a50565dd-1130-4a2b-a5b2-7a329ede1f0b.PNG) **tpdf = 10.6ns - 10.5ns = 0.1ns** |
+| Propagation Delay (tpd) | ![delay_preL](https://user-images.githubusercontent.com/114692581/218428508-b4389e7f-80dc-478a-ac52-6d59cf612bed.PNG) **tpd = 10.6482ns - 10.5ns = 0.1482ns** | ![delay_postL](https://user-images.githubusercontent.com/114692581/218423767-ac6accff-4f31-495c-b1e5-b1472d370d1c.PNG) **tpd = 10.6162ns - 10.5014ns = 0.1148ns** |
 
 
 
