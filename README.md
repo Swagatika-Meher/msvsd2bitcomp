@@ -211,12 +211,22 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
     ```
 # Create Inverter and perform pre-layout using Xschem and NgSpice
-## Transient Analysis of Inverter
+## DC Analysis of Inverter
    An initial schematic of inverter is made by placing components from the open_pdk library in Xschem simulator.
+   
+   ![dc_cir](https://user-images.githubusercontent.com/114692581/218378837-26801fe0-65ac-4f4d-b6e8-7ba0a852c0a4.PNG)
+   
+# NgSpice plot
+
+![dc](https://user-images.githubusercontent.com/114692581/218378945-9d42e95f-3a28-408b-ad94-d6e8a5e242da.PNG)
+
+Threshold Voltage (Vth) = 838.1 mV  [Intersection point of Vin and Vout]
+   
+## Transient Analysis of Inverter
+   
+![11](https://user-images.githubusercontent.com/114692581/218123256-939d0aed-d8f4-46af-85f4-ff4a18fe59c3.PNG)
   
-   ![11](https://user-images.githubusercontent.com/114692581/218123256-939d0aed-d8f4-46af-85f4-ff4a18fe59c3.PNG)
-  
-# Netlist
+# Netlist for transient analysis
 ```
 ** sch_path: /home/swagatika/Desktop/Circuits/Inverter.sch
 **.subckt Inverter Vout Vin Vin VDD GND GND GND VDD
