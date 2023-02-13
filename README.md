@@ -220,7 +220,7 @@ To adequately utilize the open source skywater130 pdk and understand the design 
 
   ![dc](https://user-images.githubusercontent.com/114692581/218378945-9d42e95f-3a28-408b-ad94-d6e8a5e242da.PNG)
 
-  Threshold Voltage (Vth) = 838.1 mV  [Intersection point of Vin and Vout]
+Threshold Voltage (Vth) = 838.1 mV  [Intersection point of Vin and Vout]
    
 ## Transient Analysis of Inverter
    
@@ -342,6 +342,7 @@ If we run an `ls` in same working directory we should see our `.ext` files, `.ma
 ![99L](https://user-images.githubusercontent.com/114692581/218333348-354d7ee0-3f6c-4fc6-9726-21d1183115ee.PNG)
 
 * The generated post-layout inverter netlist extracts the interconnect parasitics, that were absent in pre-layout netlist.
+
   ```
   * NGSPICE file created from Inverter_magic.ext - technology: sky130A
 
@@ -389,6 +390,7 @@ If we run an `ls` in same working directory we should see our `.ext` files, `.ma
   .ends
   ```
 * **Post-layout Netlist of testbench inverter schematic for transient analysis**
+  
   Selectively paste the pre-layout netlist of inverter testbench into the magic generated inverter spice netlist. The final post-layout   netlist of inverter testbench is shown as following.
   ```
   * NGSPICE file created from Inverter_magic.ext - technology: sky130A
@@ -460,7 +462,7 @@ If we run an `ls` in same working directory we should see our `.ext` files, `.ma
   ```
 * **NgSpice Plot**
 
-![PL_netlist](https://user-images.githubusercontent.com/114692581/218385930-e1c66f24-5b06-4a37-956c-c9fe2ce55069.PNG)
+  ![PL_netlist](https://user-images.githubusercontent.com/114692581/218385930-e1c66f24-5b06-4a37-956c-c9fe2ce55069.PNG)
 
 
 
