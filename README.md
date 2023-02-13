@@ -226,7 +226,7 @@ Threshold Voltage (Vth) = 838.1 mV  [Intersection point of Vin and Vout]
    
 ![11](https://user-images.githubusercontent.com/114692581/218123256-939d0aed-d8f4-46af-85f4-ff4a18fe59c3.PNG)
   
-# Netlist for transient analysis
+# Pre-layout Netlist for transient analysis
 ```
 ** sch_path: /home/swagatika/Desktop/Circuits/Inverter.sch
 **.subckt Inverter Vout Vin Vin VDD GND GND GND VDD
@@ -382,6 +382,9 @@ C11 vdd VSUBS 0.71fF
 C12 XPMOS/w_n211_n319# VSUBS 1.09fF
 .ends
 ```
+# Post-layout Netlist for transient analysis
+Selectively paste the pre-layout netlist of inverter testbench into the magic generated inverter spice netlist. The final post-layout netlist of inverter testbench is shown as following.
+
 
 
 
