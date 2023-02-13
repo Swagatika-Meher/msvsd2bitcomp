@@ -211,22 +211,22 @@ To adequately utilize the open source skywater130 pdk and understand the design 
     $ cp /usr/local/share/pdk/sky130A/libs.tech/netgen//sky130A_setup.tcl .
     ```
 # Create Inverter and perform pre-layout using Xschem and NgSpice
-## DC Analysis of Inverter
+# DC Analysis of Inverter
    An initial schematic of inverter is made by placing components from the open_pdk library in Xschem simulator.
    
    ![dc_cir](https://user-images.githubusercontent.com/114692581/218378837-26801fe0-65ac-4f4d-b6e8-7ba0a852c0a4.PNG)
    
-# NgSpice plot
+## NgSpice plot
 
 ![dc](https://user-images.githubusercontent.com/114692581/218378945-9d42e95f-3a28-408b-ad94-d6e8a5e242da.PNG)
 
 Threshold Voltage (Vth) = 838.1 mV  [Intersection point of Vin and Vout]
    
-## Transient Analysis of Inverter
+# Transient Analysis of Inverter
    
 ![11](https://user-images.githubusercontent.com/114692581/218123256-939d0aed-d8f4-46af-85f4-ff4a18fe59c3.PNG)
   
-# Pre-layout Netlist for transient analysis
+## Pre-layout Netlist for transient analysis
 ```
 ** sch_path: /home/swagatika/Desktop/Circuits/Inverter.sch
 **.subckt Inverter Vout Vin Vin VDD GND GND GND VDD
@@ -272,11 +272,11 @@ set xbrushwidth=3
 **.ends
 .end
 ```
-# NgSpice Plot
+## NgSpice Plot
 
 ![22](https://user-images.githubusercontent.com/114692581/218123837-e16d1d9d-90c9-44bc-b78d-552054bd2f08.PNG)
 
-# Make Symbol from Schematic and an independent testbench circuit to simulate
+## Make Symbol from Schematic and an independent testbench circuit to simulate
   - First, design an inverter without voltage source. The following is schematic of inverter with metal pins.
 
     ![33](https://user-images.githubusercontent.com/114692581/218243371-9491fd51-4497-4c44-871d-ca2cdb8fa657.PNG)
@@ -382,7 +382,7 @@ C11 vdd VSUBS 0.71fF
 C12 XPMOS/w_n211_n319# VSUBS 1.09fF
 .ends
 ```
-# Post-layout Netlist for transient analysis
+## Post-layout Netlist for transient analysis
 Selectively paste the pre-layout netlist of inverter testbench into the magic generated inverter spice netlist. The final post-layout netlist of inverter testbench is shown as following.
 
 
