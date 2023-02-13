@@ -250,7 +250,6 @@ VDD VDD GND 1.8
 .save i(vdd)
 **** begin user architecture code
 
-
 .tran 0.01n 100n
 .control
 run
@@ -262,11 +261,9 @@ set xbrushwidth=3
 .endc
 .end
 
-
 .lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
 .save all
-
 
 **** end user architecture code
 **.ends
@@ -384,6 +381,78 @@ C12 XPMOS/w_n211_n319# VSUBS 1.09fF
 ```
 ## Post-layout Netlist for transient analysis
 Selectively paste the pre-layout netlist of inverter testbench into the magic generated inverter spice netlist. The final post-layout netlist of inverter testbench is shown as following.
+```
+* NGSPICE file created from Inverter_magic.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_XGS3BL a_n73_n100# a_15_n100# w_n211_n319# a_n33_n197#
++ VSUBS
+X0 a_15_n100# a_n33_n197# a_n73_n100# w_n211_n319# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+C0 a_15_n100# w_n211_n319# 0.06fF
+C1 a_15_n100# a_n33_n197# 0.03fF
+C2 a_15_n100# a_n73_n100# 0.16fF
+C3 w_n211_n319# a_n33_n197# 0.26fF
+C4 w_n211_n319# a_n73_n100# 0.09fF
+C5 a_n73_n100# a_n33_n197# 0.03fF
+C6 a_15_n100# VSUBS 0.02fF
+C7 a_n73_n100# VSUBS 0.02fF
+C8 a_n33_n197# VSUBS 0.05fF
+C9 w_n211_n319# VSUBS 1.07fF
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+C0 a_n33_n188# a_n73_n100# 0.03fF
+C1 a_n33_n188# a_15_n100# 0.03fF
+C2 a_15_n100# a_n73_n100# 0.16fF
+C3 a_15_n100# a_n175_n274# 0.08fF
+C4 a_n73_n100# a_n175_n274# 0.11fF
+C5 a_n33_n188# a_n175_n274# 0.30fF
+.ends
+
+V1 Vin GND pulse(0 1.8 0ns 1ns 1ns 5ns 10ns)
+.save i(v1)
+VDD VDD GND 1.8
+.save i(vdd)
+x1 VDD Vout Vin GND Inverter_magic
+**** begin user architecture code
+
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.save all
+
+.tran 1n 30n
+.control
+run
+set color0=white
+set color1=black
+plot Vin Vout
+set xbrushwidth=3
+.save all
+.endc
+
+.subckt Inverter_magic vdd OUT IN gnd
+XXPMOS vdd OUT XPMOS/w_n211_n319# IN VSUBS sky130_fd_pr__pfet_01v8_XGS3BL
+XXNMOS gnd IN OUT VSUBS sky130_fd_pr__nfet_01v8_648S5X
+C0 OUT XPMOS/w_n211_n319# 0.08fF
+C1 gnd OUT 0.01fF
+C2 IN OUT 0.06fF
+C3 OUT vdd 0.02fF
+C4 IN XPMOS/w_n211_n319# 0.06fF
+C5 XPMOS/w_n211_n319# vdd 0.15fF
+C6 gnd IN 0.39fF
+C7 IN vdd 0.39fF
+C8 IN VSUBS 1.11fF
+C9 gnd VSUBS 0.90fF
+C10 OUT VSUBS 1.11fF
+C11 vdd VSUBS 0.71fF
+C12 XPMOS/w_n211_n319# VSUBS 1.09fF
+.ends
+.end
+```
+## NgSpice Plot
+
+![PL_netlist](https://user-images.githubusercontent.com/114692581/218385930-e1c66f24-5b06-4a37-956c-c9fe2ce55069.PNG)
+
 
 
 
