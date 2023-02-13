@@ -244,10 +244,10 @@ To adequately utilize the open source skywater130 pdk and understand the design 
   ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
 
 ## Transient analysis of testbench schematic Inverter
-   Rise time : 1ns
-   Fall time : 1ns
-   On time : 5ns
-   Period : 10ns
+   - Rise time : 1ns
+   - Fall time : 1ns
+   - On time : 5ns
+   - Period : 10ns
   
 * **Netlist of pre-layout testbench schematic**
 ```
