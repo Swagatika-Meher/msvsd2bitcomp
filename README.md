@@ -471,8 +471,7 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 
 | Transient Characteristics (Timing Parameters) | Pre-layout | Post-layout |
 | --------------------------------------------- | ---------- | ----------- |
-| Rising Propagation Delay (tpdr) |   | ![Rising_delay](https://user-images.githubusercontent.com/114692581/218422246-0e7f18d5-9b3f-49ce-81ed-da2ccfdb28f4.PNG) 
-tpdr = 6.67ns - 6.5ns = 0.17ns |
+| Rising Propagation Delay (tpdr) |   | ![Rising_delay](https://user-images.githubusercontent.com/114692581/218422246-0e7f18d5-9b3f-49ce-81ed-da2ccfdb28f4.PNG) tpdr = 6.67ns - 6.5ns = 0.17ns |
 
 
 
