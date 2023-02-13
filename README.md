@@ -465,6 +465,13 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 * **NgSpice Plot**
 
   ![PL_netlist](https://user-images.githubusercontent.com/114692581/218385930-e1c66f24-5b06-4a37-956c-c9fe2ce55069.PNG)
+  
+# Comparison between Pre-layout and Post-layout testbench Inverter
+
+| Transient Characteristics | Pre-layout | Post-layout |
+| ------------------------- | ---------- | ----------- |
+| NgSpice Plots | 
+
 
 
 
