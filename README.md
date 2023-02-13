@@ -327,12 +327,62 @@ extract all
 **Extract do local** is an instruction to perform all extractions to the local directory and **extract all** does the actual extraction. To be in the spice format for LVS check on testbench and layout netlist, run the following commands.
 ```
 ext2spice lvs
+ext2spice cthresh 0 rthresh 0
 ext2spice
 ```
 Now, we can close magic.
 If we run an `ls` in same working directory we should see our `.ext` files, `.mag` files and also post layout `.spice` file for the inverter.
 
 ![99L](https://user-images.githubusercontent.com/114692581/218333348-354d7ee0-3f6c-4fc6-9726-21d1183115ee.PNG)
+
+The generated post-layout inverter netlist extracts the interconnect parasitics, that were absent in pre-layout netlist.
+```
+* NGSPICE file created from Inverter_magic.ext - technology: sky130A
+
+.subckt sky130_fd_pr__pfet_01v8_XGS3BL a_n73_n100# a_15_n100# w_n211_n319# a_n33_n197#
++ VSUBS
+X0 a_15_n100# a_n33_n197# a_n73_n100# w_n211_n319# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+C0 a_15_n100# w_n211_n319# 0.06fF
+C1 a_15_n100# a_n33_n197# 0.03fF
+C2 a_15_n100# a_n73_n100# 0.16fF
+C3 w_n211_n319# a_n33_n197# 0.26fF
+C4 w_n211_n319# a_n73_n100# 0.09fF
+C5 a_n73_n100# a_n33_n197# 0.03fF
+C6 a_15_n100# VSUBS 0.02fF
+C7 a_n73_n100# VSUBS 0.02fF
+C8 a_n33_n197# VSUBS 0.05fF
+C9 w_n211_n319# VSUBS 1.07fF
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+C0 a_n33_n188# a_n73_n100# 0.03fF
+C1 a_n33_n188# a_15_n100# 0.03fF
+C2 a_15_n100# a_n73_n100# 0.16fF
+C3 a_15_n100# a_n175_n274# 0.08fF
+C4 a_n73_n100# a_n175_n274# 0.11fF
+C5 a_n33_n188# a_n175_n274# 0.30fF
+.ends
+
+.subckt Inverter_magic vdd OUT IN gnd
+XXPMOS vdd OUT XPMOS/w_n211_n319# IN VSUBS sky130_fd_pr__pfet_01v8_XGS3BL
+XXNMOS gnd IN OUT VSUBS sky130_fd_pr__nfet_01v8_648S5X
+C0 OUT XPMOS/w_n211_n319# 0.08fF
+C1 gnd OUT 0.01fF
+C2 IN OUT 0.06fF
+C3 OUT vdd 0.02fF
+C4 IN XPMOS/w_n211_n319# 0.06fF
+C5 XPMOS/w_n211_n319# vdd 0.15fF
+C6 gnd IN 0.39fF
+C7 IN vdd 0.39fF
+C8 IN VSUBS 1.11fF
+C9 gnd VSUBS 0.90fF
+C10 OUT VSUBS 1.11fF
+C11 vdd VSUBS 0.71fF
+C12 XPMOS/w_n211_n319# VSUBS 1.09fF
+.ends
+```
+
 
 
 
