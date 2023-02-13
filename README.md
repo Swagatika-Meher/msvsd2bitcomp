@@ -473,7 +473,7 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 | --------------------------------------------- | ---------- | ----------- |
 | Rising Propagation Delay (tpdr) |   | ![Rising_delay](https://user-images.githubusercontent.com/114692581/218422246-0e7f18d5-9b3f-49ce-81ed-da2ccfdb28f4.PNG) **tpdr = 6.67ns - 6.5ns = 0.17ns** |
 | Falling Propagation Delay (tpdf) |  | ![falling_delay](https://user-images.githubusercontent.com/114692581/218423287-a50565dd-1130-4a2b-a5b2-7a329ede1f0b.PNG) **tpdf = 10.6ns - 10.5ns = 0.1ns** |
-| Propagation Delay (tpd) |  | ![delay_postL](https://user-images.githubusercontent.com/114692581/218423767-ac6accff-4f31-495c-b1e5-b1472d370d1c.PNG) **tpd = 10.6162ns - 10.5014ns** |
+| Propagation Delay (tpd) |  | ![delay_postL](https://user-images.githubusercontent.com/114692581/218423767-ac6accff-4f31-495c-b1e5-b1472d370d1c.PNG) **tpd = 10.6162ns - 10.5014ns = 0.1148ns** |
 
 
 
