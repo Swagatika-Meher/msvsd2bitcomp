@@ -3,7 +3,13 @@
 # INDEX
 * [Week 0](#Week-0)
   - [Tools Installation](#Tools-Installation)
-  - [Create Inverter and perform pre-layout using Xschem and NgSpice](#Create-Inverter-and-perform-pre-layout-using-Xschem-and-NgSpice) 
+  - [Create Inverter and perform pre-layout using Xschem and NgSpice](#Create-Inverter-and-perform-pre-layout-using-Xschem-and-NgSpice)
+    - [DC Analysis of Inverter](#DC-Analysis-of-Inverter)
+    - [Transient Analysis of Inverter](#Transient-Analysis-of-Inverter)
+    - [Make Symbol from Schematic and an independent testbench circuit to simulate](#Make-Symbol-from-Schematic-and-an-independent-testbench-circuit-to-simulate)
+    - [Transient analysis of testbench schematic Inverter](#Transient-analysis-of-testbench-schematic-Inverter)
+  - [Post-layout using Inverter Schematic in Magic VLSI tool](#Post-layout-using-Inverter-Schematic-in-Magic-VLSI-tool)
+  - [Comparison between Pre-layout and Post-layout testbench Inverter](#Comparison-between-Pre-layout-and-Post-layout-testbench-Inverter)
 # Week 0
 ## **Prerequisites**
 * **Operating System** - Ubuntu 20.04
