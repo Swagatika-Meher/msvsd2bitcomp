@@ -286,14 +286,66 @@ set xbrushwidth=3
 
     ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
 
-  - Transient analysis of testbench schematic
+**Transient analysis of testbench schematic**
   
-    - Rise time : 1ns
-    - Fall time : 1ns
-    - On time : 5ns
-    - Period : 10ns
-  
-    ![66](https://user-images.githubusercontent.com/114692581/218246025-70524b2a-9349-4b5a-8a10-46d41fb9bf8e.PNG)
+  Rise time : 1ns
+  Fall time : 1ns
+  On time : 5ns
+  Period : 10ns
+* **Netlist of pre-layout testbench schematic**
+```
+** sch_path: /home/swagatika/Desktop/Circuits/Inverter_tb.sch
+**.subckt Inverter_tb Vin Vout
+*.ipin Vin
+*.opin Vout
+V1 Vin GND pulse(0 1.8 0ns 1ns 1ns 5ns 10ns)
+.save i(v1)
+VDD VDD GND 1.8
+.save i(vdd)
+x1 VDD Vout Vin GND Inverter_sym
+**** begin user architecture code
+
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.save all
+
+.tran 1n 30n
+.control
+run
+set color0=white
+set color1=black
+plot Vin Vout
+set xbrushwidth=3
+.save all
+.endc
+.end
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/swagatika/Desktop/Circuits/Inverter_sym.sym # of pins=4
+** sym_path: /home/swagatika/Desktop/Circuits/Inverter_sym.sym
+** sch_path: /home/swagatika/Desktop/Circuits/Inverter_sym.sch
+.subckt Inverter_sym vdd OUT IN gnd
+*.opin OUT
+*.ipin IN
+*.iopin vdd
+*.iopin gnd
+XPMOS OUT IN vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
+```
+* **NgSpice Plot**
+
+  ![66](https://user-images.githubusercontent.com/114692581/218246025-70524b2a-9349-4b5a-8a10-46d41fb9bf8e.PNG)
     
 # Post-layout using Inverter Schematic in Magic VLSI tool
 Create a working directory with `sky130A.tech`, `sky130.magicrc`, `sky130A.magicrc` files and use the following command in the same directory.
@@ -379,7 +431,7 @@ C11 vdd VSUBS 0.71fF
 C12 XPMOS/w_n211_n319# VSUBS 1.09fF
 .ends
 ```
-## Post-layout Netlist for transient analysis
+## Post-layout Netlist of testbench inverter schematic for transient analysis
 Selectively paste the pre-layout netlist of inverter testbench into the magic generated inverter spice netlist. The final post-layout netlist of inverter testbench is shown as following.
 ```
 * NGSPICE file created from Inverter_magic.ext - technology: sky130A
