@@ -469,9 +469,10 @@ Save the final post-layout magic netlist in the xschem directory and open the co
   
 # Comparison between Pre-layout and Post-layout testbench Inverter
 
-| Transient Characteristics | Pre-layout | Post-layout |
-| ------------------------- | ---------- | ----------- |
-| NgSpice Plots |   | ![delay_postL](https://user-images.githubusercontent.com/114692581/218403735-aa3f0559-b9f7-4c22-85a1-fbcf903319f3.PNG) |
+| Transient Characteristics (Timing Parameters) | Pre-layout | Post-layout |
+| --------------------------------------------- | ---------- | ----------- |
+| Rising Propagation Delay (tpdr) |   | ![Rising_delay](https://user-images.githubusercontent.com/114692581/218422246-0e7f18d5-9b3f-49ce-81ed-da2ccfdb28f4.PNG) 
+tpdr = 6.67ns - 6.5ns = 0.17ns |
 
 
 
