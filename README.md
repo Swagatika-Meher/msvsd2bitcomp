@@ -244,10 +244,11 @@ Threshold Voltage (Vth) = 838.1 mV  [Intersection point of Vin and Vout]
   ![55](https://user-images.githubusercontent.com/114692581/218245773-095ba650-198a-4ce8-9f97-3ef22a0a551b.PNG)
 
 ## Transient analysis of testbench schematic Inverter
-   - Rise time : 1ns
-   - Fall time : 1ns
-   - On time : 5ns
-   - Period : 10ns
+Input timing parameters:
+* Rise time : 1ns
+* Fall time : 1ns
+* On time : 5ns
+* Period : 10ns
   
 * **Netlist of pre-layout testbench schematic**
 ```
