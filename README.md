@@ -460,7 +460,7 @@ If we run an `ls` in same working directory we should see our `.ext` files, `.ma
   .ends
   .end
   ```
-Save the final post-layout magic netlist in the xschem directory and open the command window in the same directory. Type `<post-layout_file-name>.spice` in the command window.
+Save the final post-layout magic netlist in the xschem directory and open the command window in the same directory. Type `ngspice <post-layout_file-name>.spice` in the command window.
 
 * **NgSpice Plot**
 
