@@ -269,8 +269,9 @@ Input timing parameters:
 * Fall time : 1ns
 * On time : 5ns
 * Period : 10ns
-  
-**Netlist of pre-layout testbench schematic**
+
+**Netlist of pre-layout testbench schematic :**
+
 ```
 ** sch_path: /home/swagatika/Desktop/Circuits/Inverter_tb.sch
 **.subckt Inverter_tb Vin Vout
