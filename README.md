@@ -322,7 +322,9 @@ XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) *
 .end
 ```
 * **NgSpice Plot**
-
+  
+  ![PreL_ngspicecmd0](https://user-images.githubusercontent.com/114692581/218732903-d29ba49b-506d-4d5a-8b50-f7b6615577ef.PNG)
+  
   ![66](https://user-images.githubusercontent.com/114692581/218246025-70524b2a-9349-4b5a-8a10-46d41fb9bf8e.PNG)
     
 # Post-layout using Inverter Schematic in Magic VLSI tool
@@ -483,6 +485,11 @@ If we run an `ls` in same working directory we should see our `.ext` files, `.ma
   ```
 Save the final post-layout magic netlist in the xschem directory and open the command window in the same directory. Type `ngspice <post-layout_file-name>.spice` in the command window.
 
+![PL_ngspicecmd1](https://user-images.githubusercontent.com/114692581/218730829-d94bb032-c42f-4df8-8322-94f1ecf4e588.PNG)
+
+![PL_ngspicecmd2](https://user-images.githubusercontent.com/114692581/218731173-b5fa65f4-fa39-48a3-8515-7edd7c261566.PNG)
+
+![PL_ngspicecmd3](https://user-images.githubusercontent.com/114692581/218731517-8bc13179-226e-43b9-8514-db0fb51fc13d.PNG)
 
 
 * **NgSpice Plot**
