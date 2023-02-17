@@ -54,14 +54,57 @@ Open magic tool and `go to file --> read GDS --> open the .gds file` and view th
 
 ![AL5](https://user-images.githubusercontent.com/114692581/219689580-306a729e-0dfb-4744-944d-cc0e319591a2.PNG)
 
-Now, click `i` and go to `Tkcon.tcl` command window.
+Now, click `i` and go to `Tkcon.tcl` command window. Type the following command to extract the netlist.
+```
+extract do local
+extract all
+ext2spice lvs
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+* Align post layout spice file is created in work directory,
+```
+* NGSPICE file created from INVERTER_SYM_0.ext - technology: sky130A
 
+.subckt PMOS_S_48783884_X1_Y1_1676643947_1676643947 a_200_252# w_0_0# a_230_525# VSUBS
+X0 a_230_525# a_200_252# w_0_0# w_0_0# sky130_fd_pr__pfet_01v8 ad=1.176e+11p pd=1.4e+06u as=2.226e+11p ps=2.74e+06u w=420000u l=150000u
+X1 w_0_0# a_200_252# a_230_525# w_0_0# sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+C0 a_200_252# a_230_525# 0.12fF
+C1 w_0_0# a_230_525# 0.78fF
+C2 a_200_252# w_0_0# 0.87fF
+C3 a_230_525# VSUBS -0.05fF
+C4 a_200_252# VSUBS 0.10fF
+C5 w_0_0# VSUBS 2.97fF
+.ends
 
+.subckt NMOS_S_71820045_X1_Y1_1676643946_1676643947 a_147_504# a_200_252# a_230_504#
+X0 a_230_504# a_200_252# a_147_504# a_147_504# sky130_fd_pr__nfet_01v8 ad=1.764e+11p pd=1.82e+06u as=3.339e+11p ps=3.58e+06u w=630000u l=150000u
+X1 a_147_504# a_200_252# a_230_504# a_147_504# sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=630000u l=150000u
+C0 a_230_504# a_200_252# 0.11fF
+C1 a_230_504# a_147_504# 0.73fF
+C2 a_200_252# a_147_504# 0.93fF
+.ends
 
+.subckt INV_85967302_0_0_1676643947 m1_312_1400# VSUBS li_405_571#
+XPMOS_S_48783884_X1_Y1_1676643947_1676643947_0 li_405_571# PMOS_S_48783884_X1_Y1_1676643947_1676643947_0/w_0_0#
++ m1_312_1400# VSUBS PMOS_S_48783884_X1_Y1_1676643947_1676643947
+XNMOS_S_71820045_X1_Y1_1676643946_1676643947_0 VSUBS li_405_571# m1_312_1400# NMOS_S_71820045_X1_Y1_1676643946_1676643947
+C0 PMOS_S_48783884_X1_Y1_1676643947_1676643947_0/w_0_0# li_405_571# 0.34fF
+C1 li_405_571# m1_312_1400# 0.09fF
+C2 PMOS_S_48783884_X1_Y1_1676643947_1676643947_0/w_0_0# m1_312_1400# 0.01fF
+C3 m1_312_1400# VSUBS 0.68fF
+C4 li_405_571# VSUBS 1.57fF
+C5 PMOS_S_48783884_X1_Y1_1676643947_1676643947_0/w_0_0# VSUBS 3.02fF
+.ends
 
-
-
-
+.subckt INVERTER_SYM_0
+XINV_85967302_0_0_1676643947_0 OUT GND IN INV_85967302_0_0_1676643947
+C0 OUT GND 0.67fF
+C1 IN GND 1.35fF
+C2 INV_85967302_0_0_1676643947_0/PMOS_S_48783884_X1_Y1_1676643947_1676643947_0/w_0_0# GND 2.97fF
+.ends
+```
+THIS IS NOT COMPLETED YET AS POST LAYOUT SIMULATIONS ARE NOT EXACTLY MATCHING. HAVE TO DEBUG AT EVERY TRANSISTOR AND IDENTFY WHERE IT IS FAILING.
 
 
 
