@@ -10,6 +10,8 @@
     - [Transient analysis of testbench schematic Inverter](#Transient-analysis-of-testbench-schematic-Inverter)
   - [Post-layout using Inverter Schematic in Magic VLSI tool](#Post-layout-using-Inverter-Schematic-in-Magic-VLSI-tool)
   - [Comparison between Pre-layout and Post-layout testbench Inverter](#Comparison-between-Pre-layout-and-Post-layout-testbench-Inverter)
+  - [Inverter Post-layout characterization using ALIGN tool](#Inverter-Post-layout-characterization-using-ALIGN-tool)
+    - [Generated .lef and .gds files in KLayout](#Generated-.lef-and-.gds-files-in-KLayout)
 # Week 0
 ## **Prerequisites**
 * **Operating System** - Ubuntu 20.04
