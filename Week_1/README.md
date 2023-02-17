@@ -32,10 +32,6 @@ XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=150n W=630n nf=2
 
 ![AL2](https://user-images.githubusercontent.com/114692581/219681985-03b70156-38d2-477a-8995-5468196b7505.PNG)
 
-To extract the spice netlist of above post-layout go to MAGIC tool and read the .gds file.
-Open magic tool and `go to file --> read GDS --> open the .gds file` and view the layout in magic tool.
-
-
 
 ## Generated .lef and .gds files in KLayout
 * **.gds**
@@ -45,6 +41,10 @@ Open magic tool and `go to file --> read GDS --> open the .gds file` and view th
 * **.lef**
   
   ![AL4](https://user-images.githubusercontent.com/114692581/219683450-50499c01-f503-4be7-a3dd-5f3db415785d.PNG)
+  
+
+To extract the spice netlist of above post-layout go to MAGIC tool and read the .gds file.
+Open magic tool and `go to file --> read GDS --> open the .gds file` and view the layout in magic tool.
 
     
 
