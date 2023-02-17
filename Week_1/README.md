@@ -572,7 +572,8 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 
 * **Comparison between Pre-layout and Post-layout testbench of function schematic :**
 
-|  | Pre-layout | Post-layout |
+| Function | Pre-layout | Post-layout |
+| -------- | ---------- | ----------- |
 | Output [Fn] | ![AL15](https://user-images.githubusercontent.com/114692581/219757542-b727fba6-980b-46d7-acf4-f64cc116a057.PNG) | ![AL16](https://user-images.githubusercontent.com/114692581/219757731-f4809208-c9fe-4b14-8024-1a1d5e34ba97.PNG) |
 
 
