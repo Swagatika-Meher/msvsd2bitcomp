@@ -11,4 +11,11 @@
 | 6 |   | Compare pre-layout and post-layout using [2] & [4] | ✔️ |
 | 7 |   | Enroll in free VSD custom layout course | ✔️ |
 | 8 |   | Update findings on GitHub repo with the title “Week 0” | ✔️ |
-| 9 |   | Inverter post-layout characterization using [3] | ✔️ |
+| 9 | 1 | Install ALIGN tool | ✔️ |
+| 10 |   | Inverter post-layout characterization using [9] | ✔️ |
+| 11 |   | Compare [10] and [5] | In progress |
+| 12 |   | Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS | ✔️ |
+| 13 |   | Post layout characterization using magic/ngspice and SKY130 PDKs (xschem technique) | ✔️ |
+| 14 |   | Post layout characterization using ALIGN | ✔️ |
+| 15 |   | Compare [14] and [15] | In progress |
+| 16 |   | Update findings on GitHub repo with the title “Week 1” | -- |
