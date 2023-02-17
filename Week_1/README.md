@@ -46,5 +46,9 @@ XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=150n W=630n nf=2
 To extract the spice netlist of above post-layout go to MAGIC tool and read the .gds file.
 Open magic tool and `go to file --> read GDS --> open the .gds file` and view the layout in magic tool.
 
+![AL5](https://user-images.githubusercontent.com/114692581/219689580-306a729e-0dfb-4744-944d-cc0e319591a2.PNG)
+
+Now, click `i` and go to `Tkcon.tcl` command window.
+
     
 
