@@ -11,4 +11,4 @@
 | 6 |   | Compare pre-layout and post-layout using [2] & [4] | ✔️ |
 | 7 |   | Enroll in free VSD custom layout course | ✔️ |
 | 8 |   | Update findings on GitHub repo with the title “Week 0” | ✔️ |
-| 9 | 1 | Inverter post-layout characterization using [3] |  |
+| 9 |   | Inverter post-layout characterization using [3] | ✔️ |
