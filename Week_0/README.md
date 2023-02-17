@@ -1,18 +1,5 @@
 # msvsd2bitcomp
 # VSD Mixed Signal PD Research
-
-| Sl. No. | Week | Topics | Status |
-| ------- | ---- | ------ | ------ |
-| 1 | 0 | Install Oracle Virtual Box with Ubuntu 20.04 | ✔️ |
-| 2 |   | Install magic and SKY130 PDKs | ✔️ |
-| 3 |   | Install ALIGN tool | ✔️ |
-| 4 |   | Create Inverter and perform pre-layout using Xschem and NgSpice | ✔️ |
-| 5 |   | Inverter post-layout characterization using [2] | ✔️ |
-| 6 |   | Compare pre-layout and post-layout using [2] & [4] | ✔️ |
-| 7 |   | Enroll in free VSD custom layout course | ✔️ |
-| 8 |   | Update findings on GitHub repo with the title “Week 0” | ✔️ |
-
-
 # INDEX
 * [Week 0](#Week-0)
   - [Tools Installation](#Tools-Installation)
@@ -514,6 +501,23 @@ For accurate estimation of propagation delay, the following input timing paramet
 **tpdf :** falling propagation delay [From input to falling output crossing Vdd/2] = time taken by output to fall to its 50% value - time taken by the input to rise to its 50% value
 
 Right click and stretch on the plots of Vin and Vout. For delay calculations, stretch the plot until it reaches to the approximately 50% of Vdd. Click on Vin and Vout plots and the x and y- coordinate points will be shown on ngspice command window. 
+# Inverter Post-layout characterization using ALIGN tool
+Everytime start the ALIGN tool by running the following commands.
+```
+$ python3 -m venv general
+$ source general/bin/activate
+```
+Then, go to ALIGN-public directory,
+```
+$ mkdir work
+$ cd work
+```
+Running the inverter pre-layout spice netlist on Sky130pdk,
+```
+schematic2layout.py ../ALIGN-pdk-sky130/examples/Inverter -p ../pdks/SKY130_PDK/
+```
+
+
 
 
 
