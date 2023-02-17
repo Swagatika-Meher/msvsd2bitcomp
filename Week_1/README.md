@@ -64,6 +64,7 @@ Now, click `i` and go to `Tkcon.tcl` command window.
 
 # Pre-layout simulation of a function using Xschem and NgSpice
 Given, $\{F_n} = \overline {\left( {B + D} \right) \cdot \left( {A + C} \right) + E \cdot F} \$
+
 An initial schematic of given function is made by placing components from the open_pdk library in Xschem simulator.
 
 ![AL6](https://user-images.githubusercontent.com/114692581/219730457-4158080e-1cb7-4da7-9d6d-95557cce1da7.PNG)
@@ -192,6 +193,18 @@ XM12 net5 F Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * 
 ![AL10](https://user-images.githubusercontent.com/114692581/219740253-6e5c411d-d8a4-45b5-a62b-1757263ae5c8.PNG)
 
 ![AL11](https://user-images.githubusercontent.com/114692581/219740297-b4cfb1cb-a158-44a1-92e6-317070777e14.PNG)
+
+# Post-layout using given function Schematic in Magic VLSI tool and sky130 PDKs
+Open Magic VLSI tool using below command.
+```
+$ magic -d XR
+```
+OR
+```
+$ magic -T sky130A.tech
+```
+Once import the `.spice` file, an empty inverter cell will be visible with black bounding box. Move cursor over the cell and press `s`. Then press `x`. Save the `.mag` files in the same working directory. Navigate to `.mag` file using the terminal and rename the files to match the missing cell name displayed on the `tkcon` window. Reload the renamed `.mag` file in magic layout and expand the cell. NFET, PFET and the metal contacts will be visible. Place the cells and route the metal1 and metal2 layer such that the layout should be DRC free as shown below.
+
 
 
     
