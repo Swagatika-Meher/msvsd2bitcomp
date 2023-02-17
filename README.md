@@ -7,13 +7,13 @@
 | 2 |   | Install magic and SKY130 PDKs | ✔️ |
 | 3 |   | Install ALIGN tool | ✔️ |
 | 4 |   | Create Inverter and perform pre-layout using Xschem and NgSpice | ✔️ |
-| 5 |   | Inverter post-layout characterization using [2] | ✔️ |
+| 5 |   | Inverter post-layout characterization using magic and sky130 PDKs | ✔️ |
 | 6 |   | Compare pre-layout and post-layout using [2] & [4] | ✔️ |
 | 7 |   | Enroll in free VSD custom layout course | ✔️ |
 | 8 |   | Update findings on GitHub repo with the title “Week 0” | ✔️ |
 | 9 | 1 | Install ALIGN tool | ✔️ |
-| 10 |   | Inverter post-layout characterization using [9] | ✔️ |
-| 11 |   | Compare [10] and [5] | In progress |
+| 10 |   | Inverter post-layout characterization using Align tool | ✔️ |
+| 11 |   | Compare Align tool post-layout and Magic tool post-layout | In progress |
 | 12 |   | Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS | ✔️ |
 | 13 |   | Post layout characterization using magic/ngspice and SKY130 PDKs (xschem technique) | ✔️ |
 | 14 |   | Post layout characterization using ALIGN | ✔️ |
