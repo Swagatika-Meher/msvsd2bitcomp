@@ -4,7 +4,7 @@
   - [Pre-layout simulation of a function using Xschem, NgSpice and sky130 PDKs](#Pre-layout-simulation-of-a-function-using-Xschem,-NgSpice-and-sky130-PDKs)
     - [Make Symbol from Schematic and an independent testbench circuit to simulate](#Make-Symbol-from-Schematic-and-an-independent-testbench-circuit-to-simulate)
   - [Post-layout using given function Schematic in Magic VLSI tool and sky130 PDKs](#Post-layout-using-given-function-Schematic-in-Magic-VLSI-tool-and-sky130-PDKs)
-    - [Comparison between Pre-layout and Post-layout testbench of function schematic :](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-function-schematic-:)
+    - [Comparison between Pre-layout and Post-layout testbench of function schematic :](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-function-schematic)
   - [Post-layout characterization of given function using ALIGN tool](#Post-layout-characterization-of-given-function-using-ALIGN-tool)
     - [Generated .lef and .gds files in KLayout](#Generated-.lef-and-.gds-files-in-KLayout)
     
@@ -26,27 +26,26 @@ schematic2layout.py ../ALIGN-pdk-sky130/examples/Inverter -p ../pdks/SKY130_PDK/
 ```
 A simple SPICE Netlist for inverter is written to generate .lef and .gds files,
 ```
-.subckt Inverter_sym vdd OUT IN gnd
+.subckt Inverter vdd OUT IN gnd
 
-XPMOS OUT IN vdd vdd sky130_fd_pr__pfet_01v8 L=150n W=420n nf=2
-XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=150n W=630n nf=2
+XPMOS OUT IN vdd vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2 m=1
+XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=150n W=1050n nf=2 m=1
 .ends
 .end
 ```
 
-![AL1](https://user-images.githubusercontent.com/114692581/219681953-f12afe7f-9225-4fad-aa02-79ac3b1a9666.PNG)
+![AL1](https://user-images.githubusercontent.com/114692581/220003250-a22ae0f0-72db-4fc7-9a3f-7d8c7476eb97.PNG)
 
-![AL2](https://user-images.githubusercontent.com/114692581/219681985-03b70156-38d2-477a-8995-5468196b7505.PNG)
-
+![AL2](https://user-images.githubusercontent.com/114692581/220003271-e09c7570-7918-4acf-89bf-b6bb9c6330ab.PNG)
 
 ## Generated .lef and .gds files in KLayout
 * **.gds**
   
-  ![AL3](https://user-images.githubusercontent.com/114692581/219683181-61a574ed-74c1-4856-8236-c8b3e8fadf41.PNG)
+  ![AL3](https://user-images.githubusercontent.com/114692581/220005343-14d89aa9-326f-4172-8da9-b43b92993445.PNG)
   
 * **.lef**
   
-  ![AL4](https://user-images.githubusercontent.com/114692581/219683450-50499c01-f503-4be7-a3dd-5f3db415785d.PNG)
+  ![AL4](https://user-images.githubusercontent.com/114692581/220005370-9aad1091-c8ab-46bd-8645-9389c645ecf5.PNG)
   
 
 To extract the spice netlist of above post-layout go to MAGIC tool and read the .gds file.
