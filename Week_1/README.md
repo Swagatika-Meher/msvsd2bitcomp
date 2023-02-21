@@ -30,8 +30,7 @@ A simple SPICE Netlist for inverter is written to generate .lef and .gds files,
 
 XPMOS OUT IN vdd vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2 m=1
 XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=150n W=1050n nf=2 m=1
-.ends
-.end
+.ends Inverter
 ```
 
 ![AL1](https://user-images.githubusercontent.com/114692581/220003250-a22ae0f0-72db-4fc7-9a3f-7d8c7476eb97.PNG)
