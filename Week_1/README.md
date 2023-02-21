@@ -83,16 +83,17 @@ X0 OUT IN GND GND sky130_fd_pr__nfet_01v8 ad=2.94e+11p pd=2.66e+06u as=5.565e+11
 X1 GND IN OUT GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+06u l=150000u
 X2 OUT IN VDD VDD sky130_fd_pr__pfet_01v8 ad=2.94e+11p pd=2.66e+06u as=5.565e+11p ps=5.26e+06u w=1.05e+06u l=150000u
 X3 VDD IN OUT VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+06u l=150000u
+C0 IN VDD 1.10fF
+C1 OUT VDD 0.79fF
+C2 IN OUT 0.31fF
 .ends
 
-*======manually added prelayout testbench netlist======
 V1 Vin GND pulse(0 1.8 0ns 1ns 1ns 5ns 10ns)
 .save i(v1)
 VDD VDD GND 1.8
 .save i(vdd)
 x1 VDD Vout Vin GND INVERTER_0
 **** begin user architecture code
-
 .lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
 .save all
