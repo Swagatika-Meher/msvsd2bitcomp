@@ -24,7 +24,7 @@ Running the inverter pre-layout spice netlist on Sky130pdk,
 ```
 schematic2layout.py ../ALIGN-pdk-sky130/examples/Inverter -p ../pdks/SKY130_PDK/
 ```
-A simple SPICE Netlist for inverter is written to generate .lef and .gds files,
+A simple SPICE Netlist for inverter is written in `.sp` format to generate .lef and .gds files,
 ```
 .subckt Inverter vdd OUT IN gnd
 
