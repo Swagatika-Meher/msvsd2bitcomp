@@ -19,3 +19,6 @@
 | 14 |   | Post layout characterization using ALIGN | ✔️ |
 | 15 |   | Compare [14] and [13] | In progress |
 | 16 |   | Update findings on GitHub repo with the title “Week 1” | ✔️ |
+| 17 | 2 | OpenROAD Installation | ✔️ |
+| 18 |   | OpenFASOC Installation | ✔️ |
+| 19 |   | OpenFASOC flow for Temperature Sensor Generation | ✔️ |
