@@ -13,7 +13,7 @@
 | 8 |   | Update findings on GitHub repo with the title “Week 0” | ✔️ |
 | 9 | 1 | Install ALIGN tool | ✔️ |
 | 10 |   | Inverter post-layout characterization using Align tool | ✔️ |
-| 11 |   | Compare Align tool post-layout and Magic tool post-layout | In progress |
+| 11 |   | Compare Align tool post-layout and Magic tool post-layout | ✔️ |
 | 12 |   | Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS | ✔️ |
 | 13 |   | Post layout characterization using magic/ngspice and SKY130 PDKs (xschem technique) | ✔️ |
 | 14 |   | Post layout characterization using ALIGN | ✔️ |
