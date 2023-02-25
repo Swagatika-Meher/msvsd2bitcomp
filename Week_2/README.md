@@ -77,4 +77,27 @@ Go to one of the generators with `cd openfasoc/generators/<generator_name>` and 
 
 ![AL26](https://user-images.githubusercontent.com/114692581/221373898-cd6847e1-4e67-4d36-9417-de51f32335e7.PNG)
 
+# OpenFASOC flow for Temperature Sensor Generation
+  * To configure circuit specifications, modify the `test.json` specfile in the `openfasoc/generators/temp-sense-gen/` folder.
+  * To run the default generator, `cd` into `openfasoc/generators/temp-sense-gen/` and execute the following commands.
+First Initialised open_pdk root
+```
+$ export PDK_ROOT=/usr/local/share/pdk
+$ make sky130hd_temp
+```
+The default circuit’s physical design generation can be divided into three parts:
+1. Verilog generation
+2. RTL-to-GDS flow (OpenROAD)
+3. Post-layout verification (DRC and LVS)
+
+**Verilog Generation**
+
+To run verilog generation,
+```
+$ make sky130hd_temp_verilog
+```
+![AL27](https://user-images.githubusercontent.com/114692581/221375088-cbff0643-fcc7-4ecd-ab21-8d4acc9e2216.PNG)
+
+    
+
 
