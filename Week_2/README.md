@@ -13,6 +13,7 @@ $ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
 $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
 ```
 # Installation of OpenFASOC
+OpenFASoC is a project focused on automated analog generation from user specification to GDSII with fully open-sourced tools. Run the below commands. Before installing OpenFASoC, some dependendies including Magic, Netgen, Klayout, Yosys and Openroad must be installed. Follow this link for dependendies installation.
 ```
 $ cd
 $ git clone https://github.com/idea-fasoc/openfasoc
