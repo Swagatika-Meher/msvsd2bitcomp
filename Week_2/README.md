@@ -45,6 +45,7 @@ $ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
 $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
 ```
 **Verifying OpenROAD Installation**
+
 The OpenROAD-flow-scripts repository has example designs, constraints and makefile flows.
 ```
 $ cd 
@@ -57,6 +58,7 @@ This builds the 'ibex' 32-bit RISC-V CPU core and the results end up here.
 ~/OpenROAD-flow-scripts/flow/results/sky130hd/ibex/base$
 ```
 **Installing Openfasoc,**
+
 ```
 $ cd
 $ git clone https://github.com/idea-fasoc/openfasoc
