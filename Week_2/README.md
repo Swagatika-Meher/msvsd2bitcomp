@@ -72,4 +72,6 @@ $ git clone https://github.com/idea-fasoc/openfasoc
 $ cd openfasoc
 $ sudo ./dependencies.sh
 ```
+![AL26](https://user-images.githubusercontent.com/114692581/221373898-cd6847e1-4e67-4d36-9417-de51f32335e7.PNG)
+
 
