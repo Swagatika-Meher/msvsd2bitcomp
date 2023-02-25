@@ -98,6 +98,20 @@ $ make sky130hd_temp_verilog
 ```
 ![AL27](https://user-images.githubusercontent.com/114692581/221375088-cbff0643-fcc7-4ecd-ab21-8d4acc9e2216.PNG)
 
+**Synthesis**
+
+The OpenROAD Flow starts with a flow configuration file config.mk, the chosen platform (sky130hd, for example) and the Verilog files are generated from the previous part.
+```
+$ export PDK_ROOT=/usr/local/share/pdk
+$ make sky130hd_temp
+```
+If will get some OpenROAD path error, follow the below commands.
+```
+$ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
+$ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
+$ export PDK_ROOT=/usr/local/share/pdk
+```
+This commands are initialised OpenROAD along with open_pdks path. The systhesis verilog codes in `/openfasoc/openfasoc/generators/temp-sense-gen/flow/results/sky130hd/tempsense`.
     
 
 
