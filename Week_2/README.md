@@ -57,6 +57,13 @@ This builds the 'ibex' 32-bit RISC-V CPU core and the results end up here.
 ```
 ~/OpenROAD-flow-scripts/flow/results/sky130hd/ibex/base$
 ```
+To see the results in OpenROAD’s GUI, type the below command.
+```
+make DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk gui_final
+```
+![AL25](https://user-images.githubusercontent.com/114692581/221372828-5082cf48-11db-4a56-a8e1-d4d6e6543249.PNG)
+
+
 **Installing Openfasoc,**
 
 ```
