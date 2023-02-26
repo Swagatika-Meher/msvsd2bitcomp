@@ -165,7 +165,7 @@ Here, using the generic template, extra blocks of counter, TEMP_ANALOG_hv.nl.v, 
 
 **Synthesis**
 
-The OpenROAD Flow starts with a flow configuration file config.mk, the chosen platform (sky130hd, for example) and the Verilog files are generated from the previous part.
+For completeing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd, for example) and the Verilog files are generated from the previous part.
 ```
 $ export PDK_ROOT=/usr/local/share/pdk
 $ make sky130hd_temp
@@ -177,6 +177,26 @@ $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow
 $ export PDK_ROOT=/usr/local/share/pdk
 ```
 This commands are initialised OpenROAD along with open_pdks path. The systhesis verilog codes in `/openfasoc/openfasoc/generators/temp-sense-gen/flow/results/sky130hd/tempsense`.
+
+For debugging purposes, it is also possible to generate only part of the flow, visualize the results in OpenROAD GUI or generate DEF files of all intermediary results. For doing so, the Makefile in `temp-sense-gen/flow/` contains special targets. After running `make sky130hd_temp` in `/openfasoc/openfasoc/generators/temp-sense-gen/` once, `cd` into the `/openfasoc/openfasoc/generators/temp-sense-gen/flow/` directory and use one of the commands from the following table.
+
+| Command | Function |
+| ------- | -------- |
+| make synth | Stops the flow after synthesis |
+| make floorplan | Stops the flow after floorplan |
+| make place | Stops the flow after placement |
+| make route | Stops the flow after routing |
+| make finish | Runs the whole RTL-to-GDS flow |
+| make gui_floorplan | Opens the design after floorplan in OpenROAD GUI |
+| make gui_place | Opens the design after placement in OpenROAD GUI |
+| make gui_route | Opens the design after routing in OpenROAD GUI |
+| make gui_final | Opens the finished design in OpenROAD |
+| make all_defs	| Creates DEF files in `flow/results/` of every step in the flow |
+| make print-ENV_VARIABLE_NAME | Prints the value of an env variable recognized by OpenROAD Flow |
+
+The final result is,
+
+
 
 More info of this section can be found [here](https://github.com/rakshit-23/OpenFASOC).
     
