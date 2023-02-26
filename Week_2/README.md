@@ -1,5 +1,13 @@
 # Installation of OpenFASOC
 OpenFASoC is a project focused on automated analog generation from user specification to GDSII with fully open-sourced tools. Run the below commands. Before installing OpenFASoC, some dependendies including Magic, Netgen, Klayout, Yosys and Openroad must be installed. Follow this [link](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_0) for Magic and Netgen installation.
+## Installation of KLayout
+Type the below command,
+```
+$ sudo apt install -y klayout
+```
+
+![AL29](https://user-images.githubusercontent.com/114692581/221417334-c2ecddd2-047b-4a8d-9584-509f89f5b4db.PNG)
+
 ## Installation of Yosys
 Packages needed by Yosys.
 ```
@@ -15,6 +23,8 @@ $ cd yosys
 $ make
 $ sudo make install
 ```
+
+![AL28](https://user-images.githubusercontent.com/114692581/221416969-d1ac345d-c349-42b2-8b08-35ac54557aa2.PNG)
 
 ## OpenRoad Installation
 Packages needed by OpenROAD
