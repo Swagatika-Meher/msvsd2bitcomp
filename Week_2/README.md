@@ -1,16 +1,16 @@
 # INDEX
 * [Week 2](#Week-2)
-* [Installation of OpenFASOC](Installation-of-OpenFASOC)
-  - [Installation of KLayout](Installation-of-KLayout)
-  - [Installation of Yosys](Installation-of-Yosys)
-  - [OpenRoad Installation](OpenRoad-Installation)
-    * [Verifying OpenROAD Installation](Verifying-OpenROAD-Installation)
-* [OpenFASoC: Temperature Sensor Generator](OpenFASoC-Temperature-Sensor-Generator)
-  - [Temperature Sensor Auxiliary Cells](Temperature-Sensor-Auxiliary-Cells)
-    * [Circuit](Circuit)
-  - [OpenFASOC flow for Temperature Sensor Generation](OpenFASOC-flow-for-Temperature-Sensor-Generation)
-    * [Verilog Generation](Verilog-Generation)
-    * [Synthesis](Synthesis)
+* [Installation of OpenFASOC](#Installation-of-OpenFASOC)
+  - [Installation of KLayout](#Installation-of-KLayout)
+  - [Installation of Yosys](#Installation-of-Yosys)
+  - [OpenRoad Installation](#OpenRoad-Installation)
+    * [Verifying OpenROAD Installation](#Verifying-OpenROAD-Installation)
+* [OpenFASoC: Temperature Sensor Generator](#OpenFASoC-Temperature-Sensor-Generator)
+  - [Temperature Sensor Auxiliary Cells](#Temperature-Sensor-Auxiliary-Cells)
+    * [Circuit](#Circuit)
+  - [OpenFASOC flow for Temperature Sensor Generation](#OpenFASOC-flow-for-Temperature-Sensor-Generation)
+    * [Verilog Generation](#Verilog-Generation)
+    * [Synthesis](#Synthesis)
     
 # Week 2    
 # Installation of OpenFASOC
