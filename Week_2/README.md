@@ -93,6 +93,20 @@ make DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk gui_final
 ```
 ![AL25](https://user-images.githubusercontent.com/114692581/221372828-5082cf48-11db-4a56-a8e1-d4d6e6543249.PNG)
 
+# OpenFASoC: Temperature Sensor Generator
+## Installing Openfasoc
+```
+$ cd
+$ git clone https://github.com/idea-fasoc/openfasoc
+$ cd openfasoc
+$ sudo ./dependencies.sh
+```
+**Run OpenFASoC Flow,**
+
+Go to one of the generators with `cd openfasoc/generators/<generator_name>` and run `make` to list down all the generator specific targets.
+
+![AL26](https://user-images.githubusercontent.com/114692581/221373898-cd6847e1-4e67-4d36-9417-de51f32335e7.PNG)
+
 An overview of how the Temperature Sensor Generator (temp-sense-gen) works internally in OpenFASoC.
 
 **Circuit**
@@ -108,21 +122,6 @@ The .gds and .lef files of HEADER and SLC cells are pre-created before the start
 The layout of the HEADER cell is shown below,
 
 
-
-
-# OpenFASoC: Temperature Sensor Generator
-## Installing Openfasoc
-```
-$ cd
-$ git clone https://github.com/idea-fasoc/openfasoc
-$ cd openfasoc
-$ sudo ./dependencies.sh
-```
-**Run OpenFASoC Flow,**
-
-Go to one of the generators with `cd openfasoc/generators/<generator_name>` and run `make` to list down all the generator specific targets.
-
-![AL26](https://user-images.githubusercontent.com/114692581/221373898-cd6847e1-4e67-4d36-9417-de51f32335e7.PNG)
 
 # OpenFASOC flow for Temperature Sensor Generation
   * To configure circuit specifications, modify the `test.json` specfile in the `openfasoc/generators/temp-sense-gen/` folder.
