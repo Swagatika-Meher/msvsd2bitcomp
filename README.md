@@ -3,7 +3,7 @@
 
 | Sl. No. | Week | Topics | Status |
 | ------- | ---- | ------ | ------ |
-| 1 | 0 | Install Oracle Virtual Box with Ubuntu 20.04 | ✔️ |
+| 1 | [0](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_0) | Install Oracle Virtual Box with Ubuntu 20.04 | ✔️ |
 | 2 |   | Install magic and SKY130 PDKs | ✔️ |
 | 3 |   | Install ALIGN tool | ✔️ |
 | 4 |   | Create Inverter and perform pre-layout using Xschem and NgSpice | ✔️ |
