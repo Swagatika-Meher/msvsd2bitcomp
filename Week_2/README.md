@@ -123,7 +123,14 @@ The .gds and .lef files of HEADER and SLC cells are pre-created before the start
 
 The layout of the HEADER cell is shown below,
 
+![AL31](https://user-images.githubusercontent.com/114692581/221420345-f8604103-822e-4a5a-aea2-0fa0e06b2558.PNG)
 
+
+The layout of the SLC cell is shown below,
+
+![AL32](https://user-images.githubusercontent.com/114692581/221420372-254af881-b470-4b6c-ac18-69624e1a4ff5.PNG)
+
+The .gds files exist in `~/openfasoc/openfasoc/generators/temp-sense-gen/blocks/sky130hd/gds`. 
 
 # OpenFASOC flow for Temperature Sensor Generation
   * To configure circuit specifications, modify the `test.json` specfile in the `openfasoc/generators/temp-sense-gen/` folder.
@@ -144,7 +151,16 @@ To run verilog generation,
 ```
 $ make sky130hd_temp_verilog
 ```
+By using `make sky130hd_temp_verilog`, `.jason` file will get generated. Temperature ranges from -20 C to 100 C are used in this file, and the parameter called "error" is chosen as the target for circuit optimization. In order to reduce error, the generator determines the number of headers and inverters based on the operating temperature range.
+The `test.json` file shown in the below screenshot corresponds to the temp_sense_gen.
+
+![AL33](https://user-images.githubusercontent.com/114692581/221421116-d80f2c95-aca5-46f8-93fb-9fc70233938f.PNG)
+
+
 ![AL27](https://user-images.githubusercontent.com/114692581/221375088-cbff0643-fcc7-4ecd-ab21-8d4acc9e2216.PNG)
+
+After running the `make sky130hd_temp_verilog` command the verilog files of `counter.v`, `TEMP_ANALOG_hv.nl.v`, `TEMP_ANALOG_lv.nl.v` are created in the src folder.
+Here, using the generic template, extra blocks of counter, TEMP_ANALOG_hv.nl.v, TEMP_ANALOG_lv.nl.v are created in the src folder. For the temperature specification of -20C to 100C, we see that three header files are required.
 
 **Synthesis**
 
@@ -160,6 +176,8 @@ $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow
 $ export PDK_ROOT=/usr/local/share/pdk
 ```
 This commands are initialised OpenROAD along with open_pdks path. The systhesis verilog codes in `/openfasoc/openfasoc/generators/temp-sense-gen/flow/results/sky130hd/tempsense`.
+
+The repository of this section can be found [here](https://github.com/rakshit-23/OpenFASOC)
     
 
 
