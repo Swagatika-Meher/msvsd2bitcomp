@@ -11,6 +11,8 @@
   - [OpenFASOC flow for Temperature Sensor Generation](OpenFASOC-flow-for-Temperature-Sensor-Generation)
     * [Verilog Generation](Verilog-Generation)
     * [Synthesis](Synthesis)
+    
+# Week 2    
 # Installation of OpenFASOC
 OpenFASoC is a project focused on automated analog generation from user specification to GDSII with fully open-sourced tools. Run the below commands. Before installing OpenFASoC, some dependendies including Magic, Netgen, Klayout, Yosys and Openroad must be installed. Follow this [link](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_0) for Magic and Netgen installation.
 ## Installation of KLayout
