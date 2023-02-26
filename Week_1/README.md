@@ -9,7 +9,7 @@
   - [Post-layout characterization of given function using ALIGN tool](#Post-layout-characterization-of-given-function-using-ALIGN-tool)
     - [Generated .lef and .gds files of given function in KLayout](#Generated-lef-and-gds-files-of-given-function-in-KLayout)
     
-    
+# Week 1    
 # Inverter Post-layout characterization using ALIGN tool
 Everytime start the ALIGN tool by running the following commands.
 ```
