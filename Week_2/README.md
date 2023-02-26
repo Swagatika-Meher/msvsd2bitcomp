@@ -152,6 +152,7 @@ To run verilog generation,
 $ make sky130hd_temp_verilog
 ```
 By using `make sky130hd_temp_verilog`, `.jason` file will get generated. Temperature ranges from -20 C to 100 C are used in this file, and the parameter called "error" is chosen as the target for circuit optimization. In order to reduce error, the generator determines the number of headers and inverters based on the operating temperature range.
+
 The `test.json` file shown in the below screenshot corresponds to the temp_sense_gen.
 
 ![AL33](https://user-images.githubusercontent.com/114692581/221421116-d80f2c95-aca5-46f8-93fb-9fc70233938f.PNG)
@@ -177,7 +178,7 @@ $ export PDK_ROOT=/usr/local/share/pdk
 ```
 This commands are initialised OpenROAD along with open_pdks path. The systhesis verilog codes in `/openfasoc/openfasoc/generators/temp-sense-gen/flow/results/sky130hd/tempsense`.
 
-The repository of this section can be found [here](https://github.com/rakshit-23/OpenFASOC)
+More info of this section can be found [here](https://github.com/rakshit-23/OpenFASOC).
     
 
 
