@@ -7,7 +7,7 @@
   - [Post-layout using given function Schematic in Magic VLSI tool and sky130 PDKs](#Post-layout-using-given-function-Schematic-in-Magic-VLSI-tool-and-sky130-PDKs)
     - [Comparison between Pre-layout and Post-layout testbench of function schematic](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-function-schematic)
   - [Post-layout characterization of given function using ALIGN tool](#Post-layout-characterization-of-given-function-using-ALIGN-tool)
-    - [Generated .lef and .gds files in KLayout](#Generated-lef-and-gds-files-in-KLayout)
+    - [Generated .lef and .gds files of given function in KLayout](#Generated-lef-and-gds-files-of-given-function-in-KLayout)
     
     
 # Inverter Post-layout characterization using ALIGN tool
@@ -663,7 +663,7 @@ XM12 net5 F Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=1050n nf=6 m=1
 
 ![AL18](https://user-images.githubusercontent.com/114692581/219784978-c3006d87-6b5d-4eb0-8555-75db46a5697e.PNG)
 
-## Generated .lef and .gds files in KLayout
+## Generated .lef and .gds files of given function in KLayout
 * **.gds**
   
   ![AL19](https://user-images.githubusercontent.com/114692581/219785353-a681ed65-a3f5-4868-ad03-f90a1a1d4c11.PNG)
