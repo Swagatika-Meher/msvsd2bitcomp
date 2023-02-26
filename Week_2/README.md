@@ -27,6 +27,26 @@ $ sudo make install
 ![AL28](https://user-images.githubusercontent.com/114692581/221416969-d1ac345d-c349-42b2-8b08-35ac54557aa2.PNG)
 
 ## OpenRoad Installation
+A design can be transformed from synthesized Verilog to a routed layout using the integrated chip physical design tool known as OpenROAD.
+An outline of steps used to build a chip using OpenROAD is shown below.
+
+1. Initialize floorplan - define the chip size and cell rows
+2. Place pins (for designs without pads )
+3. Place macro cells (RAMs, embedded macros)
+4. Insert substrate tap cells
+5. Insert power distribution network
+6. Macro Placement of macro cells
+7. Global placement of standard cells
+8. Repair max slew, max capacitance, and max fanout violations and long wires
+9. Clock tree synthesis
+10. Optimize setup/hold timing
+11. Insert fill cells
+12. Global routing (route guides for detailed routing)
+13. Antenna repair
+14. Detailed routing
+15. Parasitic extraction
+16. Static timing analysis
+
 Packages needed by OpenROAD
 ```
 $ sudo apt install -y cmake qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools \
@@ -74,6 +94,7 @@ make DESIGN_CONFIG=./designs/sky130hd/ibex/config.mk gui_final
 ![AL25](https://user-images.githubusercontent.com/114692581/221372828-5082cf48-11db-4a56-a8e1-d4d6e6543249.PNG)
 
 
+# OpenFASoC: Temperature Sensor Generator
 ## Installing Openfasoc
 ```
 $ cd
