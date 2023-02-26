@@ -118,6 +118,7 @@ Using the topology presented in this paper as a base, this generator develops a 
 Two manually created standard cells are used in the circuit to physically implement the analog blocks:
 1. HEADER cell, containing the transistors in subthreshold operation;
 2. SLC cell, containing the Split-Control Level Converter.
+
 The .gds and .lef files of HEADER and SLC cells are pre-created before the start of the Generator flow.
 The layout of the HEADER cell is shown below,
 
