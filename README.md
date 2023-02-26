@@ -19,7 +19,7 @@
 | 14 |   | Post layout characterization using ALIGN | ✔️ |
 | 15 |   | Compare [14] and [13] | In progress |
 | 16 |   | Update findings on GitHub repo with the title “Week 1” | ✔️ |
-| 17 | [2](https://github.com/Swagatika-Meher/msvsd2bitcomp/blob/main/Week_2/README.md) | Yosys Installation | ✔️ |
+| 17 | [2](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_2) | Yosys Installation | ✔️ |
 | 18 |   | OpenROAD Installation | ✔️ |
 | 19 |   | OpenFASOC Installation | ✔️ |
 | 20 |   | OpenFASOC flow for Temperature Sensor Generation | ✔️ |
