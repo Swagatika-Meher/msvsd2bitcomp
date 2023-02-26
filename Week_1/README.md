@@ -1,11 +1,11 @@
 # INDEX
 * [Week 1](#Week-1)
   - [Inverter Post-layout characterization using ALIGN tool](#Inverter-Post-layout-characterization-using-ALIGN-tool)
-    - [Generated .lef and .gds files in KLayout](#Generated-.lef-and-.gds-files-in-KLayout)
+    - [Generated .lef and .gds files in KLayout](#Generated-lef-and-gds-files-in-KLayout)
   - [Pre-layout simulation of a function using Xschem, NgSpice and sky130 PDKs](#Pre-layout-simulation-of-a-function-using-Xschem,-NgSpice-and-sky130-PDKs)
     - [Make Symbol from Schematic and an independent testbench circuit to simulate](#Make-Symbol-from-Schematic-and-an-independent-testbench-circuit-to-simulate)
   - [Post-layout using given function Schematic in Magic VLSI tool and sky130 PDKs](#Post-layout-using-given-function-Schematic-in-Magic-VLSI-tool-and-sky130-PDKs)
-    - [Comparison between Pre-layout and Post-layout testbench of function schematic :](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-function-schematic)
+    - [Comparison between Pre-layout and Post-layout testbench of function schematic](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-function-schematic)
   - [Post-layout characterization of given function using ALIGN tool](#Post-layout-characterization-of-given-function-using-ALIGN-tool)
     - [Generated .lef and .gds files in KLayout](#Generated-.lef-and-.gds-files-in-KLayout)
     
