@@ -196,7 +196,7 @@ For debugging purposes, it is also possible to generate only part of the flow, v
 
 The final result is,
 
-
+![AL34](https://user-images.githubusercontent.com/114692581/221422513-3c084d9e-4fe0-428e-a669-acf3243d2180.PNG)
 
 More info of this section can be found [here](https://github.com/rakshit-23/OpenFASOC).
     
