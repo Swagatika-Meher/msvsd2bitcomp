@@ -1,5 +1,5 @@
 # INDEX
-* [Week 1](#Week-1)
+* [Week 2](#Week-2)
   - [Installation of OpenFASOC](Installation-of-OpenFASOC)
     - [Installation of KLayout](Installation-of-KLayout)
     - [Installation of Yosys](Installation-of-Yosys)
