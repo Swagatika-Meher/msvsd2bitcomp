@@ -120,11 +120,11 @@ Given, $\{F_n} = \overline {\left( {B + D} \right) \cdot \left( {A + C} \right) 
 
 An initial schematic of given function is made by placing components from the open_pdk library in Xschem simulator.
 
-![AL6](https://user-images.githubusercontent.com/114692581/219730457-4158080e-1cb7-4da7-9d6d-95557cce1da7.PNG)
+![01](https://user-images.githubusercontent.com/114692581/221765550-0d743d1a-e7fd-452a-8fe2-eef53f142608.PNG)
 
 * **NgSpice Plot**
 
-  ![AL7](https://user-images.githubusercontent.com/114692581/219732324-3a58d18f-90ba-43fb-82fa-2d2e33d41eea.PNG)
+  ![02](https://user-images.githubusercontent.com/114692581/221765604-9317e0fa-d18d-4659-b67b-528312627150.PNG)
   
 ## Make Symbol from Schematic and an independent testbench circuit to simulate
 The following is schematic of function with metal pins.
@@ -133,7 +133,7 @@ The following is schematic of function with metal pins.
 
 Then, go to Symbol and click on make symbol from schematic. To create a layout of this circuit but first, we need to functionally validate it and for that we need to create an independent testbench with the schematic as a symbol.
 
-![AL9](https://user-images.githubusercontent.com/114692581/219737128-d0b6255e-92a4-4e91-b217-8fb175ce0f05.PNG)
+![03](https://user-images.githubusercontent.com/114692581/221765681-ac9f3ea5-efd2-41d5-914b-32c808a427c6.PNG)
 
 * **Netlist of pre-layout testbench schematic :**
 ```
@@ -154,31 +154,30 @@ Then, go to Symbol and click on make symbol from schematic. To create a layout o
 *.iopin VDD
 *.iopin VDD
 *.opin Fn
-V1 A GND pulse(0 1.8 0ns 10ps 10ps 1ns 2ns)
+V1 A GND pulse(0 1.8 0.1n 10p 10p 1n 2n)
 .save i(v1)
-V2 B GND pulse(0 1.8 0ns 10ps 10ps 2ns 4ns)
+V2 B GND pulse(0 1.8 0.2n 10p 10p 1n 2n)
 .save i(v2)
-V3 C GND pulse(0 1.8 0ns 10ps 10ps 3ns 6ns)
+V3 C GND pulse(0 1.8 0.3n 10p 10p 1n 2n)
 .save i(v3)
-V4 D GND pulse(0 1.8 0ns 10ps 10ps 4ns 8ns)
+V4 D GND pulse(0 1.8 0.4n 10p 10p 1n 2n)
 .save i(v4)
-V5 E GND pulse(0 1.8 0ns 10ps 10ps 5ns 10ns)
+V5 E GND pulse(0 1.8 0.5n 10p 10p 1n 2n)
 .save i(v5)
-V6 F GND pulse(0 1.8 0ns 10ps 10ps 6ns 12ns)
+V6 F GND pulse(0 1.8 0.6n 10p 10p 1n 2n)
 .save i(v6)
 V7 VDD GND 1.8
 .save i(v7)
 x1 VDD A B D C F E Fn GND function_pre_sym
 **** begin user architecture code
 
-.tran 0.1n 24n
+.tran 10p 4n
 .control
 run
-plot A+30 B+25 C+20 D+15 E+10 F+5 Fn
+plot A+3 B+3 C+3 D+3 E+3 F+3 Fn
 .save all
 .endc
 .end
-
 
 .lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
@@ -243,9 +242,9 @@ XM12 net5 F Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * 
 ```
 * **NgSpice Plot :**
 
-![AL10](https://user-images.githubusercontent.com/114692581/219740253-6e5c411d-d8a4-45b5-a62b-1757263ae5c8.PNG)
+![05](https://user-images.githubusercontent.com/114692581/221766071-e0ebd28a-9689-4ed6-ad1e-6d42a5d1eb95.PNG)
 
-![AL11](https://user-images.githubusercontent.com/114692581/219740297-b4cfb1cb-a158-44a1-92e6-317070777e14.PNG)
+![04](https://user-images.githubusercontent.com/114692581/221766109-f5f7cab7-7016-4d67-9357-77ae40cb6134.PNG)
 
 # Post-layout using given function Schematic in Magic VLSI tool and sky130 PDKs
 Open Magic VLSI tool using below command.
