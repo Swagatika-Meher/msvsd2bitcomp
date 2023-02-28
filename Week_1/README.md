@@ -598,7 +598,7 @@ V6 F GND pulse(0 1.8 0.6n 10p 10p 1n 2n)
 .save i(v6)
 V7 VDD GND 1.8
 .save i(v7)
-x1 VDD A B D C F E Fn GND function_pre_sym
+x1 VDD A B D C F E Fn GND function_post
 **** begin user architecture code
 
 .tran 10p 4n
