@@ -961,8 +961,10 @@ C40 VDD D 0.65fF
 C41 li_2469_571# FN -0.00fF
 C42 C D 0.01fF
 C43 VDD B 0.91fF
-C44 C GND 0.19fF **FLOATING
-C45 A GND 0.11fF **FLOATING
+C44 C GND 0.19fF
+**FLOATING
+C45 A GND 0.11fF
+**FLOATING
 C46 B GND 1.70fF
 C47 D GND 1.94fF
 C48 VDD GND 10.79fF
@@ -1010,9 +1012,18 @@ plot A+3 B+3 C+3 D+3 E+3 F+3 Fn
 ```
 * **NgSpice plot**
   
-  ![AL23](https://user-images.githubusercontent.com/114692581/220418424-16c7935c-75ed-41ee-8cc9-69f4867024e9.PNG)
+  ![a6](https://user-images.githubusercontent.com/114692581/221786361-62744746-7674-4f78-9997-86f300832ee9.PNG)
   
-  ![AL24](https://user-images.githubusercontent.com/114692581/220418679-76d778fc-095a-4396-b917-23e565247dc7.PNG)
+  ![a7](https://user-images.githubusercontent.com/114692581/221786410-cbbbb45a-b11b-48fb-812f-4ee6470071d4.PNG)
+  
+* **Comparison between Pre-layout and Post-layout testbench of function schematic :**
+
+| Function | Pre-layout | Post-layout [MAGIC] | Post-layout [ALIGN] |
+| -------- | ---------- | ------------------- | ------------------- |
+| Output [Fn] | ![08](https://user-images.githubusercontent.com/114692581/221770284-c1a8f964-d075-4fe0-a264-633653a3f09c.PNG) | ![09](https://user-images.githubusercontent.com/114692581/221770339-2c628a7a-ed0e-4f5e-81f5-e6ca7175c2d0.PNG) | ![a8](https://user-images.githubusercontent.com/114692581/221786903-2a1d000f-0dd4-47ab-a9c4-6aefd50b1c33.PNG) |
+
+
+
 
 
 
