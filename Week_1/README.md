@@ -627,7 +627,7 @@ Save the final post-layout magic netlist in the xschem directory and open the co
 
 | Function | Pre-layout | Post-layout |
 | -------- | ---------- | ----------- |
-| Output [Fn] | ![AL15](https://user-images.githubusercontent.com/114692581/219757542-b727fba6-980b-46d7-acf4-f64cc116a057.PNG) | ![AL16](https://user-images.githubusercontent.com/114692581/219757731-f4809208-c9fe-4b14-8024-1a1d5e34ba97.PNG) |
+| Output [Fn] | ![08](https://user-images.githubusercontent.com/114692581/221770284-c1a8f964-d075-4fe0-a264-633653a3f09c.PNG) | ![09](https://user-images.githubusercontent.com/114692581/221770339-2c628a7a-ed0e-4f5e-81f5-e6ca7175c2d0.PNG) |
 
 # Post-layout characterization of given function using ALIGN tool
 Go to ALIGN-public directory,
