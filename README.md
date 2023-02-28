@@ -17,7 +17,7 @@
 | 12 |   | Create the design shown in section 7 of the course and perform pre-layout using xschem/ngspice using SKY130 PDKS | ✔️ |
 | 13 |   | Post layout characterization using magic/ngspice and SKY130 PDKs (xschem technique) | ✔️ |
 | 14 |   | Post layout characterization using ALIGN | ✔️ |
-| 15 |   | Compare [14] and [13] | In progress |
+| 15 |   | Compare [14] and [13] | ✔️ |
 | 16 |   | Update findings on GitHub repo with the title “Week 1” | ✔️ |
 | 17 | [2](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_2) | Yosys Installation | ✔️ |
 | 18 |   | OpenROAD Installation | ✔️ |
