@@ -617,11 +617,11 @@ plot A+3 B+3 C+3 D+3 E+3 F+3 Fn
 ```
 Save the final post-layout magic netlist in the xschem directory and open the command window in the same directory. Type ngspice `<post-layout_file-name>.spice` in the command window.
 
-![AL13](https://user-images.githubusercontent.com/114692581/219753040-1a9f3846-5d0b-45f6-a9cd-4b63b3980bb8.PNG)
+![06](https://user-images.githubusercontent.com/114692581/221768682-030cf317-a907-475a-b8c3-5a3f7e1217c1.PNG)
 
 **NgSpice Plot :**
 
-![AL14](https://user-images.githubusercontent.com/114692581/219753668-373b8523-0724-44c1-826f-aca7de075041.PNG)
+![07](https://user-images.githubusercontent.com/114692581/221768733-6c5884a3-2a64-4f66-87a1-6192cfbbdab0.PNG)
 
 * **Comparison between Pre-layout and Post-layout testbench of function schematic :**
 
