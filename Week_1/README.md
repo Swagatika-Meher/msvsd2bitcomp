@@ -428,7 +428,8 @@ C109 Gnd VSUBS 2.79fF
 
 Selectively paste the pre-layout netlist of function testbench into the magic generated inverter spice netlist. The final post-layout netlist (Magic tool) of inverter testbench is shown as following.
 
-```* NGSPICE file created from function_post.ext - technology: sky130A
+```
+* NGSPICE file created from function_post.ext - technology: sky130A
 
 .subckt sky130_fd_pr__nfet_01v8_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
 X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
@@ -581,32 +582,32 @@ C109 Gnd VSUBS 2.79fF
 .ends
 
 
-V1 A GND pulse(0 1.8 0ns 10ps 10ps 1ns 2ns)
+*========Manually added===========
+
+V1 A GND pulse(0 1.8 0.1n 10p 10p 1n 2n)
 .save i(v1)
-V2 B GND pulse(0 1.8 0ns 10ps 10ps 2ns 4ns)
+V2 B GND pulse(0 1.8 0.2n 10p 10p 1n 2n)
 .save i(v2)
-V3 C GND pulse(0 1.8 0ns 10ps 10ps 3ns 6ns)
+V3 C GND pulse(0 1.8 0.3n 10p 10p 1n 2n)
 .save i(v3)
-V4 D GND pulse(0 1.8 0ns 10ps 10ps 4ns 8ns)
+V4 D GND pulse(0 1.8 0.4n 10p 10p 1n 2n)
 .save i(v4)
-V5 E GND pulse(0 1.8 0ns 10ps 10ps 5ns 10ns)
+V5 E GND pulse(0 1.8 0.5n 10p 10p 1n 2n)
 .save i(v5)
-V6 F GND pulse(0 1.8 0ns 10ps 10ps 6ns 12ns)
+V6 F GND pulse(0 1.8 0.6n 10p 10p 1n 2n)
 .save i(v6)
 V7 VDD GND 1.8
 .save i(v7)
-x1 VDD A B D C F E Fn GND function_post
+x1 VDD A B D C F E Fn GND function_pre_sym
 **** begin user architecture code
 
-
-.tran 0.1n 24n
+.tran 10p 4n
 .control
 run
-plot A+30 B+25 C+20 D+15 E+10 F+5 Fn
+plot A+3 B+3 C+3 D+3 E+3 F+3 Fn
 .save all
 .endc
 .end
-
 
 .lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
