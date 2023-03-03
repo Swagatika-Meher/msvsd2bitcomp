@@ -220,7 +220,7 @@ The final GDS view of the temperature sensor generator in KLayout,
 
 ![AL34](https://user-images.githubusercontent.com/114692581/221422513-3c084d9e-4fe0-428e-a669-acf3243d2180.PNG)
 
-More info of this section can be found [here](https://github.com/rakshit-23/OpenFASOC).
+More details of this section can be found [here](https://github.com/rakshit-23/OpenFASOC).
     
 
 
