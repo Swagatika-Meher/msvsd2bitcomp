@@ -296,6 +296,18 @@ plot out
 .end
 ```
 
+**NgSpice Plot**
+
+![Z11](https://user-images.githubusercontent.com/114692581/222719521-7fc77661-3a7a-46f1-8911-a7760dedbc63.PNG)
+
+![Z12](https://user-images.githubusercontent.com/114692581/222719549-21fa9627-a257-49ad-a503-9824516d401d.PNG)
+
+
+**Comparison between Pre-layout and Post-layout testbench of function schematic :**
+| Ring Oscillator | Pre-layout [Xschem] | Post-layout [ALIGN] |
+| --------------- | ------------------- | ------------------- |
+| Output | ![z4](https://user-images.githubusercontent.com/114692581/222720417-451c814c-81a3-4c1a-9c27-5fd26459a1c2.PNG) | ![Z12](https://user-images.githubusercontent.com/114692581/222720348-c77760ba-ae89-405f-837c-703586a5bf46.PNG) |
+
 
 
 
