@@ -1,5 +1,8 @@
 Noise figure (NF) usually refers how much the noise added by the transistor affects the quality of the signal. A lower noise figure is better because it means that the transistor adds less noise to the signal.
-**Input netlist for ALIGN tool,**
+
+# Post-layout of Ring Oscillator using ALIGN
+
+Input netlist for ALIGN tool when **NF=2**,
 ```
 .subckt RingOscillator Vdd out Gnd
 
