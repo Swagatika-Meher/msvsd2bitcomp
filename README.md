@@ -23,3 +23,5 @@
 | 18 |   | OpenROAD Installation | ✔️ |
 | 19 |   | OpenFASOC Installation | ✔️ |
 | 20 |   | OpenFASOC flow for Temperature Sensor Generation | ✔️ |
+| 21 | [3] | Xschem: Pre-layout simulation for Ring Oscillator | ✔️ |
+| 22 |   | ALIGN: Post-layout simulation for Ring Oscillator | ✔️ |
