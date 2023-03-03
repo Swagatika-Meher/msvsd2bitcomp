@@ -10,7 +10,7 @@
     - [Generated .lef and .gds files of given function in KLayout](#Generated-lef-and-gds-files-of-given-function-in-KLayout)
     
 # Week 1
-The installation of ALIGN tool is discussed in "Week_0" section.
+The installation of ALIGN tool is discussed in ["Week_0"](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_0) section.
 # Inverter Post-layout characterization using ALIGN tool
 Everytime start the ALIGN tool by running the following commands.
 ```
