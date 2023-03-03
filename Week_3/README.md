@@ -114,7 +114,21 @@ Go to ALIGN-public directory,
 $ cd work
 $ schematic2layout.py ../ALIGN-pdk-sky130/examples/ringosci -p ../pdks/SKY130_PDK/
 ```
+Successfully generated the `.gds`and `.lef` files.
 
+![Z6](https://user-images.githubusercontent.com/114692581/222713798-5ace4ab6-22d8-4e94-a244-5b99b51b827c.PNG)
+
+![Z7](https://user-images.githubusercontent.com/114692581/222713845-3e941886-d5dc-49bf-a50a-77757bb28058.PNG)
+
+
+## Generated .lef and .gds files in KLayout
+* **.gds**
+  
+  ![Z8](https://user-images.githubusercontent.com/114692581/222714535-03657c78-470c-4377-83f7-fc9228ebec5b.PNG)
+  
+* **.lef**
+  
+  ![Z9](https://user-images.githubusercontent.com/114692581/222714589-9970ec6b-ac4c-4fc8-b729-54c54dd2ebfd.PNG)
 
 
 
