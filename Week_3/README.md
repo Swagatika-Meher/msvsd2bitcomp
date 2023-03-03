@@ -100,7 +100,9 @@ XM6 out net2 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=1050n nf=8
 .ends RingOscillator
 ```
 > **NOTE:** In input netlist of ALIGN tool, the parameter 'nf' that is, noise figure should be in even number. But, when the noise figure in input netlist of ring oscillator is setting  into 2 and 4, it is giving incorrect result. The models generated in the simulation may not accurately capture the behavior of the ring oscillator layout.
+
 > When we are increasing the value of 'nf' that is, 6, 8, 10..., we got the accurate result same as pre-layout which is going to discuss in below sections.
+
 
 Run the ALIGN tool using below commands.
 ```
