@@ -158,6 +158,10 @@ First Initialised open_pdk root
 $ export PDK_ROOT=/usr/local/share/pdk
 $ make sky130hd_temp
 ```
+After a successful execution of the above command, in this `/openfasoc/openfasoc/generators/temp-sense-gen/flow/results/sky130hd/tempsense` directory all the files corresponding to RTL-GDSII flow are saved.
+
+![a0](https://user-images.githubusercontent.com/114692581/222662750-c6c3a822-40d4-448a-81ad-7a80cede4586.PNG)
+
 The default circuit’s physical design generation can be divided into three parts:
 1. Verilog generation
 2. RTL-to-GDS flow (OpenROAD)
@@ -212,7 +216,7 @@ For debugging purposes, it is also possible to generate only part of the flow, v
 | make all_defs	| Creates DEF files in `flow/results/` of every step in the flow |
 | make print-ENV_VARIABLE_NAME | Prints the value of an env variable recognized by OpenROAD Flow |
 
-The final result is,
+The final GDS view of the temperature sensor generator in KLayout,
 
 ![AL34](https://user-images.githubusercontent.com/114692581/221422513-3c084d9e-4fe0-428e-a669-acf3243d2180.PNG)
 
