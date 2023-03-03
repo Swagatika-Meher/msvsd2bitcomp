@@ -312,9 +312,7 @@ plot out
 | --------------- | ------------------- | ------------------- |
 | Output | ![z4](https://user-images.githubusercontent.com/114692581/222720417-451c814c-81a3-4c1a-9c27-5fd26459a1c2.PNG) | ![Z12](https://user-images.githubusercontent.com/114692581/222720348-c77760ba-ae89-405f-837c-703586a5bf46.PNG) |
 
-
-
-
+It has been noticed that the post-layout simulation [using ALIGN] result is same as the pre-layout simulation result of ring oscillator. Because of capacitance parasitics in the post-layout simulation, time period is longer and less voltage magnitude as compare to pre-layout simulation. 
 
 
 
