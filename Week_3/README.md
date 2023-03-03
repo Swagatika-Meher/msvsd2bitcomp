@@ -11,4 +11,16 @@ Ring oscillators are widely used in digital circuits as clock generators, freque
 
 The following figure depicts a 3-stage ring oscillator in Xschem.
 
+![Z1](https://user-images.githubusercontent.com/114692581/222699738-a392a4bc-d68e-4288-b982-a13d5ac4c54f.PNG)
+
+3-stage ring oscillator shown as a symbol in following figure.
+
+![Z2](https://user-images.githubusercontent.com/114692581/222699994-b1716570-6c32-4222-a64e-92b8e8e7aafc.PNG)
+
+3-stage ring oscillator shown as a testbench schematic in following figure.
+
+![Z3](https://user-images.githubusercontent.com/114692581/222700155-81a26743-07e0-41e8-a110-710d6dc82d21.PNG)
+
+
+
 
