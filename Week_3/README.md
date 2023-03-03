@@ -1,6 +1,6 @@
 # INDEX
 * [Week 3](#Week-3)
-  * [Xschem: Ring Oscillator](#Xschem:-Ring-Oscillator)
+  * [Xschem: Ring Oscillator](#Xschem-Ring-Oscillator)
   
   
   
