@@ -673,7 +673,16 @@ XM12 net5 F Gnd Gnd sky130_fd_pr__nfet_01v8 L=120n W=840n nf=2
 To extract the spice netlist of above post-layout go to MAGIC tool and read the .gds file.
 Open magic tool and `go to file --> read GDS --> open the .gds file` and view the layout in magic tool.
 
-![a5](https://user-images.githubusercontent.com/114692581/221782309-c09351fe-1547-4ce2-ab7a-cbfef8021cb4.PNG)
+![a5_1](https://user-images.githubusercontent.com/114692581/222685009-7bd67da2-848f-4cbc-8b5d-a7eeb2c348fe.PNG)
+
+As we can see DRC=1, check DRC by following command and correct the layout accordingly.
+```
+drc check
+drc why
+```
+Final layout in magic is,
+
+![a5](https://user-images.githubusercontent.com/114692581/222685616-d183c2d1-69d9-422b-b869-a35a9d9aef69.PNG)
 
 Now, click `i` and go to `Tkcon.tcl` command window. Type the following command to extract the netlist.
 ```
