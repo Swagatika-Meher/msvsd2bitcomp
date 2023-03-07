@@ -307,4 +307,4 @@ Overall, increasing the number of fingers in a MOSFET can improve its performanc
 
 **REFERENCE**
 
-(https://ieeexplore.ieee.org/abstract/document/9081132)[https://ieeexplore.ieee.org/abstract/document/9081132]
+[https://ieeexplore.ieee.org/abstract/document/9081132]
