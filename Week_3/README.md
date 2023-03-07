@@ -7,7 +7,7 @@
     * Generated .gds and .lef files in KLayout
     * Extracted Post-layout spice netlist
     * NgSpice Plot
-  * [Comparison between pre-layout and post-layout [ALIGN] NgSpice Plot](Comparison-between-Pre-layout-and-Post-layout-testbench-of-ring-oscilator-schematic)
+  * [Comparison between Pre-layout and Post-layout testbench of ring oscilator schematic](Comparison-between-Pre-layout-and-Post-layout-testbench-of-ring-oscilator-schematic)
    
 # Xschem: Pre-layout simulation for Ring Oscillator
 A ring oscillator is an electronic circuit that generates a periodic waveform, typically a square wave or a sine wave, using a feedback loop of inverters or delay elements. It is a type of oscillator that does not require any external components like resistors, capacitors or crystals to generate a clock signal.
