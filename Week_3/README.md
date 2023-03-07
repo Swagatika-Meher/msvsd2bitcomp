@@ -7,7 +7,7 @@
     * Generated .gds and .lef files in KLayout
     * Extracted Post-layout spice netlist
     * NgSpice Plot
-    * Comparison between pre-layout and post-layout [ALIGN] NgSpice Plot
+  * [Comparison between pre-layout and post-layout [ALIGN] NgSpice Plot](Comparison between Pre-layout and Post-layout testbench of ring oscilator schematic)
    
 # Xschem: Pre-layout simulation for Ring Oscillator
 A ring oscillator is an electronic circuit that generates a periodic waveform, typically a square wave or a sine wave, using a feedback loop of inverters or delay elements. It is a type of oscillator that does not require any external components like resistors, capacitors or crystals to generate a clock signal.
@@ -306,8 +306,9 @@ plot out
 
 ![Z12](https://user-images.githubusercontent.com/114692581/222719549-21fa9627-a257-49ad-a503-9824516d401d.PNG)
 
+At NF=8, the width of transistors are divided by 8 in parallel manner. Due to increase in NF value, the effective area of transistors are decreasing. This leads to reduce the intrinsic capacitances and resistances.
 
-**Comparison between Pre-layout and Post-layout testbench of ring oscilator schematic :**
+# Comparison between Pre-layout and Post-layout testbench of ring oscilator schematic
 | Ring Oscillator | Pre-layout [Xschem] | Post-layout [ALIGN] |
 | --------------- | ------------------- | ------------------- |
 | Output | ![z4](https://user-images.githubusercontent.com/114692581/222720417-451c814c-81a3-4c1a-9c27-5fd26459a1c2.PNG) | ![Z12](https://user-images.githubusercontent.com/114692581/222720348-c77760ba-ae89-405f-837c-703586a5bf46.PNG) |
