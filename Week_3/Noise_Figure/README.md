@@ -1,7 +1,11 @@
-Noise figure (NF) usually refers how much the noise added by the transistor affects the quality of the signal. A lower noise figure is better because it means that the transistor adds less noise to the signal.
+In FETs, the term "fingers" refers to the narrow, interleaved parallel strips of source and drain regions that are used to increase the active area of the transistor. These fingers are usually connected in parallel to form a larger source and drain area, which can handle more current and reduce the overall resistance of the device.
+
+The fingers are typically arranged in a comb-like pattern and are separated by a thin layer of gate oxide. The gate electrode is then placed on top of the gate oxide, and it controls the current flow between the source and drain regions by creating an electric field in the channel region under the gate.
+
+By using multiple fingers, FET can increase its active area without increasing its overall size, which is important for achieving high current handling capability and low on-resistance. The number of fingers and their width and spacing are important parameters that affect the performance of the FET, and they are carefully designed to optimize the device for specific applications.
 
 # Post-layout of Ring Oscillator using ALIGN
-## When NF=2
+## When Number of Fingers, NF=2
 Input netlist for ALIGN tool when **NF=2**,
 ```
 .subckt RingOscillator Vdd out Gnd
@@ -94,7 +98,7 @@ plot out
 
 ![Z14](https://user-images.githubusercontent.com/114692581/222753645-9ee8d4d0-6ed7-4991-96b9-3b84458fae30.PNG)
 
-## When NF=4
+## When Number of Fingers, NF=4
 Similarly, the input netlist for ALIGN tool when **NF=4**,
 ```
 .subckt RingOscillator Vdd out Gnd
@@ -191,7 +195,7 @@ plot out
 
 ![Z16](https://user-images.githubusercontent.com/114692581/222756637-120dfc1e-3a68-4292-a363-7ab6063608b3.PNG)
 
-## When NF=6
+## When Number of Fingers, NF=6
 Similarly, the input netlist for ALIGN tool when **NF=6**,
 ```
 .subckt RingOscillator Vdd out Gnd
