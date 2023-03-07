@@ -293,3 +293,14 @@ plot out
 * **NgSpice Plot**
 
 ![Z18](https://user-images.githubusercontent.com/114692581/222758591-7000f7b1-c183-43cd-8f46-d5804b2b5e3b.PNG)
+
+## Advantages of having multi-fingers FETs technique
+Increasing the number of fingers in a MOSFET can improve the accuracy of its performance in several ways.
+
+Firstly, as the number of fingers increases, the total active area of the MOSFET also increases, which can allow the device to handle higher current and power levels. This can result in lower on-resistance and improved efficiency, which are important performance metrics in many applications.
+
+Secondly, using multiple fingers can help to reduce the series resistance of the MOSFET. The resistance of the metal interconnects that connect the source, drain, and gate regions can limit the performance of the MOSFET, especially at high frequencies. By dividing the gate electrode into multiple parallel fingers, the length of the metal interconnects can be reduced, which can lower their resistance and improve the overall performance of the MOSFET.
+
+Finally, using multiple fingers can increase the gate capacitance of the MOSFET, which can improve its switching speed and frequency response. This is because the capacitance between the gate and source/drain regions determines the amount of charge that is required to switch the MOSFET on or off, and a higher gate capacitance can provide more charge and therefore faster switching times.
+
+Overall, increasing the number of fingers in a MOSFET can improve its performance and accuracy by increasing its active area, reducing its series resistance, and increasing its gate capacitance. However, the specific number of fingers and their dimensions should be carefully optimized for each application to ensure the best performance.
