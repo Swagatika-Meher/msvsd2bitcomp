@@ -306,4 +306,5 @@ Finally, using multiple fingers can increase the gate capacitance of the MOSFET,
 Overall, increasing the number of fingers in a MOSFET can improve its performance and accuracy by increasing its active area, reducing its series resistance, and increasing its gate capacitance. However, the specific number of fingers and their dimensions should be carefully optimized for each application to ensure the best performance.
 
 **REFERENCE**
-(Haddad, Fayrouz, Aymen Ben Hammadi, and Sehmi Saad. "Effect of Multi-Finger Gate MOSFET on RF Analog Integrated Circuit." 2020 15th Design & Technology of Integrated Systems in Nanoscale Era (DTIS). IEEE, 2020.)[https://ieeexplore.ieee.org/abstract/document/9081132]
+
+[Haddad, Fayrouz, Aymen Ben Hammadi, and Sehmi Saad. "Effect of Multi-Finger Gate MOSFET on RF Analog Integrated Circuit." 2020 15th Design & Technology of Integrated Systems in Nanoscale Era (DTIS). IEEE, 2020.](https://ieeexplore.ieee.org/abstract/document/9081132)
