@@ -304,3 +304,6 @@ Secondly, using multiple fingers can help to reduce the series resistance of the
 Finally, using multiple fingers can increase the gate capacitance of the MOSFET, which can improve its switching speed and frequency response. This is because the capacitance between the gate and source/drain regions determines the amount of charge that is required to switch the MOSFET on or off, and a higher gate capacitance can provide more charge and therefore faster switching times.
 
 Overall, increasing the number of fingers in a MOSFET can improve its performance and accuracy by increasing its active area, reducing its series resistance, and increasing its gate capacitance. However, the specific number of fingers and their dimensions should be carefully optimized for each application to ensure the best performance.
+
+**REFERENCE**
+(https://ieeexplore.ieee.org/abstract/document/9081132)[https://ieeexplore.ieee.org/abstract/document/9081132]
