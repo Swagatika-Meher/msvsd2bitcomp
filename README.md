@@ -25,3 +25,5 @@
 | 20 |   | OpenFASOC flow for Temperature Sensor Generation | ✔️ |
 | 21 | [3](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_3) | Xschem: Pre-layout simulation for Ring Oscillator | ✔️ |
 | 22 |   | ALIGN: Post-layout simulation for Ring Oscillator | ✔️ |
+| 23 | [4](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_4) | Xschem: Pre-layout simulation for 1-bit ADC | ✔️ |
+| 24 |   | ALIGN: Post-layout simulation for 1-bit ADC | -- |
