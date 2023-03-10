@@ -19,3 +19,86 @@ The following figure depicts 1-bit ADC using two stage CMOS OP-AMP technique in 
 
 ![003](https://user-images.githubusercontent.com/114692581/224232790-7b831ab4-e343-416c-8e9e-3e11cba9dea7.PNG)
 
+**Netlist of pre-layout testbench schematic :**
+```
+** sch_path: /home/swagatika/Desktop/Circuits/1_bit_ADC_tb.sch
+**.subckt 1_bit_ADC_tb Vdd IN2 IN1 Vdd IN1 IN2 OUT
+*.iopin Vdd
+*.iopin IN2
+*.iopin IN1
+*.iopin Vdd
+*.iopin IN1
+*.iopin IN2
+*.iopin OUT
+x1 Vdd OUT IN1 IN2 GND 1_bit_ADC_sym
+V2 Vdd GND 1.8
+.save i(v2)
+V3 IN2 GND sin(0.9 0.9 50Meg)
+.save i(v3)
+V1 IN1 GND 0.9
+.save i(v1)
+**** begin user architecture code
+
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.save all
+
+.tran 0.1n 100n
+.control
+run
+plot IN1+2 IN2+2 OUT
+.save all
+.endc
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/swagatika/Desktop/Circuits/1_bit_ADC_sym.sym # of pins=5
+** sym_path: /home/swagatika/Desktop/Circuits/1_bit_ADC_sym.sym
+** sch_path: /home/swagatika/Desktop/Circuits/1_bit_ADC_sym.sch
+.subckt 1_bit_ADC_sym Vdd OUT IN1 IN2 Gnd
+*.opin OUT
+*.iopin Vdd
+*.iopin IN1
+*.iopin IN2
+*.iopin Gnd
+XM2 net1 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net3 IN1 net2 net2 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 IN2 net2 net2 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM1 Vdd net3 net3 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 Gnd net4 net4 Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM9 Vdd net4 net4 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end
+```
+After successfully running for 100ns with 0.1ns steps, the generated NgSpice plot shown below.
+
+![004](https://user-images.githubusercontent.com/114692581/224233986-1f9799a8-1bc0-4c5e-b505-bcfe5afdd1ab.PNG)
+
+![005](https://user-images.githubusercontent.com/114692581/224234031-54381869-0b4e-496b-a748-948f5afcc80b.PNG)
+
