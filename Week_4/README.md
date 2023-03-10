@@ -9,15 +9,17 @@ The output of a 1-bit ADC is a single bit, which means it can only represent two
 
 The following figure depicts 1-bit ADC using two stage CMOS OP-AMP technique in Xschem.
 
-![001](https://user-images.githubusercontent.com/114692581/224232409-24083ee0-eed0-45c2-b42f-e8efda5df53b.PNG)
+![001](https://user-images.githubusercontent.com/114692581/224245132-132912be-13cb-4354-9d6f-6f6f3bde3948.PNG)
 
 1-bit ADC shown as a symbol in following figure.
 
-![002](https://user-images.githubusercontent.com/114692581/224232587-0b7e31a2-94b4-422f-877c-90182d711075.PNG)
+![0000](https://user-images.githubusercontent.com/114692581/224245329-8bff0b3c-def3-487f-ad94-ac033ec75124.PNG)
+
+![002](https://user-images.githubusercontent.com/114692581/224245493-b0969872-6a86-497b-a90d-f68db814d587.PNG)
 
 1-bit ADC shown as a testbench schematic in following figure.
 
-![003](https://user-images.githubusercontent.com/114692581/224232790-7b831ab4-e343-416c-8e9e-3e11cba9dea7.PNG)
+![003](https://user-images.githubusercontent.com/114692581/224246007-669653ba-a9fb-43d2-a3ee-e094f4d9cf9a.PNG)
 
 **Netlist of pre-layout testbench schematic :**
 ```
@@ -30,17 +32,15 @@ The following figure depicts 1-bit ADC using two stage CMOS OP-AMP technique in 
 *.iopin IN1
 *.iopin IN2
 *.iopin OUT
-x1 Vdd OUT IN1 IN2 GND 1_bit_ADC_sym
 V2 Vdd GND 1.8
 .save i(v2)
 V3 IN2 GND sin(0.9 0.9 50Meg)
 .save i(v3)
 V1 IN1 GND 0.9
 .save i(v1)
+x1 Vdd OUT IN1 IN2 GND 1_bit_ADC_sym
 **** begin user architecture code
-
 .lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-
 .save all
 
 .tran 0.1n 100n
@@ -50,7 +50,6 @@ plot IN1+2 IN2+2 OUT
 .save all
 .endc
 .end
-
 
 **** end user architecture code
 **.ends
@@ -73,7 +72,7 @@ XM3 net3 IN1 net2 net2 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2)
 XM4 net1 IN2 net2 net2 sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-XM1 Vdd net3 net3 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM1 net3 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 XM5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
@@ -85,10 +84,10 @@ XM6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) *
 XM7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-XM8 Gnd net4 net4 Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM8 net4 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
-XM9 Vdd net4 net4 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
+XM9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
 + sa=0 sb=0 sd=0 mult=1 m=1
 .ends
@@ -98,7 +97,7 @@ XM9 Vdd net4 net4 Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) 
 ```
 After successfully running for 100ns with 0.1ns steps, the generated NgSpice plot shown below.
 
-![004](https://user-images.githubusercontent.com/114692581/224233986-1f9799a8-1bc0-4c5e-b505-bcfe5afdd1ab.PNG)
+![004](https://user-images.githubusercontent.com/114692581/224246755-f7be927f-7ae3-4aff-96aa-4cd6caa0bed1.PNG)
 
-![005](https://user-images.githubusercontent.com/114692581/224234031-54381869-0b4e-496b-a748-948f5afcc80b.PNG)
+![005](https://user-images.githubusercontent.com/114692581/224246801-a437e279-2e3f-4afa-b49e-f5ce6dfaa18b.PNG)
 
