@@ -355,3 +355,11 @@ plot INN+2 INP+2 OUT
 ```
 **NgSpice Plot**
 
+![Y7](https://user-images.githubusercontent.com/114692581/225523744-f9ac7bff-a936-4cb7-97e7-f7c46cdc0d4c.PNG)
+
+# Comparison between Pre-layout and Post-layout testbench of 1-bit ADC schematic
+| 1-bit ADC | Pre-layout [Xschem] | Post-layout [ALIGN] |
+| --------- | ------------------- | ------------------- |
+| Output | ![Y9](https://user-images.githubusercontent.com/114692581/225524968-d07f3c72-97cd-4d2e-b6c6-7071db4eb7cb.PNG) | ![Y8](https://user-images.githubusercontent.com/114692581/225524927-90a6c329-500d-4278-b978-30e1293044a7.PNG) |
+
+It has been noticed that the post-layout simulation [using ALIGN] result is **same** as the pre-layout simulation result of 1-bit ADC. 
