@@ -119,15 +119,15 @@ Input netlist for ALIGN tool,
 ```
 .subckt 1bitadc OUT Vdd INN INP Gnd
 
-M1 net3 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
-M2 net1 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
-M3 net3 INN net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n
-M4 net1 INP net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n
-M5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
-M6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M8 net4 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
+M1 net3 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
+M2 net1 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
+M3 net3 INN net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M4 net1 INP net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
+M6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M8 net4 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
 .ends 1bitadc
 ```
 Run the ALIGN tool using below commands.
@@ -151,15 +151,15 @@ This issue is arising when we connect bulk connections both in the NMOS transist
 Then, regenerate and modify the input netlist for ALIGN.
 ```
 .subckt 1bitadc Vdd INN INP Gnd OUT
-M1 net3 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
-M2 net1 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
-M3 net3 INN net2 Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M4 net1 INP net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n
-M5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
-M6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M8 net4 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
-M9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
+M1 net3 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
+M2 net1 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
+M3 net3 INN net2 Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M4 net1 INP net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
+M6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M8 net4 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n nf=2
+M9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n nf=2
 .ends 1bitadc
 ```
 Successfully generated `.gds` and `.lef` files.
@@ -337,8 +337,6 @@ XM9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) 
 + sa=0 sb=0 sd=0 mult=1 m=1
 
 
-
-
 V2 Vdd GND 1.8
 .save i(v2)
 V3 INP GND sin(0.9 0.9 50Meg)
@@ -377,3 +375,90 @@ plot INN+2 INP+2 OUT
 It has been noticed that the post-layout simulation [using ALIGN] result is **same** as the pre-layout simulation result of 1-bit ADC. Though because of capacitance parasitics in the post-layout simulation, it is observed that less voltage swing as compare to pre-layout simulation. 
 
 # Xschem: Pre-layout simulation of 1-bit Analog to Digital Converter with Ring Oscillator
+The following schematic depicts 1-bit ADC with analog input from [ring oscillator](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_3) in Xschem. Here, to non-inverting teminal analog input is applied from ring oscillator with amplitude 1.8V and to the inverting terminal, 0.9V of reference voltage(Vref) is given.
+
+![Y10](https://user-images.githubusercontent.com/114692581/225542271-a7b778aa-a69f-45fa-a768-cc3dcfb07233.PNG)
+
+**Netlist of pre-layout schematic**
+```
+** sch_path: /home/swagatika/Desktop/Circuits/RO_ADC_pre.sch
+**.subckt RO_ADC_pre INP Vdd INN INP OUT INN Vdd Vdd
+*.opin INP
+*.iopin Vdd
+*.iopin INN
+*.iopin INP
+*.opin OUT
+*.iopin INN
+*.iopin Vdd
+*.iopin Vdd
+XM1 net1 INP Vdd Vdd sky130_fd_pr__pfet_01v8 L=1 W=16.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net2 net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=1 W=16.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 INP net2 Vdd Vdd sky130_fd_pr__pfet_01v8 L=1 W=16.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net1 INP GND GND sky130_fd_pr__nfet_01v8 L=1 W=16.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net2 net1 GND GND sky130_fd_pr__nfet_01v8 L=1 W=16.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 INP net2 GND GND sky130_fd_pr__nfet_01v8 L=1 W=16.8 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM7 net3 net5 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM8 net5 INN net4 net4 sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM9 net3 INP net4 net4 sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM10 net5 net5 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM11 OUT net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM12 OUT net6 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM13 net4 net6 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM14 net6 net6 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM15 net6 net6 Vdd Vdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+V1 INN GND 0.9
+.save i(v1)
+V2 Vdd GND 1.8
+.save i(v2)
+**** begin user architecture code
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.save all
+.tran 0.1n 50n
+.control
+run
+plot INN+2 INP+2 OUT
+.save all
+.endc
+.end
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
+```
+After successfully running for 50ns with 0.1ns steps, the generated NgSpice plot shown below.
+
+![Y11](https://user-images.githubusercontent.com/114692581/225544052-93e82728-ac99-419c-a549-31cfb422d02a.PNG)
+
+![Y12](https://user-images.githubusercontent.com/114692581/225544088-a5f0c3bd-aa55-4f0c-bfd3-e80b7aa1c481.PNG)
+
