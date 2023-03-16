@@ -1,3 +1,14 @@
+# INDEX
+* [Week 4](#Week-4)
+  * [Xschem: Pre-layout simulation for 1-bit Analog to Digital Converter](#Xschem: Pre-layout-simulation-for-1-bit-Analog-to-Digital-Converter)
+    * Netlist of pre-layout testbench schematic
+    * NgSpice plot
+  * [ALIGN: Post-layout simulation for 1-bit ADC](#ALIGN-Post-layout-simulation-for-1-bit-ADC)
+    * Generated .gds and .lef files in KLayout
+    * Extracted Post-layout spice netlist
+    * NgSpice Plot
+  * [Comparison between Pre-layout and Post-layout testbench of 1-bit ADC](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-1-bit-ADC)
+  
 # Xschem: Pre-layout simulation for 1-bit Analog to Digital Converter
 A 1-bit ADC (analog-to-digital converter) is the simplest form of ADC. It works by comparing the analog input signal to a fixed reference voltage and producing a digital output that indicates whether the input signal is above or below the reference voltage.
 
