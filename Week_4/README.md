@@ -375,3 +375,5 @@ plot INN+2 INP+2 OUT
 
 
 It has been noticed that the post-layout simulation [using ALIGN] result is **same** as the pre-layout simulation result of 1-bit ADC. Though because of capacitance parasitics in the post-layout simulation, it is observed that less voltage swing as compare to pre-layout simulation. 
+
+# Xschem: Pre-layout simulation of 1-bit Analog to Digital Converter with Ring Oscillator
