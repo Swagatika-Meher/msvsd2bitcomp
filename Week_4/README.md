@@ -362,4 +362,5 @@ plot INN+2 INP+2 OUT
 | --------- | ------------------- | ------------------- |
 | Output | ![Y9](https://user-images.githubusercontent.com/114692581/225524968-d07f3c72-97cd-4d2e-b6c6-7071db4eb7cb.PNG) | ![Y8](https://user-images.githubusercontent.com/114692581/225524927-90a6c329-500d-4278-b978-30e1293044a7.PNG) |
 
-It has been noticed that the post-layout simulation [using ALIGN] result is **same** as the pre-layout simulation result of 1-bit ADC. 
+
+It has been noticed that the post-layout simulation [using ALIGN] result is **same** as the pre-layout simulation result of 1-bit ADC. Though because of capacitance parasitics in the post-layout simulation, it is observed that less voltage swing as compare to pre-layout simulation. 
