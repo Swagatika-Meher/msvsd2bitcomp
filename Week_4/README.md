@@ -133,4 +133,21 @@ After running the above `.sp` file as input netlist to ALIGN tool, got the follo
 
 ![AA](https://user-images.githubusercontent.com/114692581/224280543-47d3d20d-acdf-433b-82e5-1c19cac3588a.PNG)
 
-This issue is arising when we connect bulk connections both in the NMOS transistors (M3 & M4) to either GND or low voltage terminal. To solve this problem, we have to connect either one of the NMOS transistors (M3 & M4) to GND and other one to closest low voltage terminal as shown in the circuit below.
+This issue is arising when we connect bulk connections both in the NMOS transistors (M3 & M4) to either GND or the closest low voltage terminal. To solve this problem, we have to connect either one of the NMOS transistors (M3 & M4) to GND and other one to closest low voltage terminal as shown in the circuit below.
+
+![Y1](https://user-images.githubusercontent.com/114692581/225518049-5a90e737-23ce-4559-8924-1216c3cc08cf.PNG)
+
+Then, regenerate and modify the input netlist for ALIGN.
+```
+.subckt 1bitadc Vdd INN INP Gnd OUT
+M1 net3 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
+M2 net1 net3 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
+M3 net3 INN net2 Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
+M4 net1 INP net2 net2 sky130_fd_pr__nfet_01v8 L=150n W=420n
+M5 OUT net1 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
+M6 OUT net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
+M7 net2 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
+M8 net4 net4 Gnd Gnd sky130_fd_pr__nfet_01v8 L=150n W=420n
+M9 net4 net4 Vdd Vdd sky130_fd_pr__pfet_01v8 L=150n W=1050n
+.ends 1bitadc
+```
