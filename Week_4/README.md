@@ -1,6 +1,6 @@
 # INDEX
 * [Week 4](#Week-4)
-  * [Xschem: Pre-layout simulation for 1-bit Analog to Digital Converter](#Xschem: Pre-layout-simulation-for-1-bit-Analog-to-Digital-Converter)
+  * [Xschem: Pre-layout simulation for 1-bit Analog to Digital Converter](#Xschem-Pre-layout-simulation-for-1-bit-Analog-to-Digital-Converter)
     * Netlist of pre-layout testbench schematic
     * NgSpice plot
   * [ALIGN: Post-layout simulation for 1-bit ADC](#ALIGN-Post-layout-simulation-for-1-bit-ADC)
