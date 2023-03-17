@@ -28,3 +28,4 @@
 | 23 | [4](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_4) | Xschem: Pre-layout simulation for 1-bit ADC | ✔️ |
 | 24 |   | ALIGN: Post-layout simulation for 1-bit ADC | ✔️ |
 | 25 |   | Xschem: Pre-layout simulation for 1-bit ADC with Ring Oscillator | ✔️ |
+| 26 |   | OpenFASOC: Asynchronous up counter | --work in progress-- |
