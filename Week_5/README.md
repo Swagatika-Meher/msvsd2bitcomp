@@ -83,4 +83,7 @@ For completeing the process like floorplan, routing, placement and the like, Ope
 ```
 $ make sky130hd_AUC
 ```
+I am getting the below mentioned error in synthesis step. [work in progress]
+
+![Q2](https://user-images.githubusercontent.com/114692581/225999844-45f235d0-326d-4299-80a6-1ed89ce4c01b.PNG)
 
