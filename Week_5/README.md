@@ -75,3 +75,12 @@ $ export PDK_ROOT=/usr/local/share/pdk
 $ make sky130hd_AUC_verilog
 ```
 
+![Q1](https://user-images.githubusercontent.com/114692581/225987253-098a613b-fb0c-412f-8812-2544d5e7eb3f.PNG)
+
+**SYNTHESIS**
+
+For completeing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd) and the Verilog files are generated from the previous part. Execute the below command.
+```
+$ make sky130hd_AUC
+```
+
