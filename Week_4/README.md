@@ -325,6 +325,7 @@ plot INN+2 INP+2 OUT
 **.ends
 ```
 **NgSpice Plot**
+
 We can see the post-layout output is not same as pre-layout.
 
 ![AAAA1](https://user-images.githubusercontent.com/114692581/227124269-b1250679-92c9-4d94-9bb7-113b67c9d492.PNG)
