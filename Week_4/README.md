@@ -332,7 +332,7 @@ We can see the post-layout output is not same as pre-layout.
 
 As we can observe, in the post-layout extracted netlist **GND** and **INP** pins are not reflected properly. **GND** terminal is shown as **VSUBS**. So, a little modification has been done in the netlist to reflect proper terminal and to get correct output.
 
-**Modified post layout spice netlist of 1 bit ADC**
+**Modified post layout spice netlist of 1 bit ADC :**
 
 ```
 * SPICE3 file created from 1BITADC_0.ext - technology: sky130A
