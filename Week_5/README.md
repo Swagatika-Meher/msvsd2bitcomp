@@ -75,7 +75,7 @@ Place your dummy verilog code inside `/asynchronous-up-counter-gen/src/`.
 ![P4](https://user-images.githubusercontent.com/114692581/227558388-bf9d7454-dae3-41f2-aa1b-34a7498e7178.PNG)
  
 To configure circuit specifications, modify the `test.json` specfile in the `/asynchronous-up-counter-gen/` folder. 
-```
+```ruby
 {
 "module_name": "asyn_up_counter",
 "generator": "asynchronous-up-counter-gen",
@@ -95,22 +95,20 @@ $ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
 $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
 $ export PDK_ROOT=/home/swagatika/open_pdks/sky130/
 ``` 
-## 1. Verilog Generation
+1. **Verilog Generation**
+
 To run verilog generation, `cd` into `openfasoc/generators/asynchronous-up-counter-gen/` and execute the following command.
 ```
 $ make sky130hd_AUC_verilog
 ```
 
+![P6](https://user-images.githubusercontent.com/114692581/227569913-5cee64e5-778d-4e6e-b5c6-ef889ba2e5e6.PNG)
 
-![Q1](https://user-images.githubusercontent.com/114692581/225987253-098a613b-fb0c-412f-8812-2544d5e7eb3f.PNG)
+2. **SYNTHESIS**
 
-**SYNTHESIS**
-
-For completeing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd) and the Verilog files are generated from the previous part. Execute the below command.
+For completeing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd) and the Verilog files are generated from the previous part. Go to `/flow` directory and execute the below command.
 ```
-$ make sky130hd_AUC
+$ make synth
 ```
-I am getting the below mentioned error in synthesis step. [work in progress]
 
-![Q2](https://user-images.githubusercontent.com/114692581/225999844-45f235d0-326d-4299-80a6-1ed89ce4c01b.PNG)
 
