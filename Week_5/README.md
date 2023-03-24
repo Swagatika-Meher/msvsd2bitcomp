@@ -65,38 +65,38 @@ These folders are inside the `asynchronous-up-counter-gen`.
 ![P2](https://user-images.githubusercontent.com/114692581/227556539-e6aef913-f16e-4562-8889-88e79d64358c.PNG)
 
 > **NOTE :**
-* Your folder name and the `.py` file name should be same, which are located inside `/asynchronous-up-counter-gen/tools/`.
+> Your folder name and the `.py` file name should be same, which are located inside `/asynchronous-up-counter-gen/tools/`.
+> ![P3](https://user-images.githubusercontent.com/114692581/227557754-bfe0b8ce-59b1-4b22-8d48-f9c1325335a2.PNG)
 
-![P3](https://user-images.githubusercontent.com/114692581/227557754-bfe0b8ce-59b1-4b22-8d48-f9c1325335a2.PNG)
+> Place your dummy verilog code inside `/asynchronous-up-counter-gen/src/`.
+> ![P4](https://user-images.githubusercontent.com/114692581/227558388-bf9d7454-dae3-41f2-aa1b-34a7498e7178.PNG)
 
-* Place your dummy verilog code inside `/asynchronous-up-counter-gen/src/`.
-
-![P4](https://user-images.githubusercontent.com/114692581/227558388-bf9d7454-dae3-41f2-aa1b-34a7498e7178.PNG)
-
-* To configure circuit specifications, modify the `test.json` specfile in the `/asynchronous-up-counter-gen/` folder.
-
-**test.json**
-
-```ruby
-{
-    "module_name": "asyn_up_counter",
-    "generator": "asynchronous-up-counter-gen",
-    "specifications": {
-    	"frequency": { "min": 5, "max": 50 },
-    	"model" :"modelfile.csv"
+> To configure circuit specifications, modify the `test.json` specfile in the `/asynchronous-up-counter-gen/` folder.
+<details>
+	<summary>test.json</summary>
+	<br>
+	```
+	{
+	"module_name": "asyn_up_counter",
+	"generator": "asynchronous-up-counter-gen",
+	"specifications": {
+	"frequency": { "min": 5, "max": 50 },
+	"model" :"modelfile.csv"
 	}
-}
-```
-* Go to `/asynchronous-up-counter-gen/flow/design/sky130hd/asyn_up_counter/config.mk/` and keep your design name **same** as your top level module name.
+	}
+	```
 
-![P5](https://user-images.githubusercontent.com/114692581/227561227-59e99604-9a04-4e90-9d90-e9530b871a04.PNG)
+> Go to `/asynchronous-up-counter-gen/flow/design/sky130hd/asyn_up_counter/config.mk/` and keep your design name **same** as your top level module name.
 
-* Once set the files as mentioned above, first run below commands to avoid **PDK_ROOT** path errors.
+> ![P5](https://user-images.githubusercontent.com/114692581/227561227-59e99604-9a04-4e90-9d90-e9530b871a04.PNG)
+
+> Once set the files as mentioned above, first run below commands to avoid **PDK_ROOT** path errors.
 ```
 $ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
 $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
 $ export PDK_ROOT=/home/swagatika/open_pdks/sky130/
 ```
+
 
 2. 
 
