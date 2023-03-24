@@ -142,6 +142,7 @@ module asyn_up_counter(Vn_Vref, OUT_ADC);
 endmodule
 ```
 **3. FLOORPLAN**
+
 Execute the below command in the same `/flow` directory.
 ```
 $ make floorplan
@@ -153,4 +154,21 @@ $ make floorplan
 
 ![P11](https://user-images.githubusercontent.com/114692581/227601722-b797fa6a-8175-4813-8041-0237af3523dd.PNG)
 
+Execute `make gui_floorplan` command to open the design in OpenROAD GUI after floorplan.
 
+![P12](https://user-images.githubusercontent.com/114692581/227604023-c4a03d5c-f64d-4cc1-b9a7-235f364cacd6.PNG)
+
+**4. PLACEMENT**
+
+Execute the below command for placement.
+```
+$ make place
+```
+
+![P13](https://user-images.githubusercontent.com/114692581/227604596-8870be01-f5ff-4095-8060-7b1d61b9fa28.PNG)
+
+![P14](https://user-images.githubusercontent.com/114692581/227604624-5936e7f0-9ff4-4235-baf5-337a28d07e0f.PNG)
+
+This error is due to overlap placement of ring oscillator and ADC. [Work in progress]
+
+![P15](https://user-images.githubusercontent.com/114692581/227605252-d0635df9-0e4c-4c88-b593-44dadf609ffb.PNG)
