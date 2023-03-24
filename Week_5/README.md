@@ -95,7 +95,7 @@ $ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
 $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
 $ export PDK_ROOT=/home/swagatika/open_pdks/sky130/
 ``` 
-1. **Verilog Generation**
+**1. Verilog Generation**
 
 To run verilog generation, `cd` into `openfasoc/generators/asynchronous-up-counter-gen/` and execute the following command.
 ```
@@ -104,7 +104,7 @@ $ make sky130hd_AUC_verilog
 
 ![P6](https://user-images.githubusercontent.com/114692581/227569913-5cee64e5-778d-4e6e-b5c6-ef889ba2e5e6.PNG)
 
-2. **SYNTHESIS**
+**2. SYNTHESIS**
 
 For completeing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd) and the Verilog files are generated from the previous part. Go to `/flow` directory and execute the below command.
 ```
