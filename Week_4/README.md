@@ -9,6 +9,7 @@
     * NgSpice Plot
   * [Comparison between Pre-layout and Post-layout testbench of 1-bit ADC schematic](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-1-bit-ADC-schematic)
   * [Xschem: Pre-layout simulation of 1-bit Analog to Digital Converter with Ring Oscillator](#Xschem-Pre-layout-simulation-of-1-bit-Analog-to-Digital-Converter-with-Ring-Oscillator)
+  * [Conclusion](#Conclusion)
   
 # Xschem: Pre-layout simulation for 1-bit Analog to Digital Converter
 A 1-bit ADC (analog-to-digital converter) is the simplest form of ADC. It works by comparing the analog input signal to a fixed reference voltage and producing a digital output that indicates whether the input signal is above or below the reference voltage.
@@ -512,3 +513,5 @@ After successfully running for 50ns with 0.1ns steps, the generated NgSpice plot
 
 ![Y12](https://user-images.githubusercontent.com/114692581/225544088-a5f0c3bd-aa55-4f0c-bfd3-e80b7aa1c481.PNG)
 
+# Conclusion
+For pre-layout simulations, XScheme and NgSpice tools have been used. For post layout simulation using ALIGN, first '.gds' and '.lef' has been created and observed in KLayout tool. Then, the post layout spice netlist has been extracted from GDS file using magic vlsi tool. Both the pre and post layouts are same but due to presence of paracitics in post layout, there are some delay in post layout waveforms.    
