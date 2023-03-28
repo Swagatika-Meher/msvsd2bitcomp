@@ -1,0 +1,57 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1676214166
+<< metal1 >>
+rect 56 1552 256 1836
+rect -492 1386 256 1552
+rect -488 1292 256 1386
+rect -488 964 -246 1292
+rect 56 1120 256 1292
+rect 126 1006 188 1058
+rect 126 1004 186 1006
+rect 184 966 716 968
+rect -494 766 138 964
+rect 184 760 888 966
+rect -382 732 156 736
+rect -382 730 172 732
+rect -492 668 172 730
+rect -1200 268 -1000 270
+rect -492 268 -268 668
+rect -1200 70 -268 268
+rect -492 -184 -268 70
+rect 624 272 888 760
+rect 624 74 1478 272
+rect -492 -240 184 -184
+rect -492 -242 158 -240
+rect -486 -244 158 -242
+rect 624 -270 888 74
+rect 1278 72 1478 74
+rect -482 -286 130 -282
+rect -492 -472 130 -286
+rect 186 -468 888 -270
+rect -492 -788 -274 -472
+rect 216 -478 888 -468
+rect 122 -560 188 -502
+rect 56 -788 256 -612
+rect -492 -1014 256 -788
+rect -488 -1016 256 -1014
+rect 56 -1274 256 -1016
+use sky130_fd_pr__nfet_01v8_648S5X  XNMOS
+timestamp 1676214166
+transform 1 0 157 0 1 -374
+box -211 -310 211 310
+use sky130_fd_pr__pfet_01v8_XGS3BL  XPMOS
+timestamp 1676214166
+transform 1 0 158 0 1 866
+box -211 -319 211 319
+<< labels >>
+flabel metal1 56 1636 256 1836 0 FreeSans 256 0 0 0 vdd
+port 0 nsew
+flabel metal1 56 -1274 256 -1074 0 FreeSans 256 0 0 0 gnd
+port 3 nsew
+flabel metal1 1278 72 1478 272 0 FreeSans 256 0 0 0 OUT
+port 1 nsew
+flabel metal1 -1200 70 -1000 270 0 FreeSans 256 0 0 0 IN
+port 2 nsew
+<< end >>
