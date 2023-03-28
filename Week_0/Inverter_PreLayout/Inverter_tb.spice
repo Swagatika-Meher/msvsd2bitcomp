@@ -1,0 +1,54 @@
+** sch_path: /home/swagatika/Desktop/Circuits/Inverter_tb.sch
+**.subckt Inverter_tb Vin Vout
+*.ipin Vin
+*.opin Vout
+V1 Vin GND pulse(0 1.8 0ns 1ns 1ns 5ns 10ns)
+.save i(v1)
+VDD VDD GND 1.8
+.save i(vdd)
+x1 VDD Vout Vin GND Inverter_sym
+**** begin user architecture code
+
+
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.save all
+
+
+
+
+
+.tran 1n 30n
+.control
+run
+set color0=white
+set color1=black
+plot Vin Vout
+set xbrushwidth=3
+.save all
+.endc
+.end
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/swagatika/Desktop/Circuits/Inverter_sym.sym # of pins=4
+** sym_path: /home/swagatika/Desktop/Circuits/Inverter_sym.sym
+** sch_path: /home/swagatika/Desktop/Circuits/Inverter_sym.sch
+.subckt Inverter_sym vdd OUT IN gnd
+*.opin OUT
+*.ipin IN
+*.iopin vdd
+*.iopin gnd
+XPMOS OUT IN vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XNMOS OUT IN gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
