@@ -1,0 +1,82 @@
+* SPICE3 file created from 1BITADC_0.ext - technology: sky130A
+
+.subckt 1_bit_ADC Vdd OUT INP INN GND
+X0 GND m1_398_1484# GND GND sky130_fd_pr__nfet_01v8 ad=1.1256e+12p pd=1.376e+07u as=0p ps=0u w=420000u l=150000u
+X1 GND m1_398_1484# GND GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X2 OUT m1_398_1484# GND GND sky130_fd_pr__nfet_01v8 ad=1.176e+11p pd=1.4e+06u as=0p ps=0u w=420000u l=150000u
+X3 GND m1_398_1484# OUT GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X4 m1_398_1484# m1_398_1484# GND GND sky130_fd_pr__nfet_01v8 ad=1.176e+11p pd=1.4e+06u as=0p ps=0u w=420000u l=150000u
+X5 GND m1_398_1484# m1_398_1484# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X6 li_405_1831# INP GND GND sky130_fd_pr__nfet_01v8 ad=1.176e+11p pd=1.4e+06u as=0p ps=0u w=420000u l=150000u
+X7 GND INP li_405_1831# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+X8 m1_398_1484# m1_398_1484# VDD VDD sky130_fd_pr__pfet_01v8 ad=2.94e+11p pd=2.66e+06u as=1.9635e+12p ps=1.844e+07u w=1.05e+06u l=150000u
+X9 VDD m1_398_1484# m1_398_1484# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+06u l=150000u
+X10 VDD m1_1430_1400# li_405_1831# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=2.94e+11p ps=2.66e+06u w=1.05e+06u l=150000u
+X11 m1_1430_1400# m1_1430_1400# VDD VDD sky130_fd_pr__pfet_01v8 ad=2.94e+11p pd=2.66e+06u as=0p ps=0u w=1.05e+06u l=150000u
+X12 VDD m1_1430_1400# m1_1430_1400# VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+06u l=150000u
+X13 li_405_1831# m1_1430_1400# VDD VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+06u l=150000u
+X14 OUT li_405_1831# VDD VDD sky130_fd_pr__pfet_01v8 ad=2.94e+11p pd=2.66e+06u as=0p ps=0u w=1.05e+06u l=150000u
+X15 VDD li_405_1831# OUT VDD sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1.05e+06u l=150000u
+X16 m1_1430_1400# INN GND GND sky130_fd_pr__nfet_01v8 ad=1.176e+11p pd=1.4e+06u as=0p ps=0u w=420000u l=150000u
+X17 GND INN m1_1430_1400# GND sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+C0 m1_398_1484# VDD 2.61fF
+C1 m1_1430_1400# m1_398_1484# 0.06fF
+C2 INP OUT 0.00fF
+C3 m1_1430_1400# VDD 2.46fF
+C4 INP INN 0.01fF
+C5 OUT li_405_1831# 0.12fF
+C6 GND OUT 0.02fF
+C7 li_405_1831# INN 0.00fF
+C8 GND INN 0.05fF
+C9 m1_398_1484# OUT 0.44fF
+C10 OUT VDD 0.88fF
+C11 m1_398_1484# INN 0.05fF
+C12 GND INP 0.10fF
+C13 m1_1430_1400# OUT 0.00fF
+C14 VDD INN 0.00fF
+C15 m1_1430_1400# INN 0.12fF
+C16 GND li_405_1831# 0.08fF
+C17 INP m1_398_1484# 0.00fF
+C18 m1_1430_1400# INP 0.00fF
+C19 m1_398_1484# li_405_1831# 0.28fF
+C20 GND m1_398_1484# 0.02fF
+C21 VDD li_405_1831# 4.06fF
+C22 GND VDD 0.27fF
+C23 m1_1430_1400# li_405_1831# 0.48fF
+C24 m1_1430_1400# GND 0.15fF
+C25 INP li_405_1831# 0.12fF
+C26 m1_1430_1400# GND 0.61fF 
+C27 INN GND 0.86fF
+C28 OUT GND 0.66fF
+C29 VDD GND 6.11fF
+C30 INP GND 0.97fF
+C31 m1_398_1484# GND 3.31fF
+.ends
+
+
+
+
+*========manually added==========
+V2 Vdd GND 1.8
+.save i(v2)
+V3 INP GND sin(0.9 0.9 50Meg)
+.save i(v3)
+V1 INN GND 0.9
+.save i(v1)
+x1 Vdd OUT INP INN GND 1_bit_ADC
+**** begin user architecture code
+.lib /home/swagatika/open_pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.save all
+
+.tran 0.1n 100n
+.control
+run
+plot INN INP OUT
+.save all
+.endc
+.GLOBAL GND
+.end
+
+**** end user architecture code
+**.ends
