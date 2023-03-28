@@ -11,6 +11,7 @@
   - [OpenFASOC flow for Temperature Sensor Generation](#OpenFASOC-flow-for-Temperature-Sensor-Generation)
     * [Verilog Generation](#Verilog-Generation)
     * [Synthesis](#Synthesis)
+  - [REFERENCES](#REFERENCES)
     
 # Week 2    
 # Installation of OpenFASOC
@@ -187,7 +188,7 @@ Here, using the generic template, extra blocks of counter, TEMP_ANALOG_hv.nl.v, 
 
 **Synthesis**
 
-For completeing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd, for example) and the Verilog files are generated from the previous part.
+For completing the process like floorplan, routing, placement and the like, OpenRoad Flow is used. The OpenROAD Flow starts with a flow configuration file `config.mk`, the chosen platform (sky130hd, for example) and the Verilog files are generated from the previous part.
 ```
 $ export PDK_ROOT=/usr/local/share/pdk
 $ make sky130hd_temp
@@ -221,6 +222,10 @@ The final GDS view of the temperature sensor generator in KLayout,
 ![AL34](https://user-images.githubusercontent.com/114692581/221422513-3c084d9e-4fe0-428e-a669-acf3243d2180.PNG)
 
 More details of this section can be found [here](https://github.com/rakshit-23/OpenFASOC).
+
+# REFERENCES
+1. [https://github.com/sanampudig/OpenFASoC](https://github.com/sanampudig/OpenFASoC)
+2. [https://github.com/rakshit-23/OpenFASOC](https://github.com/rakshit-23/OpenFASOC)
     
 
 
