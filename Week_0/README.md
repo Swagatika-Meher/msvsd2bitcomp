@@ -502,3 +502,11 @@ For accurate estimation of propagation delay, the following input timing paramet
 **tpdf :** falling propagation delay [From input to falling output crossing Vdd/2] = time taken by output to fall to its 50% value - time taken by the input to rise to its 50% value
 
 Right click and stretch on the plots of Vin and Vout. For delay calculations, stretch the plot until it reaches to the approximately 50% of Vdd. Click on Vin and Vout plots and the x and y- coordinate points will be shown on ngspice command window. 
+
+# REFERENCES
+1. [http://opencircuitdesign.com/magic/index.html](http://opencircuitdesign.com/magic/index.html)
+2. [https://github.com/RTimothyEdwards/magic](https://github.com/RTimothyEdwards/magic)
+3. [https://lootr5858.wordpress.com/2020/10/06/magic-vlsi-skywater-pdk-local-installation-guide/](https://lootr5858.wordpress.com/2020/10/06/magic-vlsi-skywater-pdk-local-installation-guide/)
+4. [https://xschem.sourceforge.io/stefan/index.html](https://xschem.sourceforge.io/stefan/index.html)
+5. [https://ngspice.sourceforge.io/download.html](https://ngspice.sourceforge.io/download.html)
+6. [https://github.com/ALIGN-analoglayout/ALIGN-public](https://github.com/ALIGN-analoglayout/ALIGN-public)
