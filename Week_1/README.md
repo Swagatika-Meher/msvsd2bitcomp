@@ -8,6 +8,7 @@
     - [Comparison between Pre-layout and Post-layout testbench of function schematic :](#Comparison-between-Pre-layout-and-Post-layout-testbench-of-function-schematic)
   - [Post-layout characterization of given function using ALIGN tool](#Post-layout-characterization-of-given-function-using-ALIGN-tool)
     - [Generated .gds and .lef files of given function in KLayout](#Generated-gds-and-lef-files-of-given-function-in-KLayout)
+  - [Conclusion](#Conclusion)
     
 # Week 1
 The installation of ALIGN tool is discussed in ["Week_0"](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_0) section.
@@ -1010,6 +1011,9 @@ plot A+3 B+3 C+3 D+3 E+3 F+3 Fn
 | Function | Pre-layout | Post-layout [MAGIC] | Post-layout [ALIGN] |
 | -------- | ---------- | ------------------- | ------------------- |
 | Output [Fn] | ![08](https://user-images.githubusercontent.com/114692581/221770284-c1a8f964-d075-4fe0-a264-633653a3f09c.PNG) | ![09](https://user-images.githubusercontent.com/114692581/221770339-2c628a7a-ed0e-4f5e-81f5-e6ca7175c2d0.PNG) | ![a8](https://user-images.githubusercontent.com/114692581/221786903-2a1d000f-0dd4-47ab-a9c4-6aefd50b1c33.PNG) |
+
+# Conclusion
+Due to the presence of parasitic capacitances and resistances in post layout simulation, the output waveforms of post layout is slightly delay as compare to pre-layout simulations. 
 
 
 
