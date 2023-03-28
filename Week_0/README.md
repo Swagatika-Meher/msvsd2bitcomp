@@ -10,7 +10,7 @@
     - [Transient analysis of testbench schematic Inverter](#Transient-analysis-of-testbench-schematic-Inverter)
   - [Post-layout using Inverter Schematic in Magic VLSI tool](#Post-layout-using-Inverter-Schematic-in-Magic-VLSI-tool)
   - [Comparison between Pre-layout and Post-layout testbench Inverter](#Comparison-between-Pre-layout-and-Post-layout-testbench-Inverter)
-  - [REFERENCES](REFERENCES)
+  - [REFERENCES](#REFERENCES)
   
 # Week 0
 ## **Prerequisites**
