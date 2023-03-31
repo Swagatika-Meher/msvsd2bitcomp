@@ -214,7 +214,7 @@ Execute `make gui_floorplan` command to open the design in OpenROAD GUI after fl
 
 ![P12](https://user-images.githubusercontent.com/114692581/229147650-ad8ff737-0398-4cd9-afd5-3af0a2b784b6.PNG)
 
-**4. PLACEMENT**
+**4. GLOBAL PLACE**
 
 Execute the below command for placement.
 ```
@@ -233,7 +233,7 @@ Execute `make gui_place` command to open the design in OpenROAD GUI after placem
 
 ![P17](https://user-images.githubusercontent.com/114692581/229149786-923f42ba-80ad-4865-b2eb-40a278303984.PNG)
 
-**5. ROUTING**
+**5. GLOBAL ROUTE**
 
 Execute the below command for routing.
 ```
@@ -249,6 +249,44 @@ $ make route
 Execute `make gui_route` command to open the design in OpenROAD GUI after routing.
 
 ![P21](https://user-images.githubusercontent.com/114692581/229153019-fd6d2f91-0c7e-4770-a49b-a01116b82f29.PNG)
+
+**6. Finish OpenFasoc flow**
+
+Execute the below command to run the whole RTL-to-GDS flow.
+```
+$ make finish
+```
+
+![P22](https://user-images.githubusercontent.com/114692581/229157957-9afc9c03-d8b1-444e-a14a-0561be2813fb.PNG)
+
+![P23](https://user-images.githubusercontent.com/114692581/229158010-524ac6fd-1ea9-4e14-8c19-6d24d35f9084.PNG)
+
+**7. DRC Check**
+DRC is clean.
+
+![P24](https://user-images.githubusercontent.com/114692581/229158869-e49eb68d-e059-47cd-9254-0e78856256dc.PNG)
+
+After successful completion of OpenFasoc flow, final files are generated in `/flow/results/` and `/work` directories.
+
+![P25](https://user-images.githubusercontent.com/114692581/229159866-5dbd54de-05fb-4876-86fc-aab0ef0a0518.PNG)
+
+![P26](https://user-images.githubusercontent.com/114692581/229159913-863d1e16-de63-4238-bb1c-f3890eeb8bf6.PNG)
+
+## OpenROAD GUI view
+
+![P27](https://user-images.githubusercontent.com/114692581/229161502-56b68b53-430d-4c04-8175-6167fe5c772e.PNG)
+
+## Final .gds file in KLayout
+
+![P28](https://user-images.githubusercontent.com/114692581/229161633-6dc613bb-bb48-4d7d-b326-0a27f4f44bad.PNG)
+
+## Conclusion
+RTL to GDS flow is successfully completed using OpenFasoc.
+
+> **NOTE :**
+> 1. For .lef files, remove the hierarchy and place the whole layout in (0,0) origin. Then, regenerate the .lef files for correct placement in OpenFasoc flow.
+> 2. Before macro placement, initially the die area was `0 0 400 400` and core area was `10 10 380 380`. Then, macros are placed that is, ring_osci in [27, 25] and adc in [52, 40] co-ordinates. After successfull placement of macros, the final die area and core area reduced to `0 0 90 80` and `10 10 80 70`.
+> 3. For power delivery network, `pdn.tcl` file needs to be set up correctly. This step is yet to be figured out.
 
 
 
