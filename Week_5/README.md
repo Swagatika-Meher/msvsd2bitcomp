@@ -212,7 +212,7 @@ $ make floorplan
 
 Execute `make gui_floorplan` command to open the design in OpenROAD GUI after floorplan.
 
-![P12](https://user-images.githubusercontent.com/114692581/227604023-c4a03d5c-f64d-4cc1-b9a7-235f364cacd6.PNG)
+![P12](https://user-images.githubusercontent.com/114692581/229147650-ad8ff737-0398-4cd9-afd5-3af0a2b784b6.PNG)
 
 **4. PLACEMENT**
 
@@ -221,10 +221,45 @@ Execute the below command for placement.
 $ make place
 ```
 
-![P13](https://user-images.githubusercontent.com/114692581/227604596-8870be01-f5ff-4095-8060-7b1d61b9fa28.PNG)
+![P13](https://user-images.githubusercontent.com/114692581/229149002-fe8276cb-1031-448d-9d70-399596174ea5.PNG)
 
-![P14](https://user-images.githubusercontent.com/114692581/227604624-5936e7f0-9ff4-4235-baf5-337a28d07e0f.PNG)
+![P14](https://user-images.githubusercontent.com/114692581/229149056-b52173ef-464e-40c6-8888-d29f3a512947.PNG)
 
-This error is due to overlap placement of ring oscillator and ADC. [Work in progress]
+![P15](https://user-images.githubusercontent.com/114692581/229149107-bfd16f90-5131-4835-b55c-ead83f456c8e.PNG)
 
-![P15](https://user-images.githubusercontent.com/114692581/227605252-d0635df9-0e4c-4c88-b593-44dadf609ffb.PNG)
+![P16](https://user-images.githubusercontent.com/114692581/229149153-1b3d5a81-6c60-4d6b-ad93-21fe09ba9220.PNG)
+
+Execute `make gui_place` command to open the design in OpenROAD GUI after placement.
+
+![P17](https://user-images.githubusercontent.com/114692581/229149786-923f42ba-80ad-4865-b2eb-40a278303984.PNG)
+
+**5. ROUTING**
+
+Execute the below command for routing.
+```
+$ make route
+```
+
+![P18](https://user-images.githubusercontent.com/114692581/229152368-27cdb21c-ae69-43c5-9e57-928b10c0ddeb.PNG)
+
+![P19](https://user-images.githubusercontent.com/114692581/229152409-4751d515-61c9-4064-a9f0-1ae7a9e4b494.PNG)
+
+![P20](https://user-images.githubusercontent.com/114692581/229152433-b36074ee-66b4-4e1e-9e3a-97bb9a0cdbd2.PNG)
+
+Execute `make gui_route` command to open the design in OpenROAD GUI after routing.
+
+![P21](https://user-images.githubusercontent.com/114692581/229153019-fd6d2f91-0c7e-4770-a49b-a01116b82f29.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
