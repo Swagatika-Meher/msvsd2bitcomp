@@ -262,6 +262,7 @@ $ make finish
 ![P23](https://user-images.githubusercontent.com/114692581/229158010-524ac6fd-1ea9-4e14-8c19-6d24d35f9084.PNG)
 
 **7. DRC Check**
+
 DRC is clean.
 
 ![P24](https://user-images.githubusercontent.com/114692581/229158869-e49eb68d-e059-47cd-9254-0e78856256dc.PNG)
