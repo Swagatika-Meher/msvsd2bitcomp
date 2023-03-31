@@ -18,13 +18,13 @@ module asyn_up_counter
 	
 	//Instantiating ring oscillator
 	RINGOSCILLATOR ring_osci(
-		.INP(RO_ADC),
+		.INP(RO_ADC)
 	);
 
         //Instantiating 1-bit ADC
-	ADC comparator(
-	        .INP(RO_ADC),
+	ONE_BIT_ADC adc(
 	        .INN(Vn_Vref),
+	        .INP(RO_ADC),
 	        .OUT(OUT_ADC)
 	);
 
@@ -37,7 +37,7 @@ endmodule
 //Define ring oscillator module
 module RINGOSCILLATOR
 (
-        output INP
+        output INP,
 	);
 endmodule
 ```
@@ -46,10 +46,10 @@ endmodule
 
 ```js
 //Define 1-bit adc module
-module ADC
+module ONE_BIT_ADC
 (
-        input INP,
-	input INN,
+        input INN,
+	input INP,
 	output OUT
 	);
 endmodule
@@ -72,7 +72,7 @@ Your folder name and the `.py` file name should be same, which are located insid
  
 Place your dummy verilog code inside `/asynchronous-up-counter-gen/src/`.
  
-![P4](https://user-images.githubusercontent.com/114692581/227558388-bf9d7454-dae3-41f2-aa1b-34a7498e7178.PNG)
+![P4](https://user-images.githubusercontent.com/114692581/229140056-c14ec7dc-1408-4b1c-83a6-bfac08a8eb4d.PNG)
  
 To configure circuit specifications, modify the `test.json` specfile in the `/asynchronous-up-counter-gen/` folder. 
 ```ruby
@@ -86,8 +86,64 @@ To configure circuit specifications, modify the `test.json` specfile in the `/as
 }
 ```
 Go to `/asynchronous-up-counter-gen/flow/design/sky130hd/asyn_up_counter/config.mk/` and keep your design name **same** as your top level module name.
+```ruby
+export DESIGN_NICKNAME = asyn_up_counter
+export DESIGN_NAME = asyn_up_counter
 
-![P5](https://user-images.githubusercontent.com/114692581/227561227-59e99604-9a04-4e90-9d90-e9530b871a04.PNG)
+export PLATFORM    = sky130hd
+
+export VERILOG_FILES 		= $(sort $(wildcard ./design/src/$(DESIGN_NICKNAME)/*.v)) \
+#			  	  ../blocks/$(PLATFORM)/asyn_up_counter.blackbox.v
+export SDC_FILE    		= ./design/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc
+
+export DIE_AREA   	 	= 0 0 90 80
+export CORE_AREA   		= 10 10 80 70
+
+# area of the smaller voltage domain
+#export VD1_AREA                 = 50 40 200 190
+
+# power delivery network config file
+export PDN_TCL 			= ../blocks/$(PLATFORM)/pdn.tcl
+
+export ADDITIONAL_LEFS  	= ../blocks/$(PLATFORM)/lef/RINGOSCILLATOR.lef \
+                        	  ../blocks/$(PLATFORM)/lef/ONE_BIT_ADC.lef
+
+export ADDITIONAL_GDS_FILES 	= ../blocks/$(PLATFORM)/gds/RINGOSCILLATOR.gds \
+			      	  ../blocks/$(PLATFORM)/gds/ONE_BIT_ADC.gds
+
+# informs what cells should be placed in the smaller voltage domain
+export DOMAIN_INSTS_LIST 	= ../blocks/$(PLATFORM)/asyn_up_counter_domain_insts.txt
+
+# configuration for placement
+export MACRO_PLACE_HALO         = 1 1
+export MACRO_PLACE_CHANNEL      = 15 15
+export MACRO_PLACEMENT          = ../blocks/$(PLATFORM)/manual_macro.tcl
+
+# export CELL_PAD_IN_SITES_GLOBAL_PLACEMENT = 1
+# export CELL_PAD_IN_SITES_DETAIL_PLACEMENT = 0
+# don't run global place w/o IOs
+#export HAS_IO_CONSTRAINTS = 1
+# don't run non-random IO placement (step 3_2)
+export PLACE_PINS_ARGS = -random
+
+export GPL_ROUTABILITY_DRIVEN = 1
+
+# DPO optimization currently fails on the asyn_up_counter
+export ENABLE_DPO = 0
+
+# export CELL_PAD_IN_SITES_GLOBAL_PLACEMENT = 4
+# export CELL_PAD_IN_SITES_DETAIL_PLACEMENT = 2
+
+# configuration for routing
+
+#export PRE_GLOBAL_ROUTE = $(SCRIPTS_DIR)/openfasoc/pre_global_route.tcl
+
+# informs any short circuits that should be forced during routing
+export CUSTOM_CONNECTION 	= ../blocks/$(PLATFORM)/asyn_up_counter_custom_net.txt
+
+# indicates with how many connections the VIN route from the HEADER cells connects to the VIN power ring
+export VIN_ROUTE_CONNECTION_POINTS = 3
+```
 
 Once set the files as mentioned above, first run below commands to avoid **PDK_ROOT** path errors.
 ```
@@ -102,7 +158,7 @@ To run verilog generation, `cd` into `openfasoc/generators/asynchronous-up-count
 $ make sky130hd_AUC_verilog
 ```
 
-![P6](https://user-images.githubusercontent.com/114692581/227569913-5cee64e5-778d-4e6e-b5c6-ef889ba2e5e6.PNG)
+![P6](https://user-images.githubusercontent.com/114692581/229141482-9e0dd784-493a-41f1-95ef-e556e5cf5060.PNG)
 
 This command is only used to copy the verilog files from `/src` directory to `/flow/design/src/asyn_up_counter/`.
 
@@ -117,9 +173,9 @@ Go to `/flow` directory and execute the below command.
 $ make synth
 ```
 
-![P7](https://user-images.githubusercontent.com/114692581/227598147-0763f9ed-4c4e-4638-a4f0-afaacf5b6cd9.PNG)
+![P7](https://user-images.githubusercontent.com/114692581/229142727-789e59b2-560d-4875-8e11-4fee1d5ceda4.PNG)
 
-![P8](https://user-images.githubusercontent.com/114692581/227598188-f0f82081-1a3b-4702-875f-f723ca5c39d5.PNG)
+![P8](https://user-images.githubusercontent.com/114692581/229142781-e30530c5-f31b-4ca1-898f-cb766e486f65.PNG)
 
 This command is used to generate synthesized verilog code. Go to `/results/` directory and check the generated synthesized verilog code.
 ```ruby
@@ -131,7 +187,7 @@ module asyn_up_counter(Vn_Vref, OUT_ADC);
   wire RO_ADC;
   input Vn_Vref;
   wire Vn_Vref;
-  ADC comparator (
+  ONE_BIT_ADC adc (
     .INN(Vn_Vref),
     .INP(RO_ADC),
     .OUT(OUT_ADC)
@@ -148,11 +204,11 @@ Execute the below command in the same `/flow` directory.
 $ make floorplan
 ```
 
-![P9](https://user-images.githubusercontent.com/114692581/227601633-cb0e0dbf-cff7-4a81-966b-a817cad084a0.PNG)
+![P9](https://user-images.githubusercontent.com/114692581/229144571-8edcddc5-c4db-435f-a224-e7eb92a50cf1.PNG)
 
-![P10](https://user-images.githubusercontent.com/114692581/227601682-a6d56641-e839-4695-b598-8bf764e3c60f.PNG)
+![P10](https://user-images.githubusercontent.com/114692581/229144607-34a38a23-006e-4722-8ccb-429f5eb2aec4.PNG)
 
-![P11](https://user-images.githubusercontent.com/114692581/227601722-b797fa6a-8175-4813-8041-0237af3523dd.PNG)
+![P11](https://user-images.githubusercontent.com/114692581/229144640-fa258126-07dd-4f30-bae5-ed83cf0fb55d.PNG)
 
 Execute `make gui_floorplan` command to open the design in OpenROAD GUI after floorplan.
 
