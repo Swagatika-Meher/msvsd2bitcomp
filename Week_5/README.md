@@ -5,7 +5,7 @@ The pre-layout and post-layout of analog block ([Ring Oscillator](https://github
 
 The physical implementation of the analog blocks in the circuit is done using two manually designed standard cells:
 1. RINGOSCILLATOR
-2. 1BITADC
+2. ONE_BIT_ADC
 
 First, we need to create **dummy verilog code** for TOP-LEVEL design.
 ```ruby
