@@ -1,3 +1,10 @@
+# INDEX
+* [Week 5](#Week-5)
+  * [OpenFASOC flow for 4-Bit Asynchronous Up Counter](#OpenFASOC-flow-for-4-Bit-Asynchronous-Up-Counter)
+    * [Steps for OpenFASOC flow](#Steps-for-OpenFASOC-flow)
+    * [OpenROAD GUI view](#OpenROAD-GUI-view)
+    * [Final .gds file in KLayout](#Final-.gds-file-in-KLayout)
+  * [Conclusion](#Conclusion)
 # OpenFASOC flow for 4-Bit Asynchronous Up Counter
 Refer this [repo](https://github.com/syedimaduddin/4-bit_Asynchronous_Up_Counter_using_Mixed-Signal). In this design, the analog block contains ring oscillator and 1-bit analog to digital converter and the digital block contains four T-flipflops.
 
