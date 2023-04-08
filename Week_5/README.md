@@ -3,7 +3,7 @@
   * [OpenFASOC flow for 4-Bit Asynchronous Up Counter](#OpenFASOC-flow-for-4-Bit-Asynchronous-Up-Counter)
     * [Steps for OpenFASOC flow](#Steps-for-OpenFASOC-flow)
     * [OpenROAD GUI view](#OpenROAD-GUI-view)
-    * [Final .gds file in KLayout (without power connection)](#Final-.gds-file-in-KLayout-(-without-power-connection-)-)
+    * [Final .gds file in KLayout (without power connection)](#Final-.gds-file-in-KLayout-without-power-connection)
     * [Power Delivery Network (VDD and GND connection)](#Power-Delivery-Network-VDD-and-GND-connection)
     * [Final .gds file in KLayout (with power connection)](#Final-.gds-file-in-KLayout-with-power-connection)
   * [Conclusion](#Conclusion)
