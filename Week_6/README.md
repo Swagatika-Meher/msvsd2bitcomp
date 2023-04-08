@@ -601,7 +601,13 @@ plot VIN VDD TIQ_1 TIQ_2 TIQ_3 TIQ_4 TIQ_5 TIQ_6 TIQ_7
 
 ![Y5](https://user-images.githubusercontent.com/114692581/230716277-b9e82d4e-0eb9-4d11-a497-397ac26e1bae.PNG)
 
+# Comparison between Pre-layout and Post-layout testbench of 3-bit Flash ADC schematic
+| 3-bit Flash ADC | Pre-layout [Xschem] | Post-layout [ALIGN] |
+| --------------- | ------------------- | ------------------- |
+| Output | ![A3](https://user-images.githubusercontent.com/114692581/230716388-b6343f88-f443-4e10-adec-230d66a22040.PNG) | ![Y5](https://user-images.githubusercontent.com/114692581/230716277-b9e82d4e-0eb9-4d11-a497-397ac26e1bae.PNG) |
 
+
+It has been noticed that the post-layout simulation [using ALIGN] result is **same** as the pre-layout simulation result of 3-bit flash ADC. Though because of capacitance parasitics, some delays are observed in post-layout simulation.
 
 
 
