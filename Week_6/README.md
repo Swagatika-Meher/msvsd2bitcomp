@@ -4,7 +4,7 @@ In TIQ technique, it uses two cascaded CMOS inverters as a comparator. While the
 
 Two inverters are linked in series on the TIQ Comparator for comparing and balancing. The threshold voltage of the inverter circuits can be modified to provide different reference voltages by adjusting the width of PMOS and NMOS transistors. In analog section of 3-bit ADC, $\[{2^n} - 1\]$ comparators that is, 7 TIQ comparators are connected parallelly using CMOS inverters. Where, n is the number of output binary bits.
 
-![A1](https://user-images.githubusercontent.com/114692581/229279511-a4f13c94-0150-49ed-a31a-80baf8187005.PNG)
+![A1](https://user-images.githubusercontent.com/114692581/230714036-7e7da415-ba3c-4c46-ae73-f4011a76e487.PNG)
 
 **Testbench Schematic :**
 
