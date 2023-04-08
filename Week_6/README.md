@@ -299,6 +299,22 @@ $ schematic2layout.py ../ALIGN-pdk-sky130/examples/flash_adc_align -p ../pdks/SK
 ```
 Successfully generated `.gds` and `.lef` files.
 
+![Y1](https://user-images.githubusercontent.com/114692581/230715549-57d0605f-4db2-487e-891d-bdb21ea9eeb0.PNG)
+
+## Generated .gds and .lef files in KLayout
+
+**.gds**
+
+![Y2](https://user-images.githubusercontent.com/114692581/230715572-27a18822-efa9-440d-8424-26c8c8b9e32f.PNG)
+
+**.lef**
+
+![Y3](https://user-images.githubusercontent.com/114692581/230715583-fa2ee0cd-4a72-4e19-991c-3c76e66e8e68.PNG)
+
+To extract the spice netlist of above post-layout go to MAGIC tool and read the `.gds` file. Open magic tool and `go to file --> read GDS --> open the .gds file` and view the layout in magic tool.
+
+
+
 
 
 
