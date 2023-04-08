@@ -3,8 +3,12 @@
   * [OpenFASOC flow for 4-Bit Asynchronous Up Counter](#OpenFASOC-flow-for-4-Bit-Asynchronous-Up-Counter)
     * [Steps for OpenFASOC flow](#Steps-for-OpenFASOC-flow)
     * [OpenROAD GUI view](#OpenROAD-GUI-view)
-    * [Final .gds file in KLayout](#Final-.gds-file-in-KLayout)
+    * [Final .gds file in KLayout (without power connection)](#Final-.gds-file-in-KLayout-without-power-connection)
+    * [Power Delivery Network (VDD and GND connection)](#Power-Delivery-Network-VDD-and-GND-connection)
+    * [Final .gds file in KLayout (with power connection)](#Final-.gds-file-in-KLayout-with-power-connection)
   * [Conclusion](#Conclusion)
+  
+  
 # OpenFASOC flow for 4-Bit Asynchronous Up Counter
 Refer this [repo](https://github.com/syedimaduddin/4-bit_Asynchronous_Up_Counter_using_Mixed-Signal). In this design, the analog block contains ring oscillator and 1-bit analog to digital converter and the digital block contains four T-flipflops.
 
@@ -284,17 +288,34 @@ After successful completion of OpenFasoc flow, final files are generated in `/fl
 
 ![P27](https://user-images.githubusercontent.com/114692581/229161502-56b68b53-430d-4c04-8175-6167fe5c772e.PNG)
 
-## Final .gds file in KLayout
+## Final .gds file in KLayout (without power connection)
 
 ![P28](https://user-images.githubusercontent.com/114692581/229161633-6dc613bb-bb48-4d7d-b326-0a27f4f44bad.PNG)
-
-## Conclusion
-RTL to GDS flow is successfully completed using OpenFasoc.
 
 > **NOTE :**
 > 1. For .lef files, remove the hierarchy and place the whole layout in (0,0) origin. Then, regenerate the .lef files for correct placement in OpenFasoc flow.
 > 2. Before macro placement, initially the die area was `0 0 400 400` and core area was `10 10 380 380`. Then, macros are placed that is, ring_osci in [27, 25] and adc in [52, 40] co-ordinates. After successfull placement of macros, the final die area and core area reduced to `0 0 90 80` and `10 10 80 70`.
 > 3. For power delivery network, `pdn.tcl` file needs to be set up correctly. This step is yet to be figured out.
+
+# Power Delivery Network (VDD and GND connection)
+For making the power pins connection to the macros, `pdn.tcl`, `config.mk`, `pre_global_route.tcl` files need to be editted manually. After setting up power connections and layout dimensions, final layout has been observed in KLayout.
+
+For entire OpenFasoc flow, all the files for final `.gds` layout can be found here.
+
+## Final .gds file in KLayout (with power connection)
+
+**DRC Clean**
+
+![P29](https://user-images.githubusercontent.com/114692581/230717228-33f09d6e-6948-4144-ad40-6f11f84a75cc.PNG)
+
+**Final GDS**
+
+![P30](https://user-images.githubusercontent.com/114692581/230717235-e2fde639-1f5f-4a73-8b4c-061401935e61.PNG)
+
+## Conclusion
+RTL to GDS flow is successfully completed using OpenFasoc.
+
+
 
 
 
