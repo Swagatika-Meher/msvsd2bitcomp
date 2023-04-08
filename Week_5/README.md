@@ -300,7 +300,7 @@ After successful completion of OpenFasoc flow, final files are generated in `/fl
 # Power Delivery Network (VDD and GND connection)
 For making the power pins connection to the macros, `pdn.tcl`, `config.mk`, `pre_global_route.tcl` files need to be editted manually. After setting up power connections and layout dimensions, final layout has been observed in KLayout.
 
-For entire OpenFasoc flow, all the files for final `.gds` layout can be found here.
+For entire OpenFasoc flow, all the files for final `.gds` layout can be found [here](https://github.com/Swagatika-Meher/msvsd2bitcomp/blob/main/Week_5/OpenFasoc_flow/asynchronous-up-counter-gen.zip).
 
 ## Final .gds file in KLayout (with power connection)
 
