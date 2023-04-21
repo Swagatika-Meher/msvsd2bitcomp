@@ -1,6 +1,11 @@
 # Post-Layout: OpenFASOC flow for 3-bit Flash ADC using TIQ comparator
 For pre-layout simulation, refer this [repo](https://github.com/Swagatika-Meher/3-bit-CMOS-based-TIQ-comparator-Flash-ADC). 
 
+## Reference Circuit Diagram
+Given attached is the block diagram for TIQ comparator based 3-bit Flash type ADC.
+
+![diagram](https://user-images.githubusercontent.com/114692581/194697017-283623c1-a901-4f7f-9798-6264ac4d1deb.png)
+
 The TIQ (Threshold Inverter Quantization) technique utilizes a pair of CMOS inverters in series as a comparator. The first inverter generates an internal reference voltage (Vref), while the second inverter acts as a gain booster. By adjusting the size of the CMOS, different switching and reference voltages are created, which can be used as reference voltages. The goal of the TIQ comparator is to convert an input voltage (Vin) into a logic '1' or '0' by comparing it with the estimated reference voltage (Vref). If Vin is greater than Vref, the output of the comparator is '1'; otherwise, it is '0'. This is achieved by varying the transistor width while maintaining the transistor length constant. The gain boosters increase the gain of the comparator and create sharper threshold voltages, resulting in a complete digital output voltage swing. The comparator generates a thermometer code, which is converted to a binary code using an 8:3 priority encoder. In this particular design, a sine wave with a frequency of 40MHz is used as the input voltage.
 
 ## TIQ Comparator
