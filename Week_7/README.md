@@ -84,6 +84,14 @@ endmodule
 ```
 All the files related to this flow can be found [here].
 
+> **NOTE**
+> Once set the files as mentioned above, first run below commands to avoid **PDK_ROOT** path errors.
+```
+$ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
+$ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
+$ export PDK_ROOT=/home/swagatika/open_pdks/sky130/
+```
+
 1. Go to OpenFASOC install directory `~/openfasoc/openfasoc/generators`. Create a new folder with your design name. Here, my design name is `flash-adc-gen`.
 2. Place your dummy verilog code inside `/flash-adc-gen/src/`.
 3. To run verilog generation, `cd` into `openfasoc/generators/flash-adc-gen/` and execute the command `$ make sky130hd_ADC_verilog`.
