@@ -16,3 +16,12 @@ Two inverters are linked in series on the TIQ Comparator for comparing and balan
 ## Truth Table
 
 ![Capture](https://user-images.githubusercontent.com/114692581/194705103-fb21f514-ca59-4f26-9e4e-8a998e3640c9.PNG)
+
+# Steps for OpenFASOC flow
+The physical implementation of the analog blocks in the circuit is treated as macros and the digital block that is, 8 to 3 priority encoder is placed as standard cell.
+
+**Verilog Generation**
+
+First, we need to create dummy verilog code for **TOP-LEVEL** design.
+```ruby
+
