@@ -85,7 +85,8 @@ endmodule
 All the files related to this flow can be found [here].
 
 > **NOTE**
-> Once set the files as mentioned above, first run below commands to avoid **PDK_ROOT** path errors.
+
+Once set the files as mentioned above, first run below commands to avoid **PDK_ROOT** path errors.
 ```
 $ export OPENROAD=~/OpenROAD-flow-scripts/tools/OpenROAD
 $ export PATH=~/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:~/OpenROAD-flow-scripts/tools/install/yosys/bin:~/OpenROAD-flow-scripts/tools/install/LSOracle/bin:$PATH
@@ -95,4 +96,76 @@ $ export PDK_ROOT=/home/swagatika/open_pdks/sky130/
 1. Go to OpenFASOC install directory `~/openfasoc/openfasoc/generators`. Create a new folder with your design name. Here, my design name is `flash-adc-gen`.
 2. Place your dummy verilog code inside `/flash-adc-gen/src/`.
 3. To run verilog generation, `cd` into `openfasoc/generators/flash-adc-gen/` and execute the command `$ make sky130hd_ADC_verilog`.
-4. 
+
+![Z1](https://user-images.githubusercontent.com/114692581/233766494-dac76022-bf9c-4bc3-8af7-260505d8bc70.PNG)
+
+4. Either execute the `make sky130hd_ADC_build` command in `openfasoc/generators/flash-adc-gen/` or you can check the entire flow in each step by going to `/flow` directory and execute the below commands.
+
+**SYNTHESIS**
+
+`$ make synth`
+
+![Z2](https://user-images.githubusercontent.com/114692581/233766662-e1fcfc13-60d2-4960-a749-2da6957380ae.PNG)
+
+**FLOORPLAN**
+
+`$ make floorplan`
+
+Design area 563 u^2 13% utilization.
+
+![Z3](https://user-images.githubusercontent.com/114692581/233767054-5991101a-7169-4450-9298-502c280245e8.PNG)
+
+![Z4](https://user-images.githubusercontent.com/114692581/233767060-78f0866b-6a35-4a1d-8752-61c6fb0cd5f6.PNG)
+
+`$ make gui_floorplan`
+
+![Z5](https://user-images.githubusercontent.com/114692581/233767123-68fffc81-dbdf-4a99-a7f8-198321ad4cf4.PNG)
+
+**GLOBAL PLACE**
+
+`$ make place`
+
+![Z6](https://user-images.githubusercontent.com/114692581/233767184-be54b6eb-0351-4a8c-9677-cdff8ea10bab.PNG)
+
+**GLOBAL ROUTE**
+
+`$ make route`
+
+![Z7](https://user-images.githubusercontent.com/114692581/233767352-679d5efc-1843-4a44-bfe2-344f68421f18.PNG)
+
+`$ make gui_route`
+
+![Z8](https://user-images.githubusercontent.com/114692581/233767439-6318717a-2979-4247-82ec-147142cb7b03.PNG)
+
+**FINISH**
+
+`$ make finish`
+ 
+![Z9](https://user-images.githubusercontent.com/114692581/233767530-9975e622-7bc3-4cad-ba1f-0a814d764c9a.PNG)
+
+**DRC CHECK**
+
+DRC is clean.
+
+![Z10](https://user-images.githubusercontent.com/114692581/233767758-32e37c33-1d17-46e8-8ce7-6a7a3d60e4ad.PNG)
+
+## OpenROAD GUI view
+
+![Z8](https://user-images.githubusercontent.com/114692581/233767439-6318717a-2979-4247-82ec-147142cb7b03.PNG)
+
+## Final .gds file in KLayout
+
+![Z11](https://user-images.githubusercontent.com/114692581/233767930-c382bf0d-cad9-4d43-8153-4eb468b15869.PNG)
+
+## Final .gds file in MAGIC VLSI tool
+
+![Z12](https://user-images.githubusercontent.com/114692581/233768064-2de5ee44-a8d0-402b-b1dd-4a2b9853476f.PNG)
+
+Select the entire cell by clicking `i` and extract the post-layout netlist by following the below commands.
+```
+extract do local
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+
