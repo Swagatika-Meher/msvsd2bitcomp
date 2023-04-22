@@ -1358,4 +1358,6 @@ Transient analysis for 60ns with 0.001ns,
 
 ![Z15](https://user-images.githubusercontent.com/114692581/233769830-81d61aa9-aaba-4abf-9970-e766baa3f08b.PNG)
 
+# Conclusion
+For post layout simulation using ALIGN, first '.gds' and '.lef' files (with hierarchy) has been created. For OpenFASOC flow, again the generated '.gds' and '.lef' files (without hierarchy) has been modified and extracted the '.lef' files for analog blocks. After successfull completion of OpenFasoc flow, it is concluded that post-layout and [pre-layout result](https://github.com/Swagatika-Meher/3-bit-CMOS-based-TIQ-comparator-Flash-ADC) is same. But due to parasitic capacitances, there is less voltage magnitude in post-layout simulation.    
 
