@@ -1,0 +1,130 @@
+OpenROAD v2.0-7009-g718b260b4 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0226] Finished LEF file:  /home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef
+[INFO ODB-0222] Reading LEF file: /home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/../../../common/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_1.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_1.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_2.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_2.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_3.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_3.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_4.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_4.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_5.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_5.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_6.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_6.lef
+[INFO ODB-0222] Reading LEF file: ../blocks/sky130hd/lef/FLASH_ADC_SYM_7.lef
+[INFO ODB-0225]     Created 1 library cells
+[INFO ODB-0226] Finished LEF file:  ../blocks/sky130hd/lef/FLASH_ADC_SYM_7.lef
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_1 has no liberty cell.
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_2 has no liberty cell.
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_3 has no liberty cell.
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_4 has no liberty cell.
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_5 has no liberty cell.
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_6 has no liberty cell.
+[WARNING ORD-1011] LEF master FLASH_ADC_SYM_7 has no liberty cell.
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+Warning: There is 1 input port missing set_input_delay.
+Warning: There are 10 output ports missing set_output_delay.
+Warning: There are 10 unconstrained endpoints.
+number instances in verilog is 10
+[WARNING IFP-0028] Core area lower left (20.000, 20.000) snapped to (20.240, 21.760).
+[INFO IFP-0001] Added 23 rows of 151 sites.
+[INFO RSZ-0026] Removed 0 buffers.
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+
+==========================================================================
+floorplan final check_setup
+--------------------------------------------------------------------------
+Warning: There is 1 input port missing set_input_delay.
+Warning: There are 10 output ports missing set_output_delay.
+Warning: There are 10 unconstrained endpoints.
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack INF
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: vin (input port)
+Endpoint: FA_1/VIN (internal pin)
+Path Group: (none)
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00 ^ input external delay
+                  0.00    0.00    0.00 ^ vin (in)
+     7    0.00                           vin (net)
+                  0.00    0.00    0.00 ^ FA_1/VIN (FLASH_ADC_SYM_1)
+                                  0.00   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          1.63e-15   0.00e+00   2.56e-12   2.56e-12 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.63e-15   0.00e+00   2.56e-12   2.56e-12 100.0%
+                           0.1%       0.0%      99.9%
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 563 u^2 13% utilization.
+
+Elapsed time: 0:01.50[h:]min:sec. CPU time: user 1.19 sys 0.15 (89%). Peak memory: 105040KB.

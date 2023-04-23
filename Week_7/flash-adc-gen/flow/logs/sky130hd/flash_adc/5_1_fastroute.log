@@ -1,0 +1,223 @@
+OpenROAD v2.0-7009-g718b260b4 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 17
+[INFO GRT-0003] Macros: 7
+[INFO GRT-0004] Blockages: 35
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal       4500          2620          41.78%
+met2       Vertical         3375          2318          31.32%
+met3       Horizontal       2250          1508          32.98%
+met4       Vertical         1350           812          39.85%
+met5       Horizontal        450           213          52.67%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 113
+[INFO GRT-0198] Via related Steiner nodes: 5
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 136
+[INFO GRT-0112] Final usage 3D: 614
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1              2620            87            3.32%             0 /  0 /  0
+met2              2318            84            3.62%             0 /  0 /  0
+met3              1508            35            2.32%             0 /  0 /  0
+met4               812             0            0.00%             0 /  0 /  0
+met5               213             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total             7471           206            2.76%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 3815 um
+[INFO GRT-0014] Routed nets: 13
+
+==========================================================================
+global route check_setup
+--------------------------------------------------------------------------
+Warning: There are 21 input ports missing set_input_delay.
+Warning: There are 10 output ports missing set_output_delay.
+Warning: There are 10 unconstrained endpoints.
+
+==========================================================================
+global route report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+global route report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+global route report_worst_slack
+--------------------------------------------------------------------------
+worst slack INF
+
+==========================================================================
+global route report_clock_skew
+--------------------------------------------------------------------------
+
+==========================================================================
+global route report_checks -path_delay min
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global route report_checks -path_delay max
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global route report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: r_VSS(0) (input port)
+Endpoint: FA_4/GND (internal pin)
+Path Group: (none)
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00 ^ input external delay
+                  0.00    0.00    0.00 ^ r_VSS(0) (in)
+     7    0.21                           r_VSS(0) (net)
+                  0.00    0.01    0.01 ^ FA_4/GND (FLASH_ADC_SYM_4)
+                                  0.01   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+==========================================================================
+global route report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+global route max_slew_check_slack
+--------------------------------------------------------------------------
+1.3141621351242065
+
+==========================================================================
+global route max_slew_check_limit
+--------------------------------------------------------------------------
+1.5027270317077637
+
+==========================================================================
+global route max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.8745
+
+==========================================================================
+global route max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+global route max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+global route max_capacitance_check_slack
+--------------------------------------------------------------------------
+0.14756496250629425
+
+==========================================================================
+global route max_capacitance_check_limit
+--------------------------------------------------------------------------
+0.16755099594593048
+
+==========================================================================
+global route max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+0.8807
+
+==========================================================================
+global route max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+global route max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+global route max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 0
+
+==========================================================================
+global route setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 0
+
+==========================================================================
+global route hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 0
+
+==========================================================================
+global route critical path delay
+--------------------------------------------------------------------------
+-1
+
+==========================================================================
+global route critical path slack
+--------------------------------------------------------------------------
+0
+
+==========================================================================
+global route slack div critical path delay
+--------------------------------------------------------------------------
+0.000000
+
+==========================================================================
+global route report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          1.86e-15   3.83e-15   2.55e-10   2.55e-10 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.86e-15   3.83e-15   2.55e-10   2.55e-10 100.0%
+                           0.0%       0.0%     100.0%
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 996 u^2 23% utilization.
+
+
+==========================================================================
+check_antennas
+--------------------------------------------------------------------------
+[WARNING ANT-0011] -report_violating_nets is deprecated.
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+[WARNING FLW-0006] No clocks found.
+[INFO FLW-0011] Path endpoint count 24
+Elapsed time: 0:01.40[h:]min:sec. CPU time: user 0.49 sys 0.87 (97%). Peak memory: 157800KB.

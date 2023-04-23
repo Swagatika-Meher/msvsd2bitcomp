@@ -1,0 +1,10 @@
+OpenROAD v2.0-7009-g718b260b4 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING PDN-1024] -verbose has been deprecated.
+[INFO PDN-0001] Inserting grid: stdcell
+[WARNING PDN-0110] No via inserted between met4 and met5 at (23.7400, 17.7600) - (24.7400, 20.7600) on VDD
+[WARNING PDN-0110] No via inserted between met4 and met5 at (23.7400, 85.3200) - (24.7400, 88.3200) on VDD
+[WARNING PDN-0110] No via inserted between met4 and met5 at (83.7400, 12.7600) - (84.7400, 15.7600) on VSS
+[WARNING PDN-0110] No via inserted between met4 and met5 at (83.7400, 90.3200) - (84.7400, 93.3200) on VSS
+Elapsed time: 0:01.10[h:]min:sec. CPU time: user 0.34 sys 0.72 (97%). Peak memory: 101064KB.

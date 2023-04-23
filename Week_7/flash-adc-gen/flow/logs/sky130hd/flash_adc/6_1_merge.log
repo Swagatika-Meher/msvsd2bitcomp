@@ -1,0 +1,20 @@
+[INFO] Reporting cells prior to loading DEF ...
+[INFO] Reading DEF ...
+[INFO] Clearing cells...
+[INFO] Merging GDS/OAS files...
+	/home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/../../../common/platforms/sky130hd/gds/sky130_fd_sc_hd.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_1.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_2.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_3.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_4.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_5.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_6.gds
+	../blocks/sky130hd/gds/FLASH_ADC_SYM_7.gds
+[INFO] Copying toplevel cell 'flash_adc'
+INFO: Reading config file: /home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/../../../common/platforms/sky130hd/fill.json
+[INFO] Checking for missing cell from GDS/OAS...
+[INFO] All LEF cells have matching GDS/OAS cells
+[INFO] Checking for orphan cell in the final layout...
+[INFO] No orphan cells
+[INFO] Writing out GDS/OAS '/home/swagatika/openfasoc/openfasoc/generators/flash-adc-gen/flow/results/sky130hd/flash_adc//6_1_merged.gds'
+Elapsed time: 0:04.29[h:]min:sec. CPU time: user 1.87 sys 1.91 (88%). Peak memory: 378960KB.

@@ -1,0 +1,168 @@
+OpenROAD v2.0-7009-g718b260b4 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 20240 21760
+[INFO GPL-0005] CoreAreaUxUy: 89700 84320
+[INFO GPL-0006] NumInstances: 248
+[INFO GPL-0007] NumPlaceInstances: 3
+[INFO GPL-0008] NumFixedInstances: 119
+[INFO GPL-0009] NumDummyInstances: 126
+[INFO GPL-0010] NumNets: 11
+[INFO GPL-0011] NumPins: 40
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 110000 105000
+[INFO GPL-0014] CoreAreaLxLy: 20240 21760
+[INFO GPL-0015] CoreAreaUxUy: 89700 84320
+[INFO GPL-0016] CoreArea: 4345417600
+[INFO GPL-0017] NonPlaceInstsArea: 4021356800
+[INFO GPL-0018] PlaceInstsArea: 30028800
+[INFO GPL-0019] Util(%): 9.27
+[INFO GPL-0020] StdInstsArea: 30028800
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00000000 HPWL: 1503470
+[InitialPlace]  Iter: 2 CG residual: 0.00000000 HPWL: 1060671
+[InitialPlace]  Iter: 3 CG residual: 0.00000000 HPWL: 1047621
+[InitialPlace]  Iter: 4 CG residual: 0.00000000 HPWL: 1039304
+[InitialPlace]  Iter: 5 CG residual: 0.00000000 HPWL: 1035680
+[INFO GPL-0031] FillerInit: NumGCells: 19
+[INFO GPL-0032] FillerInit: NumGNets: 11
+[INFO GPL-0033] FillerInit: NumGPins: 40
+[INFO GPL-0023] TargetDensity: 0.60
+[INFO GPL-0024] AveragePlaceInstArea: 10009600
+[INFO GPL-0025] IdealBinArea: 16682666
+[INFO GPL-0026] IdealBinCnt: 260
+[INFO GPL-0027] TotalBinArea: 4345417600
+[INFO GPL-0028] BinCnt: 16 16
+[INFO GPL-0029] BinSize: 4342 3910
+[INFO GPL-0030] NumBins: 256
+[NesterovSolve] Iter: 1 overflow: 0.999631 HPWL: 967943
+[NesterovSolve] Iter: 10 overflow: 0.999631 HPWL: 971396
+[NesterovSolve] Iter: 20 overflow: 0.999631 HPWL: 971398
+[NesterovSolve] Iter: 30 overflow: 0.999631 HPWL: 971396
+[NesterovSolve] Iter: 40 overflow: 0.999631 HPWL: 971397
+[NesterovSolve] Iter: 50 overflow: 0.999631 HPWL: 971396
+[NesterovSolve] Iter: 60 overflow: 0.999631 HPWL: 971398
+[NesterovSolve] Iter: 70 overflow: 0.999631 HPWL: 971392
+[NesterovSolve] Iter: 80 overflow: 0.999631 HPWL: 971364
+[NesterovSolve] Iter: 90 overflow: 0.999631 HPWL: 971329
+[NesterovSolve] Iter: 100 overflow: 0.999631 HPWL: 971262
+[NesterovSolve] Iter: 110 overflow: 0.999631 HPWL: 971171
+[NesterovSolve] Iter: 120 overflow: 0.999631 HPWL: 970955
+[NesterovSolve] Iter: 130 overflow: 0.999631 HPWL: 970986
+[NesterovSolve] Iter: 140 overflow: 0.999631 HPWL: 970789
+[NesterovSolve] Iter: 150 overflow: 0.999631 HPWL: 970740
+[NesterovSolve] Iter: 160 overflow: 0.999631 HPWL: 970728
+[NesterovSolve] Iter: 170 overflow: 0.999631 HPWL: 971162
+[NesterovSolve] Iter: 180 overflow: 0.999631 HPWL: 971143
+[NesterovSolve] Iter: 190 overflow: 0.999631 HPWL: 971133
+[NesterovSolve] Iter: 200 overflow: 0.999631 HPWL: 971182
+[NesterovSolve] Iter: 210 overflow: 0.999631 HPWL: 971033
+[NesterovSolve] Iter: 220 overflow: 0.999631 HPWL: 971175
+[NesterovSolve] Iter: 230 overflow: 0.999631 HPWL: 972853
+[NesterovSolve] Iter: 240 overflow: 0.999631 HPWL: 975656
+[NesterovSolve] Iter: 250 overflow: 0.999631 HPWL: 979825
+[NesterovSolve] Iter: 260 overflow: 0.999088 HPWL: 991508
+[NesterovSolve] Iter: 270 overflow: 0.720635 HPWL: 1017385
+[NesterovSolve] Iter: 280 overflow: 0.717101 HPWL: 1036580
+[NesterovSolve] Snapshot saved at iter = 283
+[NesterovSolve] Iter: 290 overflow: 0.351124 HPWL: 1078818
+[NesterovSolve] Iter: 300 overflow: 0.33321 HPWL: 1089865
+[NesterovSolve] Iter: 310 overflow: 0.0749312 HPWL: 1124039
+[INFO GPL-0075] Routability numCall: 1 inflationIterCnt: 1 bloatIterCnt: 0
+[INFO GPL-0036] TileLxLy: 0 0
+[INFO GPL-0037] TileSize: 6900 6900
+[INFO GPL-0038] TileCnt: 15 15
+[INFO GPL-0039] numRoutingLayers: 6
+[INFO GPL-0040] NumTiles: 225
+[INFO GPL-0063] TotalRouteOverflowH2: 0.0
+[INFO GPL-0064] TotalRouteOverflowV2: 0.0
+[INFO GPL-0065] OverflowTileCnt2: 0
+[INFO GPL-0066] 0.5%RC: 0.75
+[INFO GPL-0067] 1.0%RC: 0.7166666587193807
+[INFO GPL-0068] 2.0%RC: 0.6666666865348816
+[INFO GPL-0069] 5.0%RC: 0.6666666865348816
+[INFO GPL-0070] 0.5rcK: 1.0
+[INFO GPL-0071] 1.0rcK: 1.0
+[INFO GPL-0072] 2.0rcK: 0.0
+[INFO GPL-0073] 5.0rcK: 0.0
+[INFO GPL-0074] FinalRC: 0.73333335
+[NesterovSolve] Finished with Overflow: 0.074931
+
+==========================================================================
+global place check_setup
+--------------------------------------------------------------------------
+Warning: There is 1 input port missing set_input_delay.
+Warning: There are 10 output ports missing set_output_delay.
+Warning: There are 10 unconstrained endpoints.
+
+==========================================================================
+global place report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+global place report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+global place report_worst_slack
+--------------------------------------------------------------------------
+worst slack INF
+
+==========================================================================
+global place report_clock_skew
+--------------------------------------------------------------------------
+
+==========================================================================
+global place report_checks -path_delay min
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global place report_checks -path_delay max
+--------------------------------------------------------------------------
+No paths found.
+
+==========================================================================
+global place report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: vin (input port)
+Endpoint: FA_5/VIN (internal pin)
+Path Group: (none)
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00 ^ input external delay
+                  0.00    0.00    0.00 ^ vin (in)
+     7    0.02                           vin (net)
+                  0.00    0.00    0.00 ^ FA_5/VIN (FLASH_ADC_SYM_5)
+                                  0.00   data arrival time
+-----------------------------------------------------------------------------
+(Path is unconstrained)
+
+
+
+==========================================================================
+global place report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          1.82e-15   2.72e-15   2.55e-10   2.55e-10 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  1.82e-15   2.72e-15   2.55e-10   2.55e-10 100.0%
+                           0.0%       0.0%     100.0%
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 996 u^2 23% utilization.
+
+Elapsed time: 0:01.83[h:]min:sec. CPU time: user 0.44 sys 1.31 (96%). Peak memory: 176308KB.

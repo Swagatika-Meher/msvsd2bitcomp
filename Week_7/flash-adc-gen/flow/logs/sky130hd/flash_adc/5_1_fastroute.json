@@ -1,0 +1,23 @@
+{
+	"globalroute__timing__setup__tns": 0,
+	"globalroute__timing__setup__ws": 1e+39,
+	"globalroute__clock__skew__setup": 0,
+	"globalroute__clock__skew__hold": 0,
+	"globalroute__power__internal__total": 1.85526e-15,
+	"globalroute__power__switching__total": 3.82745e-15,
+	"globalroute__power__leakage__total": 2.55284e-10,
+	"globalroute__power__total": 2.5529e-10,
+	"globalroute__design__io": 33,
+	"globalroute__design__die__area": 11550,
+	"globalroute__design__core__area": 4345.42,
+	"globalroute__design__instance__count": 122,
+	"globalroute__design__instance__area": 996.153,
+	"globalroute__design__instance__count__stdcell": 115,
+	"globalroute__design__instance__area__stdcell": 455.437,
+	"globalroute__design__instance__count__macros": 7,
+	"globalroute__design__instance__area__macros": 540.716,
+	"globalroute__design__instance__utilization": 0.229242,
+	"globalroute__design__instance__utilization__stdcell": 0.119704,
+	"globalroute__antenna__violating__nets": 0,
+	"globalroute__antenna__violating__pins": 0
+}

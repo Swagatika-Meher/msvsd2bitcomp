@@ -1,0 +1,17 @@
+{
+	"detailedroute__route__net": 13,
+	"detailedroute__route__net__special": 2,
+	"detailedroute__route__drc_errors__iter:1": 63,
+	"detailedroute__route__wirelength__iter:1": 1580,
+	"detailedroute__route__drc_errors__iter:2": 3,
+	"detailedroute__route__wirelength__iter:2": 1566,
+	"detailedroute__route__drc_errors__iter:3": 8,
+	"detailedroute__route__wirelength__iter:3": 1553,
+	"detailedroute__route__drc_errors__iter:4": 0,
+	"detailedroute__route__wirelength__iter:4": 1541,
+	"detailedroute__route__drc_errors": 0,
+	"detailedroute__route__wirelength": 1541,
+	"detailedroute__route__vias": 127,
+	"detailedroute__route__vias__singlecut": 127,
+	"detailedroute__route__vias__multicut": 0
+}
