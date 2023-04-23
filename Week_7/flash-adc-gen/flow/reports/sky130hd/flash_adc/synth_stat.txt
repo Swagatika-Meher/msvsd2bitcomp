@@ -1,0 +1,32 @@
+
+28. Printing statistics.
+
+=== flash_adc ===
+
+   Number of wires:                 11
+   Number of wire bits:             11
+   Number of public wires:          11
+   Number of public wire bits:      11
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 10
+     FLASH_ADC_SYM_1                 1
+     FLASH_ADC_SYM_2                 1
+     FLASH_ADC_SYM_3                 1
+     FLASH_ADC_SYM_4                 1
+     FLASH_ADC_SYM_5                 1
+     FLASH_ADC_SYM_6                 1
+     FLASH_ADC_SYM_7                 1
+     sky130_fd_sc_hd__or4_1          3
+
+   Area for cell type \FLASH_ADC_SYM_1 is unknown!
+   Area for cell type \FLASH_ADC_SYM_2 is unknown!
+   Area for cell type \FLASH_ADC_SYM_3 is unknown!
+   Area for cell type \FLASH_ADC_SYM_4 is unknown!
+   Area for cell type \FLASH_ADC_SYM_5 is unknown!
+   Area for cell type \FLASH_ADC_SYM_6 is unknown!
+   Area for cell type \FLASH_ADC_SYM_7 is unknown!
+
+   Chip area for module '\flash_adc': 22.521600
+

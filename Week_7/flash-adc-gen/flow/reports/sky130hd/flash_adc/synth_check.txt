@@ -1,0 +1,4 @@
+
+27. Executing CHECK pass (checking for obvious problems).
+Checking module flash_adc...
+Found and reported 0 problems.
