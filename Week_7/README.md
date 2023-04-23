@@ -82,7 +82,7 @@ module flash_adc
 
 endmodule
 ```
-All the files related to this flow can be found [here].
+All the files related to this flow can be found [here](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_7/flash-adc-gen).
 
 > **NOTE**
 
