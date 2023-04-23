@@ -32,3 +32,4 @@
 | 27 | [6](https://github.com/Swagatika-Meher/msvsd2bitcomp/tree/main/Week_6) | Xschem: Pre-layout simulation for 1-bit ADC | ✔️ |
 | 28 |   | ALIGN: Post-layout simulation for 3-bit Flash ADC using TIQ comparator | ✔️ |
 | 29 |   | Xschem: Pre-layout simulation for 3-bit Flash ADC using TIQ comparator | ✔️ |
+| 30 | [7]  | Post-Layout: OpenFASOC flow for 3-bit Flash ADC using TIQ comparator | ✔️ |
